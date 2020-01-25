@@ -1,10 +1,25 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Sidebar from "./components/sidebar";
+import Introduction from "./components/intro";
+import About from "./components/about";
+import Projects from "./components/projects/projects"
+import Blog from "./components/blog/blog";
+import Contact from "./components/contact";
 
 function App() {
   return (
     <div className="App">
+      <Sidebar />
+      <div>
+        <Introduction/>
+        <About/>
+        <Projects/>
+        <Blog/>
+        <Contact/>
+      </div>
+
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
