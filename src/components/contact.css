@@ -12,6 +12,7 @@ form input, form textarea {
     font-family: Calibri, serif;
     border-bottom: 1px solid black;
     transition: 0.3s ease-in-out;
+    background: none;
 }
 
 form input:focus, form textarea:focus {

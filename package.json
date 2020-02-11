@@ -17,6 +17,7 @@
     "react-grid-layout": "^0.17.1",
     "react-scripts": "3.3.0",
     "tsutils": "^3.17.1",
+    "typeface-lato": "^0.0.75",
     "typescript": "^3.7.5"
   },
   "scripts": {

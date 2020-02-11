@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactFullpage from "@fullpage/react-fullpage";
 import logo from './logo.svg';
+import "typeface-lato";
 import './App.css';
 import Menu from './components/menu';
 import Introduction from "./components/intro";

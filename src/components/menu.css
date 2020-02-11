@@ -1,3 +1,7 @@
+:root {
+    --mycolor: #500000;
+}
+
 #menu {
     position: fixed;
     z-index: 10;
@@ -16,7 +20,7 @@
 
 #menu li {
     display: inline-block;
-    padding: 2vh 1vw;
+    padding: 2vh 0.5vw;
 }
 
 #menu a {
@@ -24,13 +28,45 @@
     color: black;
 }
 
-#menu .active a {
-    color: red;
+#menu img {
+    height: 5vh;
+    padding: 1vh;
+    background-size: 100% 200%;
+    background-image: linear-gradient(to bottom, transparent 50%, var(--mycolor) 50%);
+    transition: background-position 1s, display 1s;
 }
 
-#menu li a:after {
+#menu .active a {
+    color: var(--mycolor);
+}
+
+#menu .active img {
+    background-position: 0 100%;
+    fill: white;
+}
+
+#menu li:not(.active) a:after {
     content: "";
-    background: red;
+    background: var(--mycolor);
+    position: relative;
+    display: block;
+    height: 3px;
+    bottom: 1vh;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#menu li:hover a:after {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+#menu #fullscreenNav li a:after {
+    content: "";
+    background: var(--mycolor);
     position: relative;
     display: block;
     height: 3px;
@@ -42,7 +78,7 @@
     transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-#menu li.active a:after {
+#menu #fullscreenNav li.active a:after {
     visibility: visible;
     transform: scaleX(1);
 }
@@ -63,20 +99,24 @@ body h1 > span {
     font-weight: 300;
     font-size: 12px;
 }
-body input + label {
-    position: fixed;
-    top: 40px;
-    right: 40px;
-    height: 20px;
-    width: 15px;
-    z-index: 5;
+
+#burgerCheckbox {
+    display: none;
 }
-body input + label span {
+
+body #burgerCheckbox + .burgerLabel {
+    position: fixed;
+    height: 5vh;
+    width: 4vh;
+    z-index: 5;
+    margin: 1vh;
+}
+body input + .burgerLabel span {
     position: absolute;
     width: 100%;
     height: 2px;
     top: 50%;
-    margin-top: -1px;
+    margin-top: 1.5vh;
     left: 0;
     display: block;
     background: #020304;
@@ -109,7 +149,7 @@ body input ~ nav {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100px;
+    height: 0;
     z-index: 3;
     transition: 0.5s;
     transition-delay: 0.5s;
