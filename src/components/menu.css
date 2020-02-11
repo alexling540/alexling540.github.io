@@ -1,0 +1,48 @@
+#menu {
+    position: fixed;
+    z-index: 999;
+    right: 2vw;
+    top: 1.5vh;
+}
+
+#menu ul {
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 0;
+}
+
+#menu li {
+    display: inline-block;
+    padding: 2vh 1vw;
+}
+
+#menu a {
+    text-decoration: none;
+    color: black;
+}
+
+#menu .active a {
+    color: red;
+}
+
+#menu li a:after {
+    content: "";
+    background: red;
+    position: relative;
+    display: block;
+    height: 3px;
+    bottom: -0.5vh;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#menu li.active a:after {
+    visibility: visible;
+    transform: scaleX(1);
+}
