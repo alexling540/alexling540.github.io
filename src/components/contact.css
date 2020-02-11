@@ -1,0 +1,20 @@
+.half {
+    width: 50%;
+    float: left;
+}
+
+form div {
+    padding: 2vh 2vw;
+}
+
+form input, form textarea {
+    border: none;
+    font-family: Calibri, serif;
+    border-bottom: 1px solid black;
+    transition: 0.3s ease-in-out;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-bottom: 1px solid red;
+}
