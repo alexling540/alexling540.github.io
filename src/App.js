@@ -18,21 +18,22 @@ import Contact from './components/contact';
 function App() {
 
   const [theme, setTheme] = useState({
-    palette: "dark"
+    palette: "dark",
   });
 
-  const setThemes = (palette) => {
-    setTheme({palette});
-  };
+  const [anchors, setAnchors] = useState({
+    links: ['fp-intro', 'fp-about', 'fp-resume', 'fp-projects', 'fp-blog', 'fp-contact']
+  });
+
 
   return (
     <div className="App" theme={theme.palette}>
-      <Menu set={setThemes}/>
+      <Menu setTheme={(palette) => setTheme({palette})} setAnchors={(links) => setAnchors({links})} />
       <div id={'main'}>
         <ReactFullpage
           licenseKey={'OPEN-SOURCE-GPLV3-LICENSE'}
           css3={true}
-          anchors={['intro', 'about', 'resume', 'projects', 'blog', 'contact']}
+          anchors={anchors.links}
           menu={'#menu'}
           render={({state, fullpageApi}) => {
             return (
@@ -60,7 +61,6 @@ function App() {
           }}
         />
       </div>
-      abc
     </div>
   )
 }

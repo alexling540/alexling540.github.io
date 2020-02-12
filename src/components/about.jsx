@@ -5,9 +5,7 @@ export default class About extends Component {
   render() {
     return (
       <div>
-        <section data-section="about">
           About Me
-        </section>
         <div className={'vertical'}>
           About Me
         </div>
