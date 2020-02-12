@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
-import logo from './logo.svg';
 import 'typeface-lato';
 import './App.css';
 import Menu from './components/menu';
@@ -17,7 +16,6 @@ import Contact from './components/contact';
 // https://stackoverflow.com/questions/20751937/transition-background-color-via-slide-up-animation
 
 function App() {
-
 
   const [theme, setTheme] = useState({
     palette: "dark"

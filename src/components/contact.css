@@ -27,3 +27,10 @@ form input:focus, form textarea:focus {
     outline: none;
     border-bottom: 1px solid var(--dark-accent2);
 }
+
+button {
+    background: var(--dark-accent2);
+    border: none;
+    border-radius: 5px;
+    padding: 1vh 3vw;
+}
