@@ -11,9 +11,14 @@ import Projects from './components/projects';
 import Blog from './components/blog';
 import Contact from './components/contact';
 
+// https://visme.co/blog/website-color-schemes/
+// https://fonts.google.com/specimen/Lato?selection.family=Lato
+// https://gist.github.com/CodeMyUI/5376e109921ab4609c1857cf8010c4b8
+// https://stackoverflow.com/questions/20751937/transition-background-color-via-slide-up-animation
+
 function App() {
   return (
-    <div className="App .dark">
+    <div className="App dark">
       <Menu />
       <div id={'main'}>
         <ReactFullpage

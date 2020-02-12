@@ -4,6 +4,7 @@
   --dark-accent3: #222629;
   --dark-accent4: #474B4F;
   --dark-accent5: #6B6E70;
+  --dark-accent6: #16191b;
   --light-accent1: #5680E9;
   --light-accent2: #84CEEB;
   --light-accent3: #5AB9EA;
@@ -53,7 +54,18 @@
 
 .section {
   padding: 0 10vw;
+}
+
+.dark .section {
   background: var(--dark-accent3);
+}
+
+.dark .section:last-child {
+  background: var(--dark-accent6);
+}
+
+.light .section {
+  background: #fff;
 }
 
 .vertical {
@@ -62,9 +74,16 @@
   position: absolute;
   font-family: 'Lato Light', sans-serif;
   font-size: 9vh;
-  background: var(--dark-accent2);
   padding: 0 10vh;
   height: 11vh;
+}
+
+.dark .vertical {
+  background: var(--dark-accent2);
+}
+
+.light .vertical {
+  background: var(--light-accent3);
 }
 
 .vertical:after {
@@ -75,5 +94,18 @@
   margin-left: calc(10vh - 1px);
   border-style: solid;
   border-width: 11vh 11vh 0 0;
+}
+
+.dark .vertical:after {
   border-color: var(--dark-accent2) transparent transparent transparent;
+}
+
+.light .vertical:after {
+  border-color: var(--light-accent3) transparent transparent transparent;
+}
+
+@media screen and (max-width: 1025px){
+  .vertical {
+    display: none;
+  }
 }
