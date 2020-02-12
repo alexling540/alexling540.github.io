@@ -1,18 +1,16 @@
 import React, {Component} from "react";
-import './about.css'
 
-export default class About extends Component {
+export default class Blog extends Component {
   render() {
-    return (
+    return(
       <div>
-        <section data-section="about">
-          About Me
+        <section data-section={'blog'}>
+          Blog
         </section>
         <div className={'vertical'}>
-          About Me
+          Blog
         </div>
       </div>
     );
   }
-
 }

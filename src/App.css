@@ -1,3 +1,16 @@
+:root {
+  --dark-accent1: #61892F;
+  --dark-accent2: #86C232;
+  --dark-accent3: #222629;
+  --dark-accent4: #474B4F;
+  --dark-accent5: #6B6E70;
+  --light-accent1: #5680E9;
+  --light-accent2: #84CEEB;
+  --light-accent3: #5AB9EA;
+  --light-accent4: #C1C8E4;
+  --light-accent5: #8860D0;
+}
+
 .App {
   text-align: center;
   font-family: Lato, sans-serif;
@@ -40,5 +53,27 @@
 
 .section {
   padding: 0 10vw;
-  background: whitesmoke;
+  background: var(--dark-accent3);
+}
+
+.vertical {
+  transform: rotate(90deg) translateY(-90vw) translateX(-42vh);
+  transform-origin: left top 0;
+  position: absolute;
+  font-family: 'Lato Light', sans-serif;
+  font-size: 9vh;
+  background: var(--dark-accent2);
+  padding: 0 10vh;
+  height: 11vh;
+}
+
+.vertical:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin-left: calc(10vh - 1px);
+  border-style: solid;
+  border-width: 11vh 11vh 0 0;
+  border-color: var(--dark-accent2) transparent transparent transparent;
 }

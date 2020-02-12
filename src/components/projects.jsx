@@ -7,6 +7,9 @@ export default class Projects extends Component {
         <section data-section={'projects'}>
           Projects
         </section>
+        <div className={'vertical'}>
+          Projects
+        </div>
       </div>
     );
   }
