@@ -10,7 +10,6 @@
 
   li {
     display: inline-block;
-    padding: 2vh 0.5vw;
   }
 
   a {
@@ -51,6 +50,7 @@
     }
   }
   li {
+    padding: 2vh 0.5vw;
     svg {
       height: 5vh;
       width: 5vh;
@@ -108,6 +108,7 @@
   z-index: 10;
   right: 0;
   width: 10vw;
+  max-width: 5vh;
   display: none;
   margin: 2vw calc(2vw + 5vw);
   li a:after {
@@ -149,13 +150,18 @@
     display: none;
     + label {
       position: fixed;
+      min-height: 5vh;
+      max-height: 5vw;
       height: 5vh;
+      min-width: 4vh;
+      max-width: 4vw;
       width: 4vh;
       z-index: 5;
       span {
         position: absolute;
         width: 100%;
         height: 0.5vw;
+        max-height: 0.5vh;
         top: 50%;
         left: 0;
         display: block;
@@ -198,7 +204,7 @@
     > ul {
       text-align: center;
       position: absolute;
-      top: 35%;
+      top: 15%;
       left: 20%;
       right: 20%;
       > li {
@@ -260,6 +266,9 @@
     }
     input ~ nav {
       background: var(--dark-accent4);
+    }
+    input + label span {
+      background: var(--dark-accent2);
     }
   }
 }

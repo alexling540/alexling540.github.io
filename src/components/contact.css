@@ -3,6 +3,14 @@
     float: left;
 }
 
+@media screen
+  and (max-device-width: 480px)
+  and (orientation: portrait){
+    .half {
+        width: 100%;
+    }
+}
+
 form div {
     padding: 2vh 2vw;
 }
@@ -17,5 +25,5 @@ form input, form textarea {
 
 form input:focus, form textarea:focus {
     outline: none;
-    border-bottom: 1px solid red;
+    border-bottom: 1px solid var(--dark-accent2);
 }
