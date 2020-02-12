@@ -33,13 +33,19 @@
   top: 0;
   height: 11vh;
   width: 11vh;
+  transition: all 1s cubic-bezier(0.25, 0, 0.41, 1);
 }
-#menu-desktop #themeToggle svg {
+#menu-desktop #themeToggle div {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 1s ease-in-out, opacity 1s ease-in-out;
+}
+#menu-desktop #themeToggle div svg {
   width: 7vh;
   height: 7vh;
   padding: 2vh;
   stroke: black;
-  display: none;
 }
 #menu-desktop li svg {
   height: 5vh;
@@ -48,13 +54,7 @@
   background-size: 100% 200%;
   transition: background-position 1s cubic-bezier(0.25, 0, 0.41, 1), stroke 1.5s ease;
 }
-#menu-desktop .active svg {
-  background-position: 0 100%;
-}
-#menu-desktop .active img {
-  background-position: 0 100%;
-}
-#menu-desktop ul img {
+#menu-desktop li img {
   height: 5vh;
   padding: 1vh;
   background-size: 100% 200%;
@@ -73,9 +73,6 @@
   transition-delay: 3s;
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-#menu-desktop li:not(.active) a:after {
-  transition-delay: 0s;
-}
 #menu-desktop li:not(.active):hover a:after {
   visibility: visible;
   transform: scaleX(1);
@@ -90,6 +87,12 @@
 #menu-desktop li:not(.active):hover #title {
   visibility: visible;
   transform: scaleX(1);
+}
+#menu-desktop .active svg {
+  background-position: 0 100%;
+}
+#menu-desktop .active img {
+  background-position: 0 100%;
 }
 
 #menu-mobile {
@@ -214,64 +217,66 @@
   transition-delay: 0.5s;
 }
 
-.dark #menu .active a {
+.App[theme=dark] #menu .active a {
   color: var(--dark-accent2);
 }
-.dark #menu-desktop {
+.App[theme=dark] #menu-desktop {
   color: white;
 }
-.dark #menu-desktop #themeToggle {
+.App[theme=dark] #menu-desktop #themeToggle {
   background: var(--dark-accent2);
 }
-.dark #menu-desktop #themeToggle svg:nth-child(1) {
-  display: block;
+.App[theme=dark] #menu-desktop #themeToggle div:nth-child(1) {
+  visibility: visible;
+  opacity: 1;
 }
-.dark #menu-desktop li svg {
+.App[theme=dark] #menu-desktop li svg {
   background-image: linear-gradient(to bottom, transparent 50%, var(--dark-accent2) 50%);
   stroke: var(--dark-accent5);
 }
-.dark #menu-desktop li.active svg {
+.App[theme=dark] #menu-desktop li.active svg {
   stroke: var(--dark-accent3);
 }
-.dark #menu-desktop ul img {
+.App[theme=dark] #menu-desktop ul img {
   background-image: linear-gradient(to bottom, transparent 50%, var(--dark-accent2) 50%);
 }
-.dark #menu-desktop li a:after {
+.App[theme=dark] #menu-desktop li a:after {
   background: var(--dark-accent2);
 }
-.dark #menu-mobile li a:after {
+.App[theme=dark] #menu-mobile li a:after {
   background: var(--dark-accent2);
 }
-.dark #menu-mobile input ~ nav {
+.App[theme=dark] #menu-mobile input ~ nav {
   background: var(--dark-accent4);
 }
 
-.light #menu .active a {
+.App[theme=light] #menu .active a {
   color: var(--light-accent3);
 }
-.light #menu-desktop #themeToggle {
+.App[theme=light] #menu-desktop #themeToggle {
   background: var(--light-accent3);
 }
-.light #menu-desktop #themeToggle svg:nth-child(2) {
-  display: block;
+.App[theme=light] #menu-desktop #themeToggle div:nth-child(2) {
+  visibility: visible;
+  opacity: 1;
 }
-.light #menu-desktop li svg {
+.App[theme=light] #menu-desktop li svg {
   background-image: linear-gradient(to bottom, transparent 50%, var(--light-accent2) 50%);
   stroke: var(--light-accent3);
 }
-.light #menu-desktop li.active svg {
+.App[theme=light] #menu-desktop li.active svg {
   stroke: var(--light-accent5);
 }
-.light #menu-desktop ul img {
+.App[theme=light] #menu-desktop ul img {
   background-image: linear-gradient(to bottom, transparent 50%, var(--light-accent2) 50%);
 }
-.light #menu-desktop li a:after {
+.App[theme=light] #menu-desktop li a:after {
   background: var(--light-accent2);
 }
-.light #menu-mobile li a:after {
+.App[theme=light] #menu-mobile li a:after {
   background: var(--light-accent2);
 }
-.light #menu-mobile input ~ nav {
+.App[theme=light] #menu-mobile input ~ nav {
   background: var(--light-accent4);
 }
 

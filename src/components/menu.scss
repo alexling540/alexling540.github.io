@@ -36,20 +36,62 @@
     top: 0;
     height: 11vh;
     width: 11vh;
-    svg {
-      width: 7vh;
-      height: 7vh;
-      padding: 2vh;
-      stroke: black;
-      display: none;
+    transition: all 1s cubic-bezier(0.25, 0, 0.41, 1);
+    div {
+      position: absolute;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 1s ease-in-out, opacity 1s ease-in-out;
+      svg {
+        width: 7vh;
+        height: 7vh;
+        padding: 2vh;
+        stroke: black;
+      }
     }
   }
-  li svg {
-    height: 5vh;
-    width: 5vh;
-    padding: 1vh;
-    background-size: 100% 200%;
-    transition: background-position 1s cubic-bezier(0.25, 0, 0.41, 1), stroke 1.5s ease;
+  li {
+    svg {
+      height: 5vh;
+      width: 5vh;
+      padding: 1vh;
+      background-size: 100% 200%;
+      transition: background-position 1s cubic-bezier(0.25, 0, 0.41, 1), stroke 1.5s ease;
+    }
+    img {
+      height: 5vh;
+      padding: 1vh;
+      background-size: 100% 200%;
+      transition: background-position 1s cubic-bezier(0.25, 0, 0.41, 1);
+    }
+    a:after {
+      content: "";
+      position: relative;
+      display: block;
+      height: 3px;
+      bottom: 1vh;
+      left: 0;
+      right: 0;
+      visibility: hidden;
+      transform: scaleX(0);
+      transition-delay: 3s;
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    &:not(.active):hover a:after {
+      visibility: visible;
+      transform: scaleX(1);
+    }
+    #title {
+      position: absolute;
+      display: block;
+      visibility: hidden;
+      transform: scaleX(0);
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    &:not(.active):hover #title {
+      visibility: visible;
+      transform: scaleX(1);
+    }
   }
   .active {
     svg {
@@ -58,43 +100,6 @@
     img {
       background-position: 0 100%;
     }
-  }
-  ul img {
-    height: 5vh;
-    padding: 1vh;
-    background-size: 100% 200%;
-    transition: background-position 1s cubic-bezier(0.25, 0, 0.41, 1);
-  }
-  li a:after {
-    content: "";
-    position: relative;
-    display: block;
-    height: 3px;
-    bottom: 1vh;
-    left: 0;
-    right: 0;
-    visibility: hidden;
-    transform: scaleX(0);
-    transition-delay: 3s;
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
-  li:not(.active) a:after {
-    transition-delay: 0s;
-  }
-  li:not(.active):hover a:after {
-    visibility: visible;
-    transform: scaleX(1);
-  }
-  li #title {
-    position: absolute;
-    display: block;
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
-  li:not(.active):hover #title {
-    visibility: visible;
-    transform: scaleX(1);
   }
 }
 
@@ -222,7 +227,7 @@
   }
 }
 
-.dark {
+.App[theme="dark"] {
   #menu .active a {
     color: var(--dark-accent2);
   }
@@ -230,8 +235,9 @@
     color: white;
     #themeToggle {
       background: var(--dark-accent2);
-      svg:nth-child(1) {
-        display: block;
+      div:nth-child(1) {
+        visibility: visible;
+        opacity: 1;
       }
     }
     li svg {
@@ -258,15 +264,16 @@
   }
 }
 
-.light {
+.App[theme="light"] {
   #menu .active a {
     color: var(--light-accent3);
   }
   #menu-desktop {
     #themeToggle {
       background: var(--light-accent3);
-      svg:nth-child(2) {
-        display: block;
+      div:nth-child(2) {
+        visibility: visible;
+        opacity: 1;
       }
     }
     li svg {
