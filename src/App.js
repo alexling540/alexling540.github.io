@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
+import * as Icon from 'react-feather';
 import 'typeface-lato';
 import './App.css';
 import Menu from './components/menu';
@@ -14,6 +15,7 @@ import Contact from './components/contact';
 // https://fonts.google.com/specimen/Lato?selection.family=Lato
 // https://gist.github.com/CodeMyUI/5376e109921ab4609c1857cf8010c4b8
 // https://stackoverflow.com/questions/20751937/transition-background-color-via-slide-up-animation
+// https://feathericons.com/
 
 function App() {
 
@@ -21,46 +23,64 @@ function App() {
     palette: "dark",
   });
 
-  const [anchors, setAnchors] = useState({
-    links: ['fp-intro', 'fp-about', 'fp-resume', 'fp-projects', 'fp-blog', 'fp-contact']
-  });
-
+  const sections = [
+    {
+      anchor:'fp-intro',
+      title: 'Home',
+      icon: (<Icon.Home/>),
+      section: (<Introduction/>)
+    },
+    {
+      anchor: 'fp-about',
+      title: 'About',
+      icon: (<Icon.User/>),
+      section: (<About/>)
+    },
+    {
+      anchor: 'fp-resume',
+      title: 'Resume',
+      icon: (<Icon.FileText/>),
+      section: (<Resume/>)
+    },
+    {
+      anchor: 'fp-projects',
+      title: 'Projects',
+      icon: (<Icon.Package/>),
+      section: (<Projects/>)
+    },
+    {
+      anchor: 'fp-blog',
+      title: 'Blog',
+      icon: (<Icon.Book/>),
+      section: (<Blog/>)
+    },
+    {
+      anchor: 'fp-contact',
+      title: 'Contact',
+      icon: (<Icon.Info/>),
+      section: (<Contact/>)
+    }
+  ];
 
   return (
     <div className="App" theme={theme.palette}>
-      <Menu setTheme={(palette) => setTheme({palette})} setAnchors={(links) => setAnchors({links})} />
-      <div id={'main'}>
-        <ReactFullpage
-          licenseKey={'OPEN-SOURCE-GPLV3-LICENSE'}
-          css3={true}
-          anchors={anchors.links}
-          menu={'#menu'}
-          render={({state, fullpageApi}) => {
-            return (
-              <ReactFullpage.Wrapper>
-                <div className={'section'}>
-                  <Introduction />
+      <Menu setTheme={(palette) => setTheme({palette})} sections={sections} />
+      <ReactFullpage
+        licenseKey={'OPEN-SOURCE-GPLV3-LICENSE'}
+        css3={true}
+        menu={'#menu'}
+        render={({state, fullpageApi}) => {
+          return (
+            <ReactFullpage.Wrapper>
+              {sections.map((element, index) => (
+                <div className={'section'} data-anchor={element.anchor} key={index}>
+                  {element.section}
                 </div>
-                <div className={'section'}>
-                  <About />
-                </div>
-                <div className={'section'}>
-                  <Resume />
-                </div>
-                <div className={'section'}>
-                  <Projects />
-                </div>
-                <div className={'section'}>
-                  <Blog />
-                </div>
-                <div className={'section'}>
-                  <Contact />
-                </div>
-              </ReactFullpage.Wrapper>
-            );
-          }}
-        />
-      </div>
+              ))}
+            </ReactFullpage.Wrapper>
+          );
+        }}
+      />
     </div>
   )
 }
