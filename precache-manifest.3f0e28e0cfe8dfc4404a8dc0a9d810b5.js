@@ -1,47 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "82c605b136d4907eed598c1b4b6838a5",
+    "revision": "ca3b34957787df09fc70395e681cca64",
     "url": "/index.html"
   },
   {
-    "revision": "b9d4fc5fba763546b452",
-    "url": "/static/css/2.ae13573a.chunk.css"
+    "revision": "d43d95d81761e23088f2",
+    "url": "/static/css/2.85c893d9.chunk.css"
   },
   {
-    "revision": "f371d8a4856fc558109d",
-    "url": "/static/css/main.a6c61171.chunk.css"
+    "revision": "eebda9036ff9d6fc95c9",
+    "url": "/static/css/main.ca1126d7.chunk.css"
   },
   {
-    "revision": "b9d4fc5fba763546b452",
-    "url": "/static/js/2.8299bcb1.chunk.js"
+    "revision": "d43d95d81761e23088f2",
+    "url": "/static/js/2.f5cb17d5.chunk.js"
   },
   {
-    "revision": "f722e36a7630e726c3557316cab43594",
-    "url": "/static/js/2.8299bcb1.chunk.js.LICENSE.txt"
+    "revision": "a083cfa555cc85f975deea401534a332",
+    "url": "/static/js/2.f5cb17d5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f371d8a4856fc558109d",
-    "url": "/static/js/main.032825c2.chunk.js"
+    "revision": "eebda9036ff9d6fc95c9",
+    "url": "/static/js/main.6c60ea08.chunk.js"
   },
   {
     "revision": "6e7d85ad969107dd34f7",
     "url": "/static/js/runtime-main.54edee9e.js"
-  },
-  {
-    "revision": "1495482e1c115477403dfed673a27ed5",
-    "url": "/static/media/book.1495482e.svg"
-  },
-  {
-    "revision": "239e5f8c269addd930eacaaf77dcb61a",
-    "url": "/static/media/file-text.239e5f8c.svg"
-  },
-  {
-    "revision": "6757130387d4611c3dc6a4e010390479",
-    "url": "/static/media/home.67571303.svg"
-  },
-  {
-    "revision": "fe92784ee53b597d58eb8ba4858ad6a1",
-    "url": "/static/media/info.fe92784e.svg"
   },
   {
     "revision": "4dfdd1c035c641accc4f3fedb7b73055",
@@ -124,19 +108,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/lato-latin-900italic.bd86aaa7.woff2"
   },
   {
-    "revision": "87a3619adb02961ce3fd3aa20c050305",
-    "url": "/static/media/moon.87a3619a.svg"
-  },
-  {
-    "revision": "e8e5355d6060a12dd2c41c487d185822",
-    "url": "/static/media/package.e8e5355d.svg"
-  },
-  {
-    "revision": "010bd62b8414aefe1efd4b6f41fcd378",
-    "url": "/static/media/sun.010bd62b.svg"
-  },
-  {
-    "revision": "9d3e16e325950b616d3e2dfe7b0e61ca",
-    "url": "/static/media/user.9d3e16e3.svg"
+    "revision": "852e9fb0e4fd24513b4792b84247ec53",
+    "url": "/static/media/vaporwave_trees.852e9fb0.png"
   }
 ]);
