@@ -14,6 +14,7 @@ export default class Menu extends Component {
     return(
       <div id={'menu'}>
         <div id={'menu-desktop'}>
+          <div className={'vertical-x'}>xx</div>
           <div id={'themeToggle'}>
             <div onClick={() => this.props.setTheme('light')}>
               <Icon.Moon strokeWidth={'1.5'}/>

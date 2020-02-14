@@ -1,3 +1,28 @@
+.vertical-x {
+  transform: rotate(90deg) translateX(39vh);
+  transform-origin: right top 0;
+  position: fixed;
+  right: 0;
+  font-family: 'Lato Light', sans-serif;
+  font-size: 9vh;
+  padding: 0 10vh;
+  height: 11vh;
+  transition: all 1s cubic-bezier(0.25, 0, 0.41, 1);
+  border-right: 0.1vmin solid var(--dark-accent2);
+  background: var(--dark-accent2);
+  &:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin-left: 10vh;
+    border-style: solid;
+    border-width: 11vh 11vh 0 0;
+    transition: all 1s cubic-bezier(0.25, 0, 0.41, 1);
+    border-color: var(--dark-accent2) transparent transparent transparent;
+  }
+}
+
 #menu {
   ul {
     list-style-type: none;

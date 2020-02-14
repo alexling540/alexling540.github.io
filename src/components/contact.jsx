@@ -15,7 +15,6 @@ export default class Contact extends Component {
                 <div>
                   <Icons.Phone/>
                   <span>Phone</span>
-
                 </div>
               </a>
             </li>

@@ -6,9 +6,6 @@ export default class About extends Component {
     return (
       <div>
         <h1>About Me</h1>
-        <div className={'vertical'}>
-          About Me
-        </div>
       </div>
     );
   }
