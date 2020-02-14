@@ -102,8 +102,9 @@
 }
 
 .App[theme="vaporwave"] {
+  background: linear-gradient(var(--vaporwave-accent1) 0%, var(--vaporwave-accent2) 100%);
   .section {
-    background: var(--vaporwave-accent1);
+    background: transparent;
   }
   .vertical {
     background: var(--vaporwave-accent4);

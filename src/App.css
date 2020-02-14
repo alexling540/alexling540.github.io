@@ -95,8 +95,11 @@
   border-color: var(--lv2-accent5) transparent transparent transparent;
 }
 
+.App[theme=vaporwave] {
+  background: linear-gradient(var(--vaporwave-accent1) 0%, var(--vaporwave-accent2) 100%);
+}
 .App[theme=vaporwave] .section {
-  background: var(--vaporwave-accent1);
+  background: transparent;
 }
 .App[theme=vaporwave] .vertical {
   background: var(--vaporwave-accent4);
