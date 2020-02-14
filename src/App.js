@@ -18,6 +18,7 @@ import Contact from './components/contact';
 // https://stackoverflow.com/questions/20751937/transition-background-color-via-slide-up-animation
 // https://feathericons.com/
 // https://postimg.cc/hXjzGPV5 vaporwave
+// https://github.com/stephane-monnot/react-vertical-timeline
 
 function App() {
 
@@ -29,37 +30,37 @@ function App() {
 
   const sections = [
     {
-      anchor:'fp-intro',
+      anchor:'section-intro',
       title: 'Home',
       icon: (<Icon.Home/>),
       section: (<Introduction/>)
     },
     {
-      anchor: 'fp-about',
+      anchor: 'section-about',
       title: 'About',
       icon: (<Icon.User/>),
       section: (<About/>)
     },
     {
-      anchor: 'fp-resume',
+      anchor: 'section-resume',
       title: 'Resume',
       icon: (<Icon.FileText/>),
       section: (<Resume/>)
     },
     {
-      anchor: 'fp-projects',
+      anchor: 'section-projects',
       title: 'Projects',
       icon: (<Icon.Package/>),
       section: (<Projects/>)
     },
     {
-      anchor: 'fp-blog',
+      anchor: 'section-blog',
       title: 'Blog',
       icon: (<Icon.Book/>),
       section: (<Blog/>)
     },
     {
-      anchor: 'fp-contact',
+      anchor: 'section-contact',
       title: 'Contact',
       icon: (<Icon.Info/>),
       section: (<Contact/>)

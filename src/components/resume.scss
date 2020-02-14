@@ -1,4 +1,4 @@
-[data-anchor='fp-resume'] {
+[data-anchor='section-resume'] {
   #download-resume {
     color: black;
     text-decoration: none;
@@ -12,7 +12,7 @@
 }
 
 .App[theme='dark'] {
-  [data-anchor='fp-resume'] {
+  [data-anchor='section-resume'] {
     #download-resume {
       span {
         background: var(--dark-accent2);
@@ -22,7 +22,7 @@
 }
 
 .App[theme='light'] {
-  [data-anchor='fp-resume'] {
+  [data-anchor='section-resume'] {
     #download-resume {
       span {
         background: var(--lv2-accent5);

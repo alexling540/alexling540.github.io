@@ -1,4 +1,4 @@
-[data-anchor='fp-contact'] {
+[data-anchor='section-contact'] {
   .half {
     width: 50%;
     float: left;
@@ -8,6 +8,7 @@
     list-style-type: none;
     a {
       text-decoration: none;
+      transition: all 1s ease-in-out;
     }
     div {
       padding: 3vh 3vw;
@@ -44,15 +45,19 @@
       border: none;
       padding: 1.5vh 3.5vw;
       font-weight: bold;
+      cursor: pointer;
     }
     div {
       padding: 2vh 2vw;
     }
   }
+  ::placeholder {
+    transition: 1s ease-in-out;
+  }
 }
 
 @media screen and (max-device-width: 480px) and (orientation: portrait) {
-  [data-anchor='fp-contact'] {
+  [data-anchor='section-contact'] {
     .half {
       width: 100%;
     }
@@ -60,7 +65,7 @@
 }
 
 .App[theme='dark'] {
-  [data-anchor='fp-contact'] {
+  [data-anchor='section-contact'] {
     ul {
       a {
         color: white;
@@ -81,11 +86,14 @@
     button {
       background: var(--dark-accent2);
     }
+    ::placeholder {
+      color: var(--dark-accent5);
+    }
   }
 }
 
 .App[theme='light'] {
-  [data-anchor='fp-contact'] {
+  [data-anchor='section-contact'] {
     ul {
       a {
         color: black;
@@ -108,7 +116,7 @@
 }
 
 .App[theme='vaporwave'] {
-  [data-anchor='fp-contact'] {
+  [data-anchor='section-contact'] {
     ul {
       a {
         color: var(--vaporwave-accent9);

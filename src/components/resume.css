@@ -1,19 +1,19 @@
-[data-anchor=fp-resume] #download-resume {
+[data-anchor=section-resume] #download-resume {
   color: black;
   text-decoration: none;
 }
-[data-anchor=fp-resume] #download-resume > span {
+[data-anchor=section-resume] #download-resume > span {
   padding: 2vh 3vw;
 }
-[data-anchor=fp-resume] #download-resume > span svg, [data-anchor=fp-resume] #download-resume > span span {
+[data-anchor=section-resume] #download-resume > span svg, [data-anchor=section-resume] #download-resume > span span {
   vertical-align: middle;
 }
 
-.App[theme=dark] [data-anchor=fp-resume] #download-resume span {
+.App[theme=dark] [data-anchor=section-resume] #download-resume span {
   background: var(--dark-accent2);
 }
 
-.App[theme=light] [data-anchor=fp-resume] #download-resume span {
+.App[theme=light] [data-anchor=section-resume] #download-resume span {
   background: var(--lv2-accent5);
 }
 

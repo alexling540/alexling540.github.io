@@ -11,7 +11,7 @@ export default class Contact extends Component {
         <div className={'half'} style={{'textAlign':'left'}}>
           <ul>
             <li>
-              <a href={'#fp-contact'}>
+              <a href={'#section-contact'}>
                 <div>
                   <Icons.Phone/>
                   <span>Phone</span>

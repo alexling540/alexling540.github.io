@@ -246,7 +246,7 @@
 }
 .App[theme=dark] #menu-desktop li svg {
   background-image: linear-gradient(to bottom, transparent 50%, var(--dark-accent2) 50%);
-  stroke: var(--dark-accent5);
+  stroke: var(--dark-accent2);
 }
 .App[theme=dark] #menu-desktop li.active svg {
   stroke: var(--dark-accent3);
@@ -268,7 +268,10 @@
 }
 
 .App[theme=light] #menu .active a {
-  color: var(--light-accent3);
+  color: var(--lv2-accent3);
+}
+.App[theme=light] #menu-desktop {
+  color: black;
 }
 .App[theme=light] #menu-desktop #themeToggle {
   background: var(--lv2-accent5);
@@ -279,13 +282,13 @@
 }
 .App[theme=light] #menu-desktop li svg {
   background-image: linear-gradient(to bottom, transparent 50%, var(--lv2-accent5) 50%);
-  stroke: var(--lv2-accent4);
+  stroke: var(--lv2-accent5);
 }
 .App[theme=light] #menu-desktop li.active svg {
   stroke: var(--lv2-accent1);
 }
-.App[theme=light] #menu-desktop ul img {
-  background-image: linear-gradient(to bottom, transparent 50%, var(--light-accent2) 50%);
+.App[theme=light] #menu-desktop li img {
+  background-image: linear-gradient(to bottom, transparent 50%, var(--lv2-accent5) 50%);
 }
 .App[theme=light] #menu-desktop li a:after {
   background: var(--lv2-accent5);

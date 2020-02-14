@@ -1,26 +1,27 @@
-[data-anchor=fp-contact] .half {
+[data-anchor=section-contact] .half {
   width: 50%;
   float: left;
   overflow-x: hidden;
 }
-[data-anchor=fp-contact] ul {
+[data-anchor=section-contact] ul {
   list-style-type: none;
 }
-[data-anchor=fp-contact] ul a {
+[data-anchor=section-contact] ul a {
   text-decoration: none;
+  transition: all 1s ease-in-out;
 }
-[data-anchor=fp-contact] ul div {
+[data-anchor=section-contact] ul div {
   padding: 3vh 3vw;
   transition: background 0.5s ease-in-out;
 }
-[data-anchor=fp-contact] ul div svg {
+[data-anchor=section-contact] ul div svg {
   vertical-align: middle;
 }
-[data-anchor=fp-contact] ul div span {
+[data-anchor=section-contact] ul div span {
   padding-left: 2vmin;
   vertical-align: middle;
 }
-[data-anchor=fp-contact] form input, [data-anchor=fp-contact] form textarea {
+[data-anchor=section-contact] form input, [data-anchor=section-contact] form textarea {
   border: none;
   font-size: 3vmin;
   font-family: Lato, sans-serif;
@@ -30,82 +31,89 @@
   padding: 0.5rem 1rem;
   width: 100%;
 }
-[data-anchor=fp-contact] form textarea {
+[data-anchor=section-contact] form textarea {
   resize: vertical;
 }
-[data-anchor=fp-contact] form input:focus, [data-anchor=fp-contact] form textarea:focus {
+[data-anchor=section-contact] form input:focus, [data-anchor=section-contact] form textarea:focus {
   outline: none;
 }
-[data-anchor=fp-contact] form button {
+[data-anchor=section-contact] form button {
   font-size: 3vmin;
   font-family: Lato, sans-serif;
   border: none;
   padding: 1.5vh 3.5vw;
   font-weight: bold;
+  cursor: pointer;
 }
-[data-anchor=fp-contact] form div {
+[data-anchor=section-contact] form div {
   padding: 2vh 2vw;
+}
+[data-anchor=section-contact] ::placeholder {
+  transition: 1s ease-in-out;
 }
 
 @media screen and (max-device-width: 480px) and (orientation: portrait) {
-  [data-anchor=fp-contact] .half {
+  [data-anchor=section-contact] .half {
     width: 100%;
   }
 }
-.App[theme=dark] [data-anchor=fp-contact] ul a {
+.App[theme=dark] [data-anchor=section-contact] ul a {
   color: white;
 }
-.App[theme=dark] [data-anchor=fp-contact] ul div:hover {
+.App[theme=dark] [data-anchor=section-contact] ul div:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
-.App[theme=dark] [data-anchor=fp-contact] form input, .App[theme=dark] [data-anchor=fp-contact] form textarea {
+.App[theme=dark] [data-anchor=section-contact] form input, .App[theme=dark] [data-anchor=section-contact] form textarea {
   border-bottom-color: var(--dark-accent1);
   color: white;
 }
-.App[theme=dark] [data-anchor=fp-contact] form input:focus, .App[theme=dark] [data-anchor=fp-contact] form textarea:focus {
+.App[theme=dark] [data-anchor=section-contact] form input:focus, .App[theme=dark] [data-anchor=section-contact] form textarea:focus {
   border-bottom-color: var(--dark-accent2);
 }
-.App[theme=dark] [data-anchor=fp-contact] button {
+.App[theme=dark] [data-anchor=section-contact] button {
   background: var(--dark-accent2);
 }
+.App[theme=dark] [data-anchor=section-contact] ::placeholder {
+  color: var(--dark-accent5);
+}
 
-.App[theme=light] [data-anchor=fp-contact] ul a {
+.App[theme=light] [data-anchor=section-contact] ul a {
   color: black;
 }
-.App[theme=light] [data-anchor=fp-contact] ul div:hover {
+.App[theme=light] [data-anchor=section-contact] ul div:hover {
   background: rgba(0, 0, 0, 0.2);
 }
-.App[theme=light] [data-anchor=fp-contact] form input, .App[theme=light] [data-anchor=fp-contact] form textarea {
+.App[theme=light] [data-anchor=section-contact] form input, .App[theme=light] [data-anchor=section-contact] form textarea {
   border-bottom-color: var(--lv2-accent4);
   color: black;
 }
-.App[theme=light] [data-anchor=fp-contact] form input:focus, .App[theme=light] [data-anchor=fp-contact] form textarea:focus {
+.App[theme=light] [data-anchor=section-contact] form input:focus, .App[theme=light] [data-anchor=section-contact] form textarea:focus {
   border-bottom-color: var(--lv2-accent5);
 }
-.App[theme=light] [data-anchor=fp-contact] button {
+.App[theme=light] [data-anchor=section-contact] button {
   background: var(--lv2-accent5);
 }
 
-.App[theme=vaporwave] [data-anchor=fp-contact] ul a {
+.App[theme=vaporwave] [data-anchor=section-contact] ul a {
   color: var(--vaporwave-accent9);
 }
-.App[theme=vaporwave] [data-anchor=fp-contact] ul div:hover {
+.App[theme=vaporwave] [data-anchor=section-contact] ul div:hover {
   background: rgba(0, 0, 0, 0.2);
 }
-.App[theme=vaporwave] [data-anchor=fp-contact] form input, .App[theme=vaporwave] [data-anchor=fp-contact] form textarea {
+.App[theme=vaporwave] [data-anchor=section-contact] form input, .App[theme=vaporwave] [data-anchor=section-contact] form textarea {
   border-bottom-color: var(--vaporwave-accent6);
   color: black;
 }
-.App[theme=vaporwave] [data-anchor=fp-contact] form input:focus, .App[theme=vaporwave] [data-anchor=fp-contact] form textarea:focus {
+.App[theme=vaporwave] [data-anchor=section-contact] form input:focus, .App[theme=vaporwave] [data-anchor=section-contact] form textarea:focus {
   border-bottom-color: var(--vaporwave-accent7);
 }
-.App[theme=vaporwave] [data-anchor=fp-contact] button {
+.App[theme=vaporwave] [data-anchor=section-contact] button {
   border: 2px solid var(--vaporwave-accent6);
   background: transparent;
   border-radius: 10px;
   color: var(--vaporwave-accent6);
 }
-.App[theme=vaporwave] [data-anchor=fp-contact] ::placeholder {
+.App[theme=vaporwave] [data-anchor=section-contact] ::placeholder {
   color: var(--vaporwave-accent6);
 }
 

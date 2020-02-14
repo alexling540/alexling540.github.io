@@ -253,7 +253,7 @@
     li {
       svg {
         background-image: linear-gradient(to bottom, transparent 50%, var(--dark-accent2) 50%);
-        stroke: var(--dark-accent5);
+        stroke: var(--dark-accent2);
       }
       &.active svg {
         stroke: var(--dark-accent3);
@@ -281,9 +281,10 @@
 
 .App[theme="light"] {
   #menu .active a {
-    color: var(--light-accent3);
+    color: var(--lv2-accent3);
   }
   #menu-desktop {
+    color: black;
     #themeToggle {
       background: var(--lv2-accent5);
       div:nth-child(2) {
@@ -291,18 +292,20 @@
         opacity: 1;
       }
     }
-    li svg {
-      background-image: linear-gradient(to bottom, transparent 50%, var(--lv2-accent5) 50%);
-      stroke: var(--lv2-accent4);
-    }
-    li.active svg {
-      stroke: var(--lv2-accent1);
-    }
-    ul img {
-      background-image: linear-gradient(to bottom, transparent 50%, var(--light-accent2) 50%);
-    }
-    li a:after {
-      background: var(--lv2-accent5);
+    li {
+      svg {
+        background-image: linear-gradient(to bottom, transparent 50%, var(--lv2-accent5) 50%);
+        stroke: var(--lv2-accent5);
+      }
+      &.active svg {
+        stroke: var(--lv2-accent1);
+      }
+      img {
+        background-image: linear-gradient(to bottom, transparent 50%, var(--lv2-accent5) 50%);
+      }
+      a:after {
+        background: var(--lv2-accent5);
+      }
     }
   }
   #menu-mobile {
