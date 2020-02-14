@@ -7,11 +7,9 @@
     margin-inline-end: 0;
     padding-inline-start: 0;
   }
-
   li {
     display: inline-block;
   }
-
   a {
     text-decoration: none;
     color: black;
@@ -48,6 +46,11 @@
         padding: 2vh;
         stroke: black;
       }
+      img {
+        width: 7vh;
+        height: 7vh;
+        padding: 2vh;
+      }
     }
   }
   li {
@@ -69,7 +72,7 @@
       content: "";
       position: relative;
       display: block;
-      height: 3px;
+      height: 0.5vh;
       bottom: 1vh;
       left: 0;
       right: 0;
@@ -247,18 +250,20 @@
         opacity: 1;
       }
     }
-    li svg {
-      background-image: linear-gradient(to bottom, transparent 50%, var(--dark-accent2) 50%);
-      stroke: var(--dark-accent5);
-    }
-    li.active svg {
-      stroke: var(--dark-accent3);
-    }
-    ul img {
-       background-image: linear-gradient(to bottom, transparent 50%, var(--dark-accent2) 50%);
-    }
-    li a:after {
-      background: var(--dark-accent2);
+    li {
+      svg {
+        background-image: linear-gradient(to bottom, transparent 50%, var(--dark-accent2) 50%);
+        stroke: var(--dark-accent5);
+      }
+      &.active svg {
+        stroke: var(--dark-accent3);
+      }
+      img {
+        background-image: linear-gradient(to bottom, transparent 50%, var(--dark-accent2) 50%);
+      }
+      a:after {
+        background: var(--dark-accent2);
+      }
     }
   }
   #menu-mobile {
@@ -280,24 +285,24 @@
   }
   #menu-desktop {
     #themeToggle {
-      background: var(--light-accent3);
+      background: var(--lv2-accent5);
       div:nth-child(2) {
         visibility: visible;
         opacity: 1;
       }
     }
     li svg {
-      background-image: linear-gradient(to bottom, transparent 50%, var(--light-accent2) 50%);
-      stroke: var(--light-accent3);
+      background-image: linear-gradient(to bottom, transparent 50%, var(--lv2-accent5) 50%);
+      stroke: var(--lv2-accent4);
     }
     li.active svg {
-      stroke: var(--light-accent5);
+      stroke: var(--lv2-accent1);
     }
     ul img {
       background-image: linear-gradient(to bottom, transparent 50%, var(--light-accent2) 50%);
     }
     li a:after {
-      background: var(--light-accent2);
+      background: var(--lv2-accent5);
     }
   }
   #menu-mobile {
@@ -306,6 +311,33 @@
     }
     input ~ nav {
       background: var(--light-accent4);
+    }
+  }
+}
+
+.App[theme='vaporwave'] {
+  #menu-desktop {
+    #themeToggle {
+      background: var(--vaporwave-accent4);
+      div:nth-child(3) {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+    li {
+      svg {
+        background-image: linear-gradient(to bottom, transparent 50%, var(--vaporwave-accent4) 50%);
+        stroke: var(--vaporwave-accent6);
+      }
+      &.active svg {
+        stroke: var(--vaporwave-accent1);
+      }
+      img {
+        background-image: linear-gradient(to bottom, transparent 50%, var(--dark-accent2) 50%);
+      }
+      a:after {
+        background: var(--vaporwave-accent6);
+      }
     }
   }
 }

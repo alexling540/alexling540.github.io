@@ -41,6 +41,7 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -64,72 +65,77 @@
     transform: rotate(360deg);
   }
 }
+
 .section {
   padding: 0 10vw;
   transition: all 1s cubic-bezier(0.25, 0, 0.41, 1);
 }
 
-.App[theme=dark] .section {
-  background: var(--dark-accent3);
-}
-.App[theme=dark] .section:last-child {
-  background: var(--dark-accent6);
-}
-.App[theme=dark] .vertical {
-  background: var(--dark-accent2);
-}
-.App[theme=dark] .vertical:after {
-  border-color: var(--dark-accent2) transparent transparent transparent;
-}
-
-.App[theme=light] .section {
-  background: var(--lv2-accent1);
-}
-.App[theme=light] .section:last-child {
-  background: var(--lv2-accent2);
-}
-.App[theme=light] .vertical {
-  background: var(--lv2-accent5);
-}
-.App[theme=light] .vertical:after {
-  border-color: var(--lv2-accent5) transparent transparent transparent;
+.App[theme="dark"] {
+    .section {
+    background: var(--dark-accent3);
+  }
+  .section:last-child {
+    background: var(--dark-accent6);
+  }
+  .vertical {
+    background: var(--dark-accent2);
+  }
+  .vertical:after {
+    border-color: var(--dark-accent2) transparent transparent transparent;
+  }
 }
 
-.App[theme=vaporwave] .section {
-  background: var(--vaporwave-accent1);
+.App[theme="light"] {
+  .section {
+    background: var(--lv2-accent1);
+  }
+  .section:last-child {
+    background: var(--lv2-accent2);
+  }
+  .vertical {
+    background: var(--lv2-accent5);
+  }
+  .vertical:after {
+    border-color: var(--lv2-accent5) transparent transparent transparent;
+  }
 }
-.App[theme=vaporwave] .vertical {
-  background: var(--vaporwave-accent4);
-}
-.App[theme=vaporwave] .vertical:after {
-  border-color: var(--vaporwave-accent4) transparent transparent transparent;
+
+.App[theme="vaporwave"] {
+  .section {
+    background: var(--vaporwave-accent1);
+  }
+  .vertical {
+    background: var(--vaporwave-accent4);
+    &:after {
+      border-color: var(--vaporwave-accent4) transparent transparent transparent;
+    }
+  }
 }
 
 .vertical {
   transform: rotate(90deg) translateY(-90vw) translateX(-42vh);
   transform-origin: left top 0;
   position: absolute;
-  font-family: "Lato Light", sans-serif;
+  font-family: 'Lato Light', sans-serif;
   font-size: 9vh;
   padding: 0 10vh;
   height: 11vh;
   transition: all 1s cubic-bezier(0.25, 0, 0.41, 1);
-}
-.vertical:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  margin-left: calc(10vh - 1px);
-  border-style: solid;
-  border-width: 11vh 11vh 0 0;
-  transition: all 1s cubic-bezier(0.25, 0, 0.41, 1);
+  &:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin-left: calc(10vh - 1px);
+    border-style: solid;
+    border-width: 11vh 11vh 0 0;
+    transition: all 1s cubic-bezier(0.25, 0, 0.41, 1);
+  }
 }
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1025px){
   .vertical {
     display: none;
   }
 }
-
-/*# sourceMappingURL=App.css.map */

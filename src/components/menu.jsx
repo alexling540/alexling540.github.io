@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import * as Icon from 'react-feather';
 import './menu.scss';
+import vaporwave from '../imgs/vaporwave_trees.png';
 
 export default class Menu extends Component {
 
@@ -19,6 +20,9 @@ export default class Menu extends Component {
             </div>
             <div onClick={() => this.props.setTheme('dark')}>
               <Icon.Sun strokeWidth={'1.5'}/>
+            </div>
+            <div onClick={() => this.props.setTheme('dark')}>
+              <img src={vaporwave} alt={''}/>
             </div>
           </div>
           <ul>
