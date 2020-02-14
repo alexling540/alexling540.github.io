@@ -5,7 +5,7 @@ export default class About extends Component {
   render() {
     return (
       <div>
-        About Me
+        <h1>About Me</h1>
         <div className={'vertical'}>
           About Me
         </div>

@@ -4,9 +4,7 @@ export default class Projects extends Component {
   render() {
     return(
       <div>
-        <section data-section={'projects'}>
-          Projects
-        </section>
+        <h1>Projects</h1>
         <div className={'vertical'}>
           Projects
         </div>

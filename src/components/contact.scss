@@ -1,0 +1,137 @@
+[data-anchor='fp-contact'] {
+  .half {
+    width: 50%;
+    float: left;
+    overflow-x: hidden;
+  }
+  ul {
+    list-style-type: none;
+    a {
+      text-decoration: none;
+    }
+    div {
+      padding: 3vh 3vw;
+      transition: background 0.5s ease-in-out;
+      svg {
+        vertical-align: middle;
+      }
+      span {
+        padding-left: 2vmin;
+        vertical-align: middle;
+      }
+    }
+  }
+  form {
+    input, textarea {
+      border: none;
+      font-size: 3vmin;
+      font-family: Lato, sans-serif;
+      border-bottom: 0.5vmin solid black;
+      transition: 0.3s ease-in-out;
+      background: none;
+      padding: 0.5rem 1rem;
+      width: 100%;
+    }
+    textarea {
+      resize: vertical;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+    }
+    button {
+      font-size: 3vmin;
+      font-family: Lato, sans-serif;
+      border: none;
+      padding: 1.5vh 3.5vw;
+      font-weight: bold;
+    }
+    div {
+      padding: 2vh 2vw;
+    }
+  }
+}
+
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+  [data-anchor='fp-contact'] {
+    .half {
+      width: 100%;
+    }
+  }
+}
+
+.App[theme='dark'] {
+  [data-anchor='fp-contact'] {
+    ul {
+      a {
+        color: white;
+      }
+      div:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+    }
+    form {
+      input, textarea {
+        border-bottom-color: var(--dark-accent1);
+        color: white;
+      }
+      input:focus, textarea:focus {
+        border-bottom-color: var(--dark-accent2);
+      }
+    }
+    button {
+      background: var(--dark-accent2);
+    }
+  }
+}
+
+.App[theme='light'] {
+  [data-anchor='fp-contact'] {
+    ul {
+      a {
+        color: black;
+      }
+      div:hover {
+        background: rgba(0, 0, 0, 0.2);
+      }
+    }
+    form input, form textarea {
+      border-bottom-color: var(--lv2-accent4);
+      color: black;
+    }
+    form input:focus, form textarea:focus {
+      border-bottom-color: var(--lv2-accent5);
+    }
+    button {
+      background: var(--lv2-accent5);
+    }
+  }
+}
+
+.App[theme='vaporwave'] {
+  [data-anchor='fp-contact'] {
+    ul {
+      a {
+        color: var(--vaporwave-accent9);
+      }
+      div:hover {
+        background: rgba(0, 0, 0, 0.2);
+      }
+    }
+    form input, form textarea {
+      border-bottom-color: var(--vaporwave-accent6);
+      color: black;
+    }
+    form input:focus, form textarea:focus {
+      border-bottom-color: var(--vaporwave-accent7);
+    }
+    button {
+      border: 2px solid var(--vaporwave-accent6);
+      background: transparent;
+      border-radius: 10px;
+      color: var(--vaporwave-accent6);
+    }
+    ::placeholder {
+      color: var(--vaporwave-accent6)
+    }
+  }
+}

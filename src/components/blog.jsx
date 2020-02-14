@@ -4,9 +4,7 @@ export default class Blog extends Component {
   render() {
     return(
       <div>
-        <section data-section={'blog'}>
-          Blog
-        </section>
+        <h1>Blog</h1>
         <div className={'vertical'}>
           Blog
         </div>
