@@ -12,7 +12,7 @@
     }
     div {
       padding: 3vh 3vw;
-      transition: background 0.5s ease-in-out;
+      transition: color 0.25s ease-in-out;
       svg {
         vertical-align: middle;
       }
@@ -71,7 +71,7 @@
         color: white;
       }
       div:hover {
-        background-color: rgba(255, 255, 255, 0.2);
+        color: var(--dark-accent2);
       }
     }
     form {

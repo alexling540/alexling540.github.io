@@ -1,7 +1,5 @@
 import React, {Component} from "react";
 import * as Icons from 'react-feather';
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
-import {Timeline, TimelineEvent} from 'react-event-timeline'
 import 'react-vertical-timeline-component/style.min.css';
 import './resume.scss';
 
@@ -18,7 +16,7 @@ export default class Resume extends Component {
             <Icons.Download/>
           </span>
         </a>
-        <Timeline>
+        {/*<Timeline>
           <TimelineEvent title="John Doe sent a SMS"
                          createdAt="2016-09-12 10:06 PM"
           >
