@@ -111,7 +111,6 @@
   font-family: "Lato Light", sans-serif;
   font-size: 8.5vh;
   height: 11vh;
-  padding: 0 10vh;
   transition: all 1s cubic-bezier(0.25, 0, 0.41, 1);
 }
 #menu-desktop #menu-vertical-wrapper .vertical-title:after {
@@ -119,7 +118,6 @@
   position: absolute;
   width: 0;
   height: 0;
-  margin-left: 10vh;
   border-style: solid;
   border-width: 11vh 11vh 0 0;
   transition: all 1s cubic-bezier(0.25, 0, 0.41, 1);
@@ -129,11 +127,15 @@
   opacity: 0;
   visibility: hidden;
   transition: all 1s ease-in-out;
+  padding: 0 10vh;
 }
 #menu-desktop #menu-vertical-wrapper .vertical-title div.active {
   display: inline-block;
   opacity: 1;
   visibility: visible;
+}
+#menu-desktop #menu-vertical-wrapper .vertical-title div:first-child, #menu-desktop #menu-vertical-wrapper .vertical-title div:last-child {
+  display: none;
 }
 
 #menu-mobile {
