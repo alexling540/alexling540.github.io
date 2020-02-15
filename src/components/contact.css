@@ -10,9 +10,11 @@
   text-decoration: none;
   transition: all 1s ease-in-out;
 }
+[data-anchor=section-contact] ul a:hover {
+  transition: all 0.3s ease-in-out;
+}
 [data-anchor=section-contact] ul div {
   padding: 3vh 3vw;
-  transition: color 0.25s ease-in-out;
 }
 [data-anchor=section-contact] ul div svg {
   vertical-align: middle;
@@ -44,6 +46,7 @@
   padding: 1.5vh 3.5vw;
   font-weight: bold;
   cursor: pointer;
+  transition: background 0.3s ease-in-out;
 }
 [data-anchor=section-contact] form div {
   padding: 2vh 2vw;
@@ -60,7 +63,7 @@
 .App[theme=dark] [data-anchor=section-contact] ul a {
   color: white;
 }
-.App[theme=dark] [data-anchor=section-contact] ul div:hover {
+.App[theme=dark] [data-anchor=section-contact] ul a:hover {
   color: var(--dark-accent2);
 }
 .App[theme=dark] [data-anchor=section-contact] form input, .App[theme=dark] [data-anchor=section-contact] form textarea {
@@ -71,6 +74,9 @@
   border-bottom-color: var(--dark-accent2);
 }
 .App[theme=dark] [data-anchor=section-contact] button {
+  background: var(--dark-accent1);
+}
+.App[theme=dark] [data-anchor=section-contact] button:hover {
   background: var(--dark-accent2);
 }
 .App[theme=dark] [data-anchor=section-contact] ::placeholder {
@@ -80,8 +86,8 @@
 .App[theme=light] [data-anchor=section-contact] ul a {
   color: black;
 }
-.App[theme=light] [data-anchor=section-contact] ul div:hover {
-  background: rgba(0, 0, 0, 0.2);
+.App[theme=light] [data-anchor=section-contact] ul a:hover {
+  color: var(--lv2-accent5);
 }
 .App[theme=light] [data-anchor=section-contact] form input, .App[theme=light] [data-anchor=section-contact] form textarea {
   border-bottom-color: var(--lv2-accent4);
@@ -91,6 +97,9 @@
   border-bottom-color: var(--lv2-accent5);
 }
 .App[theme=light] [data-anchor=section-contact] button {
+  background: var(--lv2-accent4);
+}
+.App[theme=light] [data-anchor=section-contact] button:hover {
   background: var(--lv2-accent5);
 }
 

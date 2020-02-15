@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import * as Icons from 'react-feather';
+import { Timeline } from "react-event-timeline";
 import 'react-vertical-timeline-component/style.min.css';
+import { Line } from "rc-progress";
 import './resume.scss';
 
 export default class Resume extends Component {

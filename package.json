@@ -11,6 +11,7 @@
     "@testing-library/user-event": "^8.1.0",
     "eslint": "^6.8.0",
     "node-sass": "^4.13.1",
+    "rc-progress": "^2.5.2",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
@@ -21,6 +22,7 @@
     "react-scripts": "3.3.1",
     "react-vertical-timeline-component": "^2.5.0",
     "tsutils": "^3.17.1",
+    "typed.js": "^2.0.11",
     "typeface-lato": "^0.0.75",
     "typescript": "^3.7.5"
   },
