@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import * as Icons from 'react-feather';
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import './resume.scss';
 
@@ -8,9 +7,6 @@ export default class Resume extends Component {
   render() {
     return(
       <div>
-        <div className={'vertical'}>
-          Resume
-        </div>
         <h1>Resume</h1>
         <a href={'https://drive.google.com/file/d/1K1iig6_iW95FU5qU2SLp9ZqPaJKFrN82/view?usp=sharing'} target="_blank" rel="noopener noreferrer" id={'download-resume'}>
           <span>
@@ -20,6 +16,21 @@ export default class Resume extends Component {
             <Icons.Download/>
           </span>
         </a>
+        {/*<Timeline>
+          <TimelineEvent title="John Doe sent a SMS"
+                         createdAt="2016-09-12 10:06 PM"
+          >
+            I received the payment for $543. Should be shipping the item within a couple of hours.
+          </TimelineEvent>
+          <TimelineEvent
+            title="You sent an email to John Doe"
+            createdAt="2016-09-11 09:06 AM"
+          >
+            Like we talked, you said that you would share the shipment details? This is an urgent order and so I
+            am losing patience. Can you expedite the process and pls do share the details asap. Consider this a
+            gentle reminder if you are on track already!
+          </TimelineEvent>
+        </Timeline>
         {/*<div>
         <VerticalTimeline
           animate={false}

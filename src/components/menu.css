@@ -25,6 +25,53 @@
   float: right;
   margin-right: 1vh;
 }
+#menu-desktop > ul li {
+  padding: 2vh 0.5vw;
+}
+#menu-desktop > ul li svg {
+  height: 5vh;
+  width: 5vh;
+  padding: 1vh;
+  background-size: 100% 200%;
+  transition: background-position 1s cubic-bezier(0.25, 0, 0.41, 1), stroke 1.5s ease;
+}
+#menu-desktop > ul li img {
+  height: 5vh;
+  padding: 1vh;
+  background-size: 100% 200%;
+  transition: background-position 1s cubic-bezier(0.25, 0, 0.41, 1);
+}
+#menu-desktop > ul li a:after {
+  content: "";
+  position: relative;
+  display: block;
+  height: 0.5vh;
+  bottom: 1vh;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition-delay: 3s;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#menu-desktop > ul li:not(.active):hover a:after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+#menu-desktop > ul li .nav-title {
+  position: absolute;
+  display: block;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#menu-desktop > ul li:not(.active):hover .nav-title {
+  visibility: visible;
+  transform: scaleX(1);
+}
+#menu-desktop > ul li.active svg, #menu-desktop > ul li.active img {
+  background-position: 0 100%;
+}
 #menu-desktop #themeToggle {
   display: inline;
   float: right;
@@ -52,55 +99,43 @@
   height: 7vh;
   padding: 2vh;
 }
-#menu-desktop li {
-  padding: 2vh 0.5vw;
-}
-#menu-desktop li svg {
-  height: 5vh;
-  width: 5vh;
-  padding: 1vh;
-  background-size: 100% 200%;
-  transition: background-position 1s cubic-bezier(0.25, 0, 0.41, 1), stroke 1.5s ease;
-}
-#menu-desktop li img {
-  height: 5vh;
-  padding: 1vh;
-  background-size: 100% 200%;
-  transition: background-position 1s cubic-bezier(0.25, 0, 0.41, 1);
-}
-#menu-desktop li a:after {
-  content: "";
+#menu-desktop #menu-vertical-wrapper {
+  transform: rotate(90deg);
   position: relative;
-  display: block;
-  height: 0.5vh;
-  bottom: 1vh;
-  left: 0;
-  right: 0;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition-delay: 3s;
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  top: 11vh;
+  float: right;
 }
-#menu-desktop li:not(.active):hover a:after {
-  visibility: visible;
-  transform: scaleX(1);
-}
-#menu-desktop li #title {
+#menu-desktop #menu-vertical-wrapper .vertical-title {
+  display: inline-block;
   position: absolute;
-  display: block;
+  font-family: "Lato Light", sans-serif;
+  font-size: 8.5vh;
+  height: 11vh;
+  transition: all 1s cubic-bezier(0.25, 0, 0.41, 1);
+}
+#menu-desktop #menu-vertical-wrapper .vertical-title:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 11vh 11vh 0 0;
+  transition: all 1s cubic-bezier(0.25, 0, 0.41, 1);
+}
+#menu-desktop #menu-vertical-wrapper .vertical-title div {
+  display: none;
+  opacity: 0;
   visibility: hidden;
-  transform: scaleX(0);
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 1s ease-in-out;
+  padding: 0 10vh;
 }
-#menu-desktop li:not(.active):hover #title {
+#menu-desktop #menu-vertical-wrapper .vertical-title div.active {
+  display: inline-block;
+  opacity: 1;
   visibility: visible;
-  transform: scaleX(1);
 }
-#menu-desktop .active svg {
-  background-position: 0 100%;
-}
-#menu-desktop .active img {
-  background-position: 0 100%;
+#menu-desktop #menu-vertical-wrapper .vertical-title div:first-child, #menu-desktop #menu-vertical-wrapper .vertical-title div:last-child {
+  display: none;
 }
 
 #menu-mobile {
@@ -234,8 +269,11 @@
 .App[theme=dark] #menu .active a {
   color: var(--dark-accent2);
 }
-.App[theme=dark] #menu-desktop {
-  color: white;
+.App[theme=dark] #menu-desktop #menu-vertical-wrapper .vertical-title {
+  background: var(--dark-accent2);
+}
+.App[theme=dark] #menu-desktop #menu-vertical-wrapper .vertical-title:after {
+  border-color: var(--dark-accent2) transparent transparent transparent;
 }
 .App[theme=dark] #menu-desktop #themeToggle {
   background: var(--dark-accent2);
@@ -243,6 +281,9 @@
 .App[theme=dark] #menu-desktop #themeToggle div:nth-child(1) {
   visibility: visible;
   opacity: 1;
+}
+.App[theme=dark] #menu-desktop li {
+  color: white;
 }
 .App[theme=dark] #menu-desktop li svg {
   background-image: linear-gradient(to bottom, transparent 50%, var(--dark-accent2) 50%);
@@ -273,6 +314,12 @@
 .App[theme=light] #menu-desktop {
   color: black;
 }
+.App[theme=light] #menu-desktop #menu-vertical-wrapper .vertical-title {
+  background: var(--lv2-accent5);
+}
+.App[theme=light] #menu-desktop #menu-vertical-wrapper .vertical-title:after {
+  border-color: var(--lv2-accent5) transparent transparent transparent;
+}
 .App[theme=light] #menu-desktop #themeToggle {
   background: var(--lv2-accent5);
 }
@@ -300,6 +347,12 @@
   background: var(--light-accent4);
 }
 
+.App[theme=vaporwave] #menu-desktop #menu-vertical-wrapper .vertical-title {
+  background: var(--vaporwave-accent4);
+}
+.App[theme=vaporwave] #menu-desktop #menu-vertical-wrapper .vertical-title:after {
+  border-color: var(--vaporwave-accent4) transparent transparent transparent;
+}
 .App[theme=vaporwave] #menu-desktop #themeToggle {
   background: var(--vaporwave-accent4);
 }

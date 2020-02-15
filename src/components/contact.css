@@ -12,7 +12,7 @@
 }
 [data-anchor=section-contact] ul div {
   padding: 3vh 3vw;
-  transition: background 0.5s ease-in-out;
+  transition: color 0.25s ease-in-out;
 }
 [data-anchor=section-contact] ul div svg {
   vertical-align: middle;
@@ -61,7 +61,7 @@
   color: white;
 }
 .App[theme=dark] [data-anchor=section-contact] ul div:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--dark-accent2);
 }
 .App[theme=dark] [data-anchor=section-contact] form input, .App[theme=dark] [data-anchor=section-contact] form textarea {
   border-bottom-color: var(--dark-accent1);

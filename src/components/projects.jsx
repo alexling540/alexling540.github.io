@@ -5,9 +5,6 @@ export default class Projects extends Component {
     return(
       <div>
         <h1>Projects</h1>
-        <div className={'vertical'}>
-          Projects
-        </div>
       </div>
     );
   }

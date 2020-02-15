@@ -75,30 +75,10 @@ h1 {
 }
 
 .section {
-  padding: 0 10vw;
+  padding: 0 11vw 0 5vw;
   transition: all 1s cubic-bezier(0.25, 0, 0.41, 1);
 }
 
-.vertical {
-  transform: rotate(90deg) translateY(-90vw) translateX(-39vh);
-  transform-origin: left top 0;
-  position: absolute;
-  font-family: 'Lato Light', sans-serif;
-  font-size: 9vh;
-  padding: 0 10vh;
-  height: 11vh;
-  transition: all 1s cubic-bezier(0.25, 0, 0.41, 1);
-  &:after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-    margin-left: 10vh;
-    border-style: solid;
-    border-width: 11vh 11vh 0 0;
-    transition: all 1s cubic-bezier(0.25, 0, 0.41, 1);
-  }
-}
 
 .App[theme="dark"] {
   .section {
@@ -110,14 +90,6 @@ h1 {
       color: white;
       &:first-letter {
         color: var(--dark-accent2);
-      }
-    }
-    .vertical {
-      border-left: 0.1vmin solid var(--dark-accent2);
-      border-right: 0.1vmin solid var(--dark-accent2);
-      background: var(--dark-accent2);
-      &:after {
-        border-color: var(--dark-accent2) transparent transparent transparent;
       }
     }
   }
@@ -135,14 +107,6 @@ h1 {
         color: var(--lv2-accent5);
       }
     }
-    .vertical {
-      border-left: 0.1vmin solid var(--lv2-accent5);
-      border-right: 0.1vmin solid var(--lv2-accent5);
-      background: var(--lv2-accent5);
-      &:after {
-        border-color: var(--lv2-accent5) transparent transparent transparent;
-      }
-    }
   }
 }
 
@@ -156,18 +120,5 @@ h1 {
         color: var(--vaporwave-accent7);
       }
     }
-    .vertical {
-      border-right: 0.1vmin solid var(--vaporwave-accent4);
-      background: var(--vaporwave-accent4);
-      &:after {
-        border-color: var(--vaporwave-accent4) transparent transparent transparent;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 1025px){
-  .vertical {
-    display: none;
   }
 }
