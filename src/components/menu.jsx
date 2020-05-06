@@ -14,15 +14,6 @@ export default class Menu extends Component {
     return(
       <div id={'menu'}>
         <div id={'menu-desktop'}>
-          <div id={'menu-vertical-wrapper'}>
-            <div className={'vertical-title'}>
-              {this.props.sections.map((element, index) => (
-                <div data-menuanchor={element.anchor} key={index}>
-                  {element.title}
-                </div>
-              ))}
-            </div>
-          </div>
           <div id={'themeToggle'}>
             <div onClick={() => this.props.setTheme('light')}>
               <Icon.Moon strokeWidth={'1.5'}/>

@@ -4,9 +4,9 @@ import './about.scss'
 export default class About extends Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <h1>About Me</h1>
-      </div>
+      </React.Fragment>
     );
   }
 

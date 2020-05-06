@@ -9,7 +9,6 @@ import Introduction from './components/intro';
 import About from './components/about';
 import Resume from './components/resume';
 import Projects from './components/projects';
-import Blog from './components/blog';
 import Contact from './components/contact';
 
 // https://visme.co/blog/website-color-schemes/
@@ -52,12 +51,6 @@ function App() {
       title: 'Projects',
       icon: (<Icon.Package/>),
       section: (<Projects/>)
-    },
-    {
-      anchor: 'section-blog',
-      title: 'Blog',
-      icon: (<Icon.Book/>),
-      section: (<Blog/>)
     },
     {
       anchor: 'section-contact',

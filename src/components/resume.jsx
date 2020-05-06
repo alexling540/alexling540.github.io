@@ -8,7 +8,7 @@ import './resume.scss';
 export default class Resume extends Component {
   render() {
     return(
-      <div>
+      <React.Fragment>
         <h1>Resume</h1>
         <a href={'https://drive.google.com/file/d/1K1iig6_iW95FU5qU2SLp9ZqPaJKFrN82/view?usp=sharing'} target="_blank" rel="noopener noreferrer" id={'download-resume'}>
           <span>
@@ -64,7 +64,7 @@ export default class Resume extends Component {
           </VerticalTimelineElement>
         </VerticalTimeline>
         </div>*/}
-      </div>
+      </React.Fragment>
     )
   }
 }

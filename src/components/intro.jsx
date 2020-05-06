@@ -1,13 +1,23 @@
 import React, {Component} from "react";
+import ReactTyped from "../lib/ReactTyped";
+import './intro.scss';
 
 export default class Introduction extends Component {
   render() {
     return(
-      <div>
-        <div>
-          Welcome
+      <React.Fragment>
+        <div className={'intro-picture'} style={{
+          'backgroundImage': 'url("https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg")'
+        }}>
         </div>
-      </div>
+        <div className={'intro-banner'}>
+          <ReactTyped
+            strings={[
+              'Welcome'
+            ]}
+          />
+        </div>
+      </React.Fragment>
     );
   }
 }

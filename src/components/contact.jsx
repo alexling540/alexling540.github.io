@@ -6,7 +6,7 @@ import './contact.scss';
 export default class Contact extends Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <h1>Contact Me</h1>
         <div className={'half'} style={{'textAlign':'left'}}>
           <ul>
@@ -62,7 +62,7 @@ export default class Contact extends Component {
             </Button>
           </Form>
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }
