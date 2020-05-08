@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {BrowserView, MobileView} from "react-device-detect";
 import * as Icon from 'react-feather';
 import './menu.scss';
 import vaporwave from '../imgs/vaporwave_trees.png';
@@ -13,7 +14,7 @@ export default class Menu extends Component {
   render() {
     return(
       <div id={'menu'}>
-        <div id={'menu-desktop'}>
+        <BrowserView id={'test'} viewClassName={'menu-desktop'}>
           <div id={'themeToggle'}>
             <div onClick={() => this.props.setTheme('light')}>
               <Icon.Moon strokeWidth={'1.5'}/>
@@ -35,8 +36,8 @@ export default class Menu extends Component {
               </li>
             ))}
           </ul>
-        </div>
-        <div id={'menu-mobile'}>
+        </BrowserView>
+        <MobileView viewClassName={'menu-mobile'}>
           <input id="burgerCheckbox" type="checkbox"/>
           <label htmlFor="burgerCheckbox">
             <span></span>
@@ -52,7 +53,7 @@ export default class Menu extends Component {
               ))}
             </ul>
           </nav>
-        </div>
+        </MobileView>
       </div>
     )
   }
