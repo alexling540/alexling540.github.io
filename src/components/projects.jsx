@@ -6,12 +6,12 @@ export default class Projects extends Component {
   render() {
     const cards = [
       {
-        title: 'Test',
+        title: 'Ag\'s Guide to Foods And Brews',
         image: '',
         desc: '',
         item: [],
-        link: '',
-        repo: ''
+        link: 'https://pages.github.tamu.edu/jarrett/Group7FinalProject/#/',
+        repo: 'https://github.tamu.edu/jarrett/Group7FinalProject'
       }
     ];
 
