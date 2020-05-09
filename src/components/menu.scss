@@ -13,7 +13,7 @@
   }
 }
 
-.menu-desktop {
+#menu .menu-desktop {
   position: fixed;
   z-index: 10;
   right: 0;
@@ -105,7 +105,7 @@
   }
 }
 
-.menu-mobile {
+#menu .menu-mobile {
   position: fixed;
   z-index: 10;
   right: 0;
@@ -237,8 +237,8 @@
   }
 }
 
-.App[theme="dark"] {
-  #menu .active a {
+.App[theme="dark"] #menu {
+  .active a {
     color: var(--dark-accent2);
   }
   .menu-desktop {
@@ -279,8 +279,8 @@
   }
 }
 
-.App[theme="light"] {
-  #menu .active a {
+.App[theme="light"] #menu {
+  .active a {
     color: var(--lv2-accent3);
   }
   .menu-desktop {
@@ -326,7 +326,7 @@
   }
 }
 
-.App[theme='vaporwave'] {
+.App[theme='vaporwave'] #menu {
   .menu-desktop {
     #themeToggle {
       background: var(--vaporwave-accent4);

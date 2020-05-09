@@ -1,7 +1,20 @@
 import React, {Component} from "react";
 import {BrowserView, MobileView} from "react-device-detect";
 import Swiper from 'react-id-swiper';
-import {Card, CardColumns} from "react-bootstrap";
+import {
+  Card,
+  CardColumns
+} from "react-bootstrap";
+import './projects.scss';
+import 'swiper/swiper.scss';
+
+const params = {
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: false
+  },
+};
 
 export default class Projects extends Component {
 
@@ -22,23 +35,44 @@ export default class Projects extends Component {
       }
     ];
 
-    const params = {
-      spaceBetween: 30,
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        dynamicBullets: true
-      }
-    };
-
     return(
       <React.Fragment>
         <h1>Projects</h1>
-        <BrowserView renderWithFragment>
-          <CardColumns>
-            {cards.map((element, i) => (
-              <Card key={i}>
+        {/*<BrowserView renderWithFragment>*/}
+        {/*  <CardColumns>*/}
+        {/*    {cards.map((element, i) => (*/}
+        {/*      <Card key={i}>*/}
+        {/*        <Card.Img variant="top" src={element.image} />*/}
+        {/*        <Card.Body>*/}
+        {/*          <Card.Title>{element.title}</Card.Title>*/}
+        {/*          <Card.Text>{element.desc}</Card.Text>*/}
+        {/*          <Card.Link href={element.link}>Live</Card.Link>*/}
+        {/*          <Card.Link href={element.repo}>Github</Card.Link>*/}
+        {/*        </Card.Body>*/}
+        {/*      </Card>*/}
+        {/*    ))}*/}
+        {/*  </CardColumns>*/}
+        {/*</BrowserView>*/}
+        {/*<MobileView renderWithFragment>*/}
+        {/*  <Carousel interval={null} controls={false}>*/}
+        {/*    {cards.map((element, i) => (*/}
+        {/*      <CarouselItem as={'Card'} key={i}>*/}
+        {/*        <Card>*/}
+        {/*          <Card.Img variant="top" src={element.image} />*/}
+        {/*          <Card.Body>*/}
+        {/*            <Card.Title>{element.title}</Card.Title>*/}
+        {/*            <Card.Text>{element.desc}</Card.Text>*/}
+        {/*            <Card.Link href={element.link}>Live</Card.Link>*/}
+        {/*            <Card.Link href={element.repo}>Github</Card.Link>*/}
+        {/*          </Card.Body>*/}
+        {/*        </Card>*/}
+        {/*      </CarouselItem>*/}
+        {/*    ))}*/}
+        {/*  </Carousel>*/}
+        <Swiper {...params}>
+          {cards.map((element, i) => (
+            <div key={i}>
+              <Card>
                 <Card.Img variant="top" src={element.image} />
                 <Card.Body>
                   <Card.Title>{element.title}</Card.Title>
@@ -47,24 +81,10 @@ export default class Projects extends Component {
                   <Card.Link href={element.repo}>Github</Card.Link>
                 </Card.Body>
               </Card>
-            ))}
-          </CardColumns>
-        </BrowserView>
-        <MobileView>
-          <Swiper {...params}>
-            {cards.slice(4).map((element, i) => (
-              <Card key={i}>
-                <Card.Img variant="top" src={element.image} />
-                <Card.Body>
-                  <Card.Title>{element.title}</Card.Title>
-                  <Card.Text>{element.desc}</Card.Text>
-                  <Card.Link href={element.link}>Live</Card.Link>
-                  <Card.Link href={element.repo}>Github</Card.Link>
-                </Card.Body>
-              </Card>
-            ))}
-          </Swiper>
-        </MobileView>
+            </div>
+          ))}
+        </Swiper>
+        {/*</MobileView>*/}
       </React.Fragment>
     );
   }
