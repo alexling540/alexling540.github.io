@@ -21,11 +21,11 @@ export default class Introduction extends Component {
               ]}
             />
           </div>
-          <ChevronDown className={'intro-down'}/>
         </BrowserView>
         <MobileView renderWithFragment>
           Welcome
         </MobileView>
+        <ChevronDown className={'intro-down'}/>
       </React.Fragment>
     );
   }
