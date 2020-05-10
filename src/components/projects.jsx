@@ -1,18 +1,21 @@
 import React, {Component} from "react";
-import {BrowserView, MobileView} from "react-device-detect";
+import {isMobile, isMobileOnly} from "react-device-detect";
 import Swiper from 'react-id-swiper';
-import {
-  Card,
-  CardColumns
-} from "react-bootstrap";
-import './projects.scss';
+import Card from "../lib/Card";
+import Project_PARK from '../resources/images/Project_PARK.png';
 import 'swiper/css/swiper.css';
+import './projects.scss';
 
 const params = {
+  slidesPerView: (isMobile) ? ((isMobileOnly) ? 1 : 2) : 3, // phone=1, tablet=2, desktop=3
   pagination: {
     el: '.swiper-pagination',
     type: 'bullets',
-    clickable: false
+    clickable: true
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
   },
   loop: true
 };
@@ -24,53 +27,55 @@ export default class Projects extends Component {
       {
         title: 'Ag\'s Guide to Foods And Brews',
         image: '',
-        desc: 'Vue, Vuetify, Axios',
-        link: 'https://pages.github.tamu.edu/jarrett/Group7FinalProject/#/',
-        repo: 'https://github.tamu.edu/jarrett/Group7FinalProject'
+        text: [
+          'A website where you can search for recipes and pair them with a beverage!',
+          'Built using Vue.js and Vuetify and querying from Spoonacular, Edamam, and Punk APIs using Axios.',
+          'A Programming Studio group project with fellow Ags. ' +
+            'We built this website using the AGILE process.'
+        ],
+        links: [
+          {text: 'Repository', link: 'https://github.tamu.edu/jarrett/Group7FinalProject'},
+          {text: 'Demo', link: 'https://pages.github.tamu.edu/jarrett/Group7FinalProject/#/'}
+        ]
       },
       {
-        title: 'Test',
+        title: 'P.A.R.K Sports Management',
+        image: Project_PARK,
+        text: [
+          'A Java application displaying information regarding college sports, with additional functionality ' +
+            'to find a victory chain from one team to another, a player relation chain from one to another, ' +
+            'and more',
+          'This runnable JAR is built with Java Swing, using the Java Database Connectivity (JDBC) API to query ' +
+            'information from our PostgreSQL server.',
+          'A Programming Studio group project with fellow Ags. ' +
+            'We built this application using the Waterfall process.'
+        ],
+        links: [
+          {text: 'Repository', link: 'https://github.tamu.edu/peterluong/group14databaseproject'}
+        ]
+      },
+      {
+        title: 'This website',
         image: '',
-        desc: '',
-        repo: 'https://github.tamu.edu/peterluong/group14databaseproject'
+        text: [
+
+        ],
+        links: [
+
+        ]
       }
     ];
 
-    return(
+    return (
       <React.Fragment>
         <h1>Projects</h1>
-        {/*<BrowserView renderWithFragment>*/}
-        {/*  <CardColumns>*/}
-        {/*    {cards.map((element, i) => (*/}
-        {/*      <Card key={i}>*/}
-        {/*        <Card.Img variant="top" src={element.image} />*/}
-        {/*        <Card.Body>*/}
-        {/*          <Card.Title>{element.title}</Card.Title>*/}
-        {/*          <Card.Text>{element.desc}</Card.Text>*/}
-        {/*          <Card.Link href={element.link}>Live</Card.Link>*/}
-        {/*          <Card.Link href={element.repo}>Github</Card.Link>*/}
-        {/*        </Card.Body>*/}
-        {/*      </Card>*/}
-        {/*    ))}*/}
-        {/*  </CardColumns>*/}
-        {/*</BrowserView>*/}
-        {/*<MobileView renderWithFragment>*/}
         <Swiper {...params}>
           {cards.map((element, i) => (
             <div key={i}>
-              <Card >
-                <Card.Img variant="top" src={element.image} />
-                <Card.Body>
-                  <Card.Title>{element.title}</Card.Title>
-                  <Card.Text>{element.desc}</Card.Text>
-                  <Card.Link href={element.link}>Live</Card.Link>
-                  <Card.Link href={element.repo}>Github</Card.Link>
-                </Card.Body>
-              </Card>
+              <Card data={element}/>
             </div>
           ))}
         </Swiper>
-        {/*</MobileView>*/}
       </React.Fragment>
     );
   }
