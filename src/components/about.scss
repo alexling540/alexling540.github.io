@@ -1,0 +1,49 @@
+[data-anchor='section-about'] {
+  #download-resume {
+    color: black;
+    text-decoration: none;
+    position: absolute;
+    top: 10vmin;
+    left: 40vmin;
+    > span {
+      padding: 2vmin 3vw;
+      svg, span {
+        vertical-align: middle;
+      }
+    }
+  }
+  .third {
+    width: calc(33% - 10vmin);
+    float: left;
+    overflow-x: hidden;
+    padding: 5vmin;
+  }
+}
+
+.App[theme='dark'] [data-anchor='section-about'] {
+  #download-resume {
+    > span {
+      //background: var(--dark-accent2);
+      border: 2px solid var(--dark-accent2);
+      transition: 0.25s all ease-in-out;
+      svg, span {
+        color: white;
+        transition: 0.25s all ease-in-out;
+      }
+      &:hover {
+        background: var(--dark-accent2);
+        svg, span {
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+.App[theme='light'] [data-anchor='section-about'] {
+  #download-resume {
+    span {
+      background: var(--lv2-accent5);
+    }
+  }
+}

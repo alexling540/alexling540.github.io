@@ -37,52 +37,27 @@
   background-size: cover;
 }
 
-@-webkit-keyframes rotating /* Safari and Chrome */ {
-  from {
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@keyframes rotating {
-  from {
-    -ms-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    -ms-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@keyframes test {
+@keyframes shake {
   0% {
     transform: translateY(0);
   }
   50% {
     transform: translateY(1vh);
   }
+  100% {
+    transform: translateY(0);
+  }
 }
 .intro-down {
   position: absolute;
-  bottom: 5vh;
+  bottom: 2vh;
   left: calc(50% - 5vh);
   height: 10vh;
   width: 10vh;
   stroke: white;
   stroke-linecap: butt;
   stroke-opacity: 0.5;
-  animation: test 2s linear infinite;
+  animation: shake 2s ease-in-out infinite;
 }
 
 /*# sourceMappingURL=intro.css.map */
