@@ -1,4 +1,4 @@
-.card {
+[data-anchor=section-projects] .card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -10,7 +10,7 @@
   border-radius: 0.25rem;
   margin: 0 20px;
 }
-.card .card-img, .card .card-img-top {
+[data-anchor=section-projects] .card .card-img, [data-anchor=section-projects] .card .card-img-top {
   vertical-align: middle;
   border-style: none;
   border-top-left-radius: calc(0.25rem - 1px);
@@ -18,21 +18,24 @@
   flex-shrink: 0;
   width: 100%;
 }
-.card .card-body {
+[data-anchor=section-projects] .card .card-body {
   flex: 1 1 auto;
   min-height: 1px;
   padding: 1.25rem;
 }
-.card .card-body .card-title {
+[data-anchor=section-projects] .card .card-body .card-title {
   margin-bottom: 0.75rem;
 }
-.card .card-body .card-title.h5 {
+[data-anchor=section-projects] .card .card-body .card-title.h5 {
   font-size: 1.25rem;
 }
-.card .card-body .card-link {
+[data-anchor=section-projects] .card .card-body .card-link {
   color: #007bff;
   text-decoration: none;
   background-color: transparent;
+}
+[data-anchor=section-projects] .swiper-slide {
+  padding-bottom: 30px;
 }
 
 /*# sourceMappingURL=projects.css.map */

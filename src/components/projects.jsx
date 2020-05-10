@@ -6,7 +6,7 @@ import {
   CardColumns
 } from "react-bootstrap";
 import './projects.scss';
-import 'swiper/swiper.scss';
+import 'swiper/css/swiper.css';
 
 const params = {
   pagination: {
@@ -55,21 +55,6 @@ export default class Projects extends Component {
         {/*  </CardColumns>*/}
         {/*</BrowserView>*/}
         {/*<MobileView renderWithFragment>*/}
-        {/*  <Carousel interval={null} controls={false}>*/}
-        {/*    {cards.map((element, i) => (*/}
-        {/*      <CarouselItem as={'Card'} key={i}>*/}
-        {/*        <Card>*/}
-        {/*          <Card.Img variant="top" src={element.image} />*/}
-        {/*          <Card.Body>*/}
-        {/*            <Card.Title>{element.title}</Card.Title>*/}
-        {/*            <Card.Text>{element.desc}</Card.Text>*/}
-        {/*            <Card.Link href={element.link}>Live</Card.Link>*/}
-        {/*            <Card.Link href={element.repo}>Github</Card.Link>*/}
-        {/*          </Card.Body>*/}
-        {/*        </Card>*/}
-        {/*      </CarouselItem>*/}
-        {/*    ))}*/}
-        {/*  </Carousel>*/}
         <Swiper {...params}>
           {cards.map((element, i) => (
             <div key={i}>

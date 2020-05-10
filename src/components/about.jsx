@@ -2,9 +2,19 @@ import React from "react";
 import { Download as DownloadIcon } from "react-feather";
 import { Timeline, TimelineEvent } from "react-event-timeline";
 import { BrowserView, TabletView, MobileOnlyView } from "react-device-detect";
+import Swiper from "react-id-swiper";
 import SectionTitle from "../lib/SectionTitle";
 import SkillsTable from "../lib/SkillsTable";
 import './about.scss'
+
+const params = {
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: false
+  },
+  loop: true
+};
 
 export default class About extends React.Component {
 
@@ -23,7 +33,7 @@ export default class About extends React.Component {
           <img src={''} alt={''} />
         </div>
         <div>
-          ETC ETC ETC
+          <p>Howdy! I'm Alexander Ling, a Junior at Texas A&M majoring in Computer Science. </p>
         </div>
       </React.Fragment>
     );
@@ -87,15 +97,17 @@ export default class About extends React.Component {
           </div>
         </TabletView>
         <MobileOnlyView renderWithFragment>
-          <div className={'slide'} data-anchor="about">
-            {this.renderAbout()}
-          </div>
-          <div className={'slide'} data-anchor='timeline'>
-            {this.renderTimeline()}
-          </div>
-          <div className={'slide'} data-anchor="skills">
-            {this.renderSkills()}
-          </div>
+          <Swiper {...params}>
+            <div>
+              {this.renderAbout()}
+            </div>
+            <div>
+              {this.renderTimeline()}
+            </div>
+            <div>
+              {this.renderSkills()}
+            </div>
+          </Swiper>
         </MobileOnlyView>
       </React.Fragment>
     );

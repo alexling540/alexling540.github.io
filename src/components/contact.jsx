@@ -4,6 +4,9 @@ import * as Icons from 'react-feather';
 import './contact.scss';
 
 export default class Contact extends Component {
+
+
+
   render() {
     return (
       <React.Fragment>

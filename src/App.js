@@ -5,7 +5,6 @@ import styled, { ThemeProvider } from "styled-components";
 import {
   Home as IntroIcon,
   User as AboutIcon,
-  FileText as ResumeIcon,
   Package as ProjectsIcon,
   Info as ContactIcon
 } from 'react-feather';
@@ -14,7 +13,6 @@ import './App.scss';
 import Menu from './components/menu';
 import Introduction from './components/intro';
 import About from './components/about';
-import Resume from './components/resume';
 import Projects from './components/projects';
 import Contact from './components/contact';
 import {darkTheme, lightTheme} from "./themes";
@@ -44,7 +42,6 @@ function App() {
   const sections = [
     { anchor: 'section-intro',    title: 'Home',     icon: (<IntroIcon/>),     section: (<Introduction/>) },
     { anchor: 'section-about',    title: 'About',    icon: (<AboutIcon/>),     section: (<About/>) },
-    // { anchor: 'section-resume',   title: 'Resume',   icon: (<ResumeIcon/>),    section: (<Resume/>) },
     { anchor: 'section-projects', title: 'Projects', icon: (<ProjectsIcon/>),  section: (<Projects/>) },
     { anchor: 'section-contact',  title: 'Contact',  icon: (<ContactIcon/>),   section: (<Contact/>) }
   ];
