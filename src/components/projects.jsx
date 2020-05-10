@@ -30,8 +30,7 @@ export default class Projects extends Component {
         text: [
           'A website where you can search for recipes and pair them with a beverage!',
           'Built using Vue.js and Vuetify and querying from Spoonacular, Edamam, and Punk APIs using Axios.',
-          'A Programming Studio group project with fellow Ags. ' +
-            'We built this website using the AGILE process.'
+          'A Programming Studio group project with fellow Ags. We built this website using the AGILE process.'
         ],
         links: [
           {text: 'Repository', link: 'https://github.tamu.edu/jarrett/Group7FinalProject'},
@@ -44,11 +43,10 @@ export default class Projects extends Component {
         text: [
           'A Java application displaying information regarding college sports, with additional functionality ' +
             'to find a victory chain from one team to another, a player relation chain from one to another, ' +
-            'and more',
+            'and more!',
           'This runnable JAR is built with Java Swing, using the Java Database Connectivity (JDBC) API to query ' +
             'information from our PostgreSQL server.',
-          'A Programming Studio group project with fellow Ags. ' +
-            'We built this application using the Waterfall process.'
+          'A Programming Studio group project with fellow Ags. We built this application using the Waterfall process.'
         ],
         links: [
           {text: 'Repository', link: 'https://github.tamu.edu/peterluong/group14databaseproject'}
