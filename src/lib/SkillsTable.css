@@ -1,0 +1,21 @@
+.skills-row {
+  text-align: left;
+  padding: 5px 0;
+}
+.skills-row .skills-title {
+  color: white;
+}
+.skills-row .skill-name {
+  color: white;
+  font-variant: small-caps;
+  font-family: Lato, sans-serif;
+  font-size: 3vmin;
+}
+.skills-row .skill-line {
+  border: 1px solid var(--dark-accent2);
+}
+.skills-row .skill-line .rc-progress-line-path {
+  stroke: var(--dark-accent2);
+}
+
+/*# sourceMappingURL=SkillsTable.css.map */

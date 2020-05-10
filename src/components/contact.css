@@ -32,6 +32,7 @@
   background: none;
   padding: 0.5rem 1rem;
   width: 100%;
+  box-sizing: border-box;
 }
 [data-anchor=section-contact] form textarea {
   resize: vertical;
@@ -106,7 +107,7 @@
 .App[theme=vaporwave] [data-anchor=section-contact] ul a {
   color: var(--vaporwave-accent9);
 }
-.App[theme=vaporwave] [data-anchor=section-contact] ul div:hover {
+.App[theme=vaporwave] [data-anchor=section-contact] div:hover {
   background: rgba(0, 0, 0, 0.2);
 }
 .App[theme=vaporwave] [data-anchor=section-contact] form input, .App[theme=vaporwave] [data-anchor=section-contact] form textarea {

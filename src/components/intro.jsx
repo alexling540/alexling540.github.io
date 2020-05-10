@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {BrowserView, MobileView} from "react-device-detect";
 import ReactTyped from "../lib/ReactTyped";
+import {ChevronDown} from "react-feather";
 import './intro.scss';
 
 export default class Introduction extends Component {
@@ -20,6 +21,7 @@ export default class Introduction extends Component {
               ]}
             />
           </div>
+          <ChevronDown className={'intro-down'}/>
         </BrowserView>
         <MobileView renderWithFragment>
           Welcome

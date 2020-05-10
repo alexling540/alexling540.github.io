@@ -1,0 +1,19 @@
+.skills-row {
+  text-align: left;
+  padding: 5px 0;
+  .skills-title {
+    color: white;
+  }
+  .skill-name {
+    color: white;
+    font-variant: small-caps;
+    font-family: Lato, sans-serif;
+    font-size: 3vmin;
+  }
+  .skill-line {
+    border: 1px solid var(--dark-accent2);
+    .rc-progress-line-path {
+      stroke: var(--dark-accent2);
+    }
+  }
+}

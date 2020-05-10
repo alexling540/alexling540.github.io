@@ -91,12 +91,14 @@ function App() {
   });
 
   return (
+    // <ThemeProvider theme={theme.palette}>
     <div className="App" theme={theme.palette}>
       <Menu setTheme={(palette) => setTheme({palette})} sections={sections} />
       <ReactFullpage
         licenseKey={'OPEN-SOURCE-GPLV3-LICENSE'}
         css3={true}
         menu={'#menu'}
+        touchSensitivity={10}
         render={({state, fullpageApi}) => {
           return (
             <ReactFullpage.Wrapper>
@@ -110,6 +112,7 @@ function App() {
         }}
       />
     </div>
+    // </ThemeProvider>
   )
 }
 

@@ -14,6 +14,7 @@ const params = {
     type: 'bullets',
     clickable: false
   },
+  loop: true
 };
 
 export default class Projects extends Component {
@@ -72,7 +73,7 @@ export default class Projects extends Component {
         <Swiper {...params}>
           {cards.map((element, i) => (
             <div key={i}>
-              <Card>
+              <Card >
                 <Card.Img variant="top" src={element.image} />
                 <Card.Body>
                   <Card.Title>{element.title}</Card.Title>

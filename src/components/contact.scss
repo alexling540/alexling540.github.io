@@ -34,6 +34,7 @@
       background: none;
       padding: 0.5rem 1rem;
       width: 100%;
+      box-sizing: border-box;
     }
     textarea {
       resize: vertical;
@@ -67,88 +68,80 @@
   }
 }
 
-.App[theme='dark'] {
-  [data-anchor='section-contact'] {
-    ul {
-      a {
-        color: white;
-        &:hover {
-          color: var(--dark-accent2);
-        }
-      }
+.App[theme='dark'] [data-anchor='section-contact'] {
+  ul a {
+    color: white;
+    &:hover {
+      color: var(--dark-accent2);
     }
-    form {
-      input, textarea {
-        border-bottom-color: var(--dark-accent1);
-        color: white;
-      }
-      input:focus, textarea:focus {
-        border-bottom-color: var(--dark-accent2);
-      }
+  }
+  form {
+    input, textarea {
+      border-bottom-color: var(--dark-accent1);
+      color: white;
     }
-    button {
-      background: var(--dark-accent1);
-      &:hover {
-        background: var(--dark-accent2);
-      }
+    input:focus, textarea:focus {
+      border-bottom-color: var(--dark-accent2);
     }
-    ::placeholder {
-      color: var(--dark-accent5);
+  }
+  button {
+    background: var(--dark-accent1);
+    &:hover {
+      background: var(--dark-accent2);
     }
+  }
+  ::placeholder {
+    color: var(--dark-accent5);
   }
 }
 
-.App[theme='light'] {
-  [data-anchor='section-contact'] {
-    ul {
-      a {
-        color: black;
-        &:hover {
-          color: var(--lv2-accent5);
-        }
-      }
+.App[theme='light'] [data-anchor='section-contact'] {
+  ul a {
+    color: black;
+    &:hover {
+      color: var(--lv2-accent5);
     }
-    form input, form textarea {
+  }
+  form {
+    input, textarea {
       border-bottom-color: var(--lv2-accent4);
       color: black;
     }
-    form input:focus, form textarea:focus {
+    input:focus, textarea:focus {
       border-bottom-color: var(--lv2-accent5);
     }
-    button {
-      background: var(--lv2-accent4);
-      &:hover {
-        background: var(--lv2-accent5);
-      }
+  }
+  button {
+    background: var(--lv2-accent4);
+    &:hover {
+      background: var(--lv2-accent5);
     }
   }
 }
 
-.App[theme='vaporwave'] {
-  [data-anchor='section-contact'] {
-    ul {
-      a {
-        color: var(--vaporwave-accent9);
-      }
-      div:hover {
-        background: rgba(0, 0, 0, 0.2);
-      }
-    }
-    form input, form textarea {
+.App[theme='vaporwave'] [data-anchor='section-contact'] {
+  ul a {
+    color: var(--vaporwave-accent9);
+  }
+  div:hover {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  form {
+    input, textarea {
       border-bottom-color: var(--vaporwave-accent6);
       color: black;
     }
-    form input:focus, form textarea:focus {
+    input:focus, textarea:focus {
       border-bottom-color: var(--vaporwave-accent7);
     }
-    button {
-      border: 2px solid var(--vaporwave-accent6);
-      background: transparent;
-      border-radius: 10px;
-      color: var(--vaporwave-accent6);
-    }
-    ::placeholder {
-      color: var(--vaporwave-accent6)
-    }
+  }
+  button {
+    border: 2px solid var(--vaporwave-accent6);
+    background: transparent;
+    border-radius: 10px;
+    color: var(--vaporwave-accent6);
+  }
+  ::placeholder {
+    color: var(--vaporwave-accent6)
   }
 }
