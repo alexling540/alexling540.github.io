@@ -13,4 +13,5 @@ export const lightTheme = {
   backgroundColor: '#EAE7DC', // lv2-accent1
   backgroundColorOther: '#D8C3A5', // lv2-accent2
   accentColor: '#E85A4F', // lv2-accent5
+  accentColor2: '#E98074' // lv2-accent4
 };

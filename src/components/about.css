@@ -1,9 +1,6 @@
 [data-anchor=section-about] #download-resume {
   color: black;
   text-decoration: none;
-  position: absolute;
-  top: 10vmin;
-  left: 40vmin;
 }
 [data-anchor=section-about] #download-resume > span {
   padding: 2vmin 3vw;
