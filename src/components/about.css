@@ -14,6 +14,9 @@
   overflow-x: hidden;
   padding: 5vmin;
 }
+[data-anchor=section-about] .swiper-slide {
+  flex-direction: column;
+}
 
 .App[theme=dark] [data-anchor=section-about] #download-resume > span {
   border: 2px solid var(--dark-accent2);

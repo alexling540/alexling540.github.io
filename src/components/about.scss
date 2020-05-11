@@ -15,6 +15,9 @@
     overflow-x: hidden;
     padding: 5vmin;
   }
+  .swiper-slide {
+    flex-direction: column;
+  }
 }
 
 .App[theme='dark'] [data-anchor='section-about'] {

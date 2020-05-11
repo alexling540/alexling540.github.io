@@ -49,12 +49,12 @@
   .section-content {
     flex: 1 1 0;
     padding: 5vmin 0 5vmin;
-    max-height: calc(100vh - 24vmin);
+    max-height: calc(100% - 17vmin);
     display: flex;
     .swiper-container {
       flex: 1 1 auto;
       .swiper-wrapper {
-        height: calc(100% - 5vmin);
+        height: calc(100% - 5vh);
         .swiper-slide {
           display: flex;
         }

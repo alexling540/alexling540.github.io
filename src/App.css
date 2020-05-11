@@ -49,14 +49,14 @@
 .section .section-content {
   flex: 1 1 0;
   padding: 5vmin 0 5vmin;
-  max-height: calc(100vh - 24vmin);
+  max-height: calc(100% - 17vmin);
   display: flex;
 }
 .section .section-content .swiper-container {
   flex: 1 1 auto;
 }
 .section .section-content .swiper-container .swiper-wrapper {
-  height: calc(100% - 5vmin);
+  height: calc(100% - 5vh);
 }
 .section .section-content .swiper-container .swiper-wrapper .swiper-slide {
   display: flex;
