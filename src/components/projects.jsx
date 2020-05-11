@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {isMobile, isMobileOnly} from "react-device-detect";
 import Swiper from 'react-id-swiper';
 import Card from "../lib/Card";
+import SectionTitle from "../lib/SectionTitle";
 import Project_Ags from '../resources/images/Project_Ags.png';
 import Project_PARK from '../resources/images/Project_PARK.png';
 import 'swiper/css/swiper.css';
@@ -72,7 +73,7 @@ export default class Projects extends Component {
   render() {
     return (
       <React.Fragment>
-        <h1>Projects</h1>
+        <SectionTitle>Projects</SectionTitle>
         <div className={'section-content'}>
           <Swiper {...params}>
             {cards.map((element, i) => (

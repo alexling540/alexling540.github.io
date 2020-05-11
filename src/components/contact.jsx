@@ -1,12 +1,44 @@
 import React from 'react';
 import { isMobileOnly } from "react-device-detect";
+import styled from "styled-components";
 import {
   Phone as PhoneIcon,
   Mail as MailIcon,
   GitHub as GitHubIcon,
   Linkedin as LinkedinIcon
 } from "react-feather";
+import SectionTitle from "../lib/SectionTitle";
 import './contact.scss';
+
+const ContactLink = styled.a`
+  color: ${props => props.theme.textColor};
+  &:hover {
+    color: ${props => props.theme.accentColor};
+  }
+`;
+
+const SendInput = styled.input`
+  color: ${props => props.theme.textColor};
+  border-bottom-color: ${props => props.theme.accentColor2} !important;
+  &:focus {
+    border-bottom-color: ${props => props.theme.accentColor} !important;
+  }
+`;
+
+const SendTextarea = styled.textarea`
+  color: ${props => props.theme.textColor};
+  border-bottom-color: ${props => props.theme.accentColor2} !important;
+  &:focus {
+    border-bottom-color: ${props => props.theme.accentColor} !important;
+  }
+`;
+
+const SendButton = styled.button`
+  background: ${props => props.theme.accentColor2};
+  &:hover {
+    background: ${props => props.theme.accentColor};
+  }
+`;
 
 export default class Contact extends React.Component {
 
@@ -30,12 +62,12 @@ export default class Contact extends React.Component {
       <ul style={{'textAlign':'left'}}>
         {sections.map((element, i) => (
           <li key={i}>
-            <a href={element.href} target={element.target} rel='noopener noreferrer'>
+            <ContactLink href={element.href} target={element.target} rel='noopener noreferrer'>
               <div>
                 {element.icon}
                 <span>{element.text}</span>
               </div>
-            </a>
+            </ContactLink>
           </li>
         ))}
       </ul>
@@ -46,15 +78,15 @@ export default class Contact extends React.Component {
     return (
       <form>
         <div>
-          <input placeholder="Your Name" type="text" id="contact-Name" />
+          <SendInput placeholder="Your Name" type="text" id="contact-Name" />
         </div>
         <div>
-          <input placeholder="Your Email" type="email" id="contact-Email" />
+          <SendInput placeholder="Your Email" type="email" id="contact-Email" />
         </div>
         <div>
-          <textarea rows="3" placeholder="Your message..." id="contact-Message" />
+          <SendTextarea rows="3" placeholder="Your message..." id="contact-Message" />
         </div>
-        <button type="submit">Submit</button>
+        <SendButton type="submit">Submit</SendButton>
       </form>
     );
   }
@@ -82,7 +114,7 @@ export default class Contact extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <h1>Contact Me</h1>
+        <SectionTitle>Contact Me</SectionTitle>
         <div className={'section-content'}>
           {this.renderContent()}
         </div>

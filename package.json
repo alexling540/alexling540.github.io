@@ -19,6 +19,7 @@
     "react-feather": "^2.0.3",
     "react-grid-layout": "^0.17.1",
     "react-id-swiper": "^3.0.0",
+    "react-is": "^16.13.1",
     "react-media-hook": "^0.4.4",
     "react-scripts": "^3.4.0",
     "styled-components": "^5.1.0",

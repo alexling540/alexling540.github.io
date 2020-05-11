@@ -1,7 +1,10 @@
 import React, { useContext } from "react";
 import { BrowserView, MobileView } from "react-device-detect";
 import styled from "styled-components";
-import * as Icon from 'react-feather';
+import {
+  Moon as MoonIcon,
+  Sun as SunIcon
+} from 'react-feather';
 import './menu.scss';
 import vaporwave from '../imgs/vaporwave_trees.png';
 
@@ -58,10 +61,10 @@ export default class Menu extends React.Component {
       <React.Fragment>
         <ThemeToggle id={'themeToggle'} onClick={() => this.props.toggleTheme()}>
           <div>
-            <Icon.Moon strokeWidth={'1.5'}/>
+            <MoonIcon strokeWidth={'1.5'}/>
           </div>
           <div>
-            <Icon.Sun strokeWidth={'1.5'}/>
+            <SunIcon strokeWidth={'1.5'}/>
           </div>
           <div>
             <img src={vaporwave} alt={''}/>

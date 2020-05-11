@@ -35,7 +35,8 @@
         border: none;
         font-size: 3vmin;
         font-family: Lato, sans-serif;
-        border-bottom: 0.5vmin solid black;
+        border-bottom-width: 0.5vmin;
+        border-bottom-style: solid;
         transition: 0.3s ease-in-out;
         background: none;
         padding: 0.5rem 1rem;
@@ -72,54 +73,12 @@
 }
 
 .App[theme='dark'] [data-anchor='section-contact'] {
-  ul a {
-    color: white;
-    &:hover {
-      color: var(--dark-accent2);
-    }
-  }
-  form {
-    input, textarea {
-      border-bottom-color: var(--dark-accent1);
-      color: white;
-    }
-    input:focus, textarea:focus {
-      border-bottom-color: var(--dark-accent2);
-    }
-  }
-  button {
-    background: var(--dark-accent1);
-    &:hover {
-      background: var(--dark-accent2);
-    }
-  }
   ::placeholder {
     color: var(--dark-accent5);
   }
 }
 
 .App[theme='light'] [data-anchor='section-contact'] {
-  ul a {
-    color: black;
-    &:hover {
-      color: var(--lv2-accent5);
-    }
-  }
-  form {
-    input, textarea {
-      border-bottom-color: var(--lv2-accent4);
-      color: black;
-    }
-    input:focus, textarea:focus {
-      border-bottom-color: var(--lv2-accent5);
-    }
-  }
-  button {
-    background: var(--lv2-accent4);
-    &:hover {
-      background: var(--lv2-accent5);
-    }
-  }
 }
 
 .App[theme='vaporwave'] [data-anchor='section-contact'] {
