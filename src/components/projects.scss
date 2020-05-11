@@ -1,64 +1,6 @@
 [data-anchor='section-projects'] {
   .card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, 0.125);
-    border-radius: 0.25rem;
     margin: 0 20px;
-
-    .card-img, .card-img-top {
-      vertical-align: middle;
-      border-style: none;
-      border-top-left-radius: calc(0.25rem - 1px);
-      border-top-right-radius: calc(0.25rem - 1px);
-      flex-shrink: 0;
-      width: 100%;
-    }
-    .card-body {
-      flex: 1 1 auto;
-      min-height: 1px;
-      padding: 1.25rem;
-      .card-title {
-        margin-bottom: 0.75rem;
-        &.h5 {
-          font-size: 1.25rem;
-        }
-      }
-      .card-link {
-        color: #007bff;
-        text-decoration: none;
-        background-color: transparent;
-      }
-    }
-    .list-group {
-      display: flex;
-      flex-direction: column;
-      padding-left: 0;
-      margin-bottom: 0;
-    }
-    .list-group-flush .list-group-item:first-child {
-      border-top-width: 0;
-    }
-    .list-group-flush:last-child .list-group-item:last-child {
-      border-bottom-width: 0;
-    }
-    .list-group-flush .list-group-item {
-      border-right-width: 0;
-      border-left-width: 0;
-      border-radius: 0;
-    }
-    .list-group-item {
-      position: relative;
-      display: block;
-      padding: .75rem 1.25rem;
-      background-color: #fff;
-      border: 1px solid rgba(0,0,0,.125);
-    }
   }
 
   .swiper-slide {

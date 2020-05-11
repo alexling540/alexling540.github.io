@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import { ListGroup, ListGroupItem } from "react-bootstrap";
+import "./Card.scss";
 
 const Link = styled.a`
   color: ${props => props.theme.accentColor2}
@@ -27,20 +28,22 @@ export default class Card extends React.Component {
           <div className={'card-title h5'}>
             {this.props.data.title}
           </div>
-          {this.props.data.text.map((element, i) => (
-            <p className={'card-text'} key={i}>
-              {element}
-            </p>
-          ))}
-          <ListGroup className="list-group-flush">
-            {this.props.data.links.map((element, i) => (
-              <ListGroupItem key={i}>
-                <Link href={element.link} target={'_blank'} rel='noopener noreferrer'>
-                  {element.text}
-                </Link>
-              </ListGroupItem>
+          <div className={'card-content'}>
+            {this.props.data.text.map((element, i) => (
+              <p className={'card-text'} key={i}>
+                {element}
+              </p>
             ))}
-          </ListGroup>
+            <ListGroup className="list-group-flush">
+              {this.props.data.links.map((element, i) => (
+                <ListGroupItem key={i}>
+                  <Link href={element.link} target={'_blank'} rel='noopener noreferrer'>
+                    {element.text}
+                  </Link>
+                </ListGroupItem>
+              ))}
+            </ListGroup>
+          </div>
         </div>
       </div>
     );

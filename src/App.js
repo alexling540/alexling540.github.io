@@ -55,6 +55,7 @@ function App() {
           css3={true}
           menu={'#menu'}
           touchSensitivity={15}
+          verticalCentered={false}
           render={({state, fullpageApi}) => {
             return (
               <ReactFullpage.Wrapper>
