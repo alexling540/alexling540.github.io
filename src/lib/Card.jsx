@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import { ListGroup, ListGroupItem } from "react-bootstrap";
 import "./Card.scss";
+// import 'bootstrap/dist/css/bootstrap.css'
 
 const Link = styled.a`
   color: ${props => props.theme.accentColor2}
@@ -23,12 +24,11 @@ export default class Card extends React.Component {
   render() {
     return (
       <div className={'card'}>
-        <img className="card-img-top" src={this.props.data.image} alt={''}/>
+        <img className="card-img" src={this.props.data.image} alt={''}/>
+        <div className={'card-title h5'}>
+          {this.props.data.title}
+        </div>
         <div className={'card-body'}>
-          <div className={'card-title h5'}>
-            {this.props.data.title}
-          </div>
-          <div className={'card-content'}>
             {this.props.data.text.map((element, i) => (
               <p className={'card-text'} key={i}>
                 {element}
@@ -44,7 +44,6 @@ export default class Card extends React.Component {
               ))}
             </ListGroup>
           </div>
-        </div>
       </div>
     );
   }

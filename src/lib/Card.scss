@@ -8,28 +8,35 @@
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
-  .card-img, .card-img-top {
+
+  max-height: calc(100vh - 24vmin);
+
+  //max-height: 10vh;
+  .card-img {
     vertical-align: middle;
     border-style: none;
     border-top-left-radius: calc(0.25rem - 1px);
     border-top-right-radius: calc(0.25rem - 1px);
-    flex-shrink: 0;
+    flex-shrink: 2;
+    flex-grow: 0;
+    flex-basis: 0;
     width: 100%;
+  }
+  .card-title {
+    padding: 1.25rem 0 0;
+    flex: 1 0 auto;
+    //margin-bottom: 0.75rem;
+    &.h5 {
+      font-size: 1.25rem;
+    }
   }
   .card-body {
     flex: 1 1 auto;
     min-height: 1px;
-    padding: 1.25rem;
-    .card-title {
-      margin-bottom: 0.75rem;
-      &.h5 {
-        font-size: 1.25rem;
-      }
-    }
-    .card-content {
-      p {
-        text-align: justify;
-      }
+    padding: 0 1.25rem 1.25rem;
+    overflow-y: auto;
+    p {
+      text-align: justify;
     }
     a {
       text-decoration: none;
@@ -41,23 +48,15 @@
     flex-direction: column;
     padding-left: 0;
     margin-bottom: 0;
-  }
-  .list-group-flush .list-group-item:first-child {
-    border-top-width: 0;
-  }
-  .list-group-flush:last-child .list-group-item:last-child {
-    border-bottom-width: 0;
-  }
-  .list-group-flush .list-group-item {
-    border-right-width: 0;
-    border-left-width: 0;
-    border-radius: 0;
-  }
-  .list-group-item {
-    position: relative;
-    display: block;
-    padding: .75rem 1.25rem;
-    background-color: #fff;
-    border: 1px solid rgba(0,0,0,.125);
+    .list-group-item {
+      position: relative;
+      display: block;
+      padding: .75rem 1.25rem;
+      background-color: #fff;
+      border-top: 1px solid rgba(0,0,0,.125);
+      &:last-child {
+        padding: .75rem 1.25rem 0;
+      }
+    }
   }
 }

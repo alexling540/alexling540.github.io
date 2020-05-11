@@ -25,7 +25,7 @@ export default class Introduction extends Component {
         <MobileView renderWithFragment>
           Welcome
         </MobileView>
-        <ChevronDown className={'intro-down'}/>
+        {/*<ChevronDown className={'intro-down'}/>*/}
       </React.Fragment>
     );
   }

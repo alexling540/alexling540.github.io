@@ -7,20 +7,6 @@ import Project_PARK from '../resources/images/Project_PARK.png';
 import 'swiper/css/swiper.css';
 import './projects.scss';
 
-const params = {
-  slidesPerView: (isMobile) ? ((isMobileOnly) ? 1 : 2) : 3, // phone=1, tablet=2, desktop=3
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
-    clickable: true
-  },
-  keyboard: {
-    enabled: true,
-    onlyInViewport: true,
-  },
-  loop: true
-};
-
 const cards = [
   {
     title: 'Ag\'s Guide to Foods And Brews',
@@ -45,7 +31,7 @@ const cards = [
       'This runnable JAR is built with Java Swing, using the Java Database Connectivity (JDBC) API to query ' +
       'information from our PostgreSQL server.',
       'A CSCE 315 Programming Studio group project with fellow Ags. We built this application using the Waterfall ' +
-        'process.'
+      'process.'
     ],
     links: [
       {text: 'Repository', link: 'https://github.tamu.edu/peterluong/group14databaseproject'}
@@ -62,6 +48,23 @@ const cards = [
     ]
   }
 ];
+
+const slidesPerView = (isMobile) ? ((isMobileOnly) ? 1 : 2) : 3; // phone=1, tablet=2, desktop=3
+
+const params = {
+  slidesPerView: slidesPerView,
+  spaceBetween: 20,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+  loop: cards.length > slidesPerView
+};
 
 export default class Projects extends Component {
 

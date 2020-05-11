@@ -56,11 +56,12 @@ function App() {
           menu={'#menu'}
           touchSensitivity={15}
           verticalCentered={false}
+          // scrollOverflow={true}
           render={({state, fullpageApi}) => {
             return (
               <ReactFullpage.Wrapper>
                 {sections.map((element, index) => (
-                  <div className={'section'} data-anchor={element.anchor} key={index}>
+                  <div className={'section fp-scrollable'} data-anchor={element.anchor} key={index}>
                     {element.section}
                   </div>
                 ))}
