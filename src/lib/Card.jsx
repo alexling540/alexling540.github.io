@@ -24,7 +24,9 @@ export default class Card extends React.Component {
   render() {
     return (
       <div className={'card'}>
-        <img className="card-img" src={this.props.data.image} alt={''}/>
+        <div className="card-img">
+          <img src={this.props.data.image} alt={''}/>
+        </div>
         <div className={'card-title h5'}>
           {this.props.data.title}
         </div>

@@ -2,39 +2,35 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  min-width: 0;
+  flex: 1 1 auto;
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
-
-  max-height: calc(100vh - 24vmin);
-
-  //max-height: 10vh;
   .card-img {
-    vertical-align: middle;
+    vertical-align: top;
     border-style: none;
     border-top-left-radius: calc(0.25rem - 1px);
     border-top-right-radius: calc(0.25rem - 1px);
-    flex-shrink: 2;
-    flex-grow: 0;
-    flex-basis: 0;
-    width: 100%;
+    flex: 1 2 auto;
+    overflow-y: hidden;
+    img {
+      width: 100%;
+    }
   }
   .card-title {
     padding: 1.25rem 0 0;
-    flex: 1 0 auto;
+    flex: 0 0 auto; // don't grow, don't shrink
     //margin-bottom: 0.75rem;
     &.h5 {
       font-size: 1.25rem;
     }
   }
   .card-body {
-    flex: 1 1 auto;
-    min-height: 1px;
+    flex: 2 1 auto;
     padding: 0 1.25rem 1.25rem;
-    overflow-y: auto;
+    //overflow-y: auto;
     p {
       text-align: justify;
     }

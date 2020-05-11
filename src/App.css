@@ -46,11 +46,22 @@
   margin-block-start: 0;
 }
 .section .section-content {
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 0;
-  padding: 5vmin 0;
-  align-items: center;
+  flex: 1 1 0;
+  padding: 5vmin 0 5vmin;
+  max-height: calc(100vh - 26vmin);
+  display: flex;
+}
+.section .section-content .swiper-container {
+  flex: 1 1 auto;
+}
+.section .section-content .swiper-container .swiper-slide {
+  display: flex;
+}
+.section .section-content .swiper-container .swiper-wrapper {
+  height: calc(100% - 5vmin);
+}
+.section .section-content .swiper-container .swiper-pagination-fraction, .section .section-content .swiper-container .swiper-pagination-custom, .section .section-content .swiper-container .swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 0;
 }
 
 .App[theme=dark] .section {

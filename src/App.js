@@ -56,6 +56,7 @@ function App() {
           menu={'#menu'}
           touchSensitivity={15}
           verticalCentered={false}
+          fixedElements={['#menu']}
           // scrollOverflow={true}
           render={({state, fullpageApi}) => {
             return (
