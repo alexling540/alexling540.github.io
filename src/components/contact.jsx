@@ -87,7 +87,9 @@ export default class Contact extends React.Component {
     return (
       <React.Fragment>
         <h1>Contact Me</h1>
-        {this.renderContent()}
+        <div className={'section-content'}>
+          {this.renderContent()}
+        </div>
       </React.Fragment>
     );
   }

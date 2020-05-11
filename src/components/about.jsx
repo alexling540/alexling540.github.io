@@ -106,7 +106,9 @@ export default class About extends React.Component {
     return (
       <React.Fragment>
         <SectionTitle>About Me</SectionTitle>
-        {this.renderContent()}
+        <div className={'section-content'}>
+          {this.renderContent()}
+        </div>
       </React.Fragment>
     );
   }
