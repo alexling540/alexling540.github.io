@@ -4,7 +4,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@callstack/react-theme-provider": "^2.1.0",
     "@fullpage/react-fullpage": "^0.1.17",
     "@testing-library/dom": "^6.12.2",
     "@testing-library/jest-dom": "^5.1.1",
@@ -24,7 +23,6 @@
     "react-id-swiper": "^3.0.0",
     "react-media-hook": "^0.4.4",
     "react-scripts": "^3.4.0",
-    "react-vertical-timeline-component": "^2.5.0",
     "styled-components": "^5.1.0",
     "swiper": "^5.3.8",
     "tsutils": "^3.17.1",
@@ -37,7 +35,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
+    "predeploy": "yarn run build",
     "deploy": "gh-pages -d build -b master"
   },
   "eslintConfig": {

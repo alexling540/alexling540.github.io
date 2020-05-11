@@ -37,10 +37,11 @@
   display: flex;
   flex-direction: column;
 }
-.section h1 {
+.section > h1 {
   flex-shrink: 0;
   text-align: left;
   font-size: 7vmin;
+  line-height: 1;
   transition: 1s ease-in-out;
   margin-block-end: 0;
   margin-block-start: 0;
@@ -48,7 +49,7 @@
 .section .section-content {
   flex: 1 1 0;
   padding: 5vmin 0 5vmin;
-  max-height: calc(100vh - 26vmin);
+  max-height: calc(100vh - 24vmin);
   display: flex;
 }
 .section .section-content .swiper-container {
@@ -59,7 +60,6 @@
 }
 .section .section-content .swiper-container .swiper-wrapper .swiper-slide {
   display: flex;
-  flex-direction: column;
 }
 .section .section-content .swiper-container .swiper-pagination-fraction, .section .section-content .swiper-container .swiper-pagination-custom, .section .section-content .swiper-container .swiper-container-horizontal > .swiper-pagination-bullets {
   bottom: 0;

@@ -34,7 +34,10 @@ export default class About extends React.Component {
         <div>
           <img src={''} alt={''} />
         </div>
-        <div>
+        <div style={{
+          textAlign: 'justify',
+          color: 'white'
+        }}>
           <p>Howdy! I'm Alexander Ling, a Junior at Texas A&M majoring in Computer Science. </p>
         </div>
         <a href={'https://drive.google.com/file/d/1K1iig6_iW95FU5qU2SLp9ZqPaJKFrN82/view?usp=sharing'} target="_blank" rel="noopener noreferrer" id={'download-resume'}>
