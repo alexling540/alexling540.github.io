@@ -60,14 +60,6 @@
   }
 }
 
-@media screen and (max-device-width: 480px) and (orientation: portrait) {
-  [data-anchor='section-contact'] {
-    .half {
-      width: 100%;
-    }
-  }
-}
-
 .App[theme='dark'] [data-anchor='section-contact'] {
   ul a {
     color: white;

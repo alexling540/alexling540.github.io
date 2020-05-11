@@ -67,7 +67,6 @@ export default class Contact extends React.Component {
       return (
         <React.Fragment>
           {this.renderContactInfo()}
-          {this.renderSendEmail()}
         </React.Fragment>
       );
     }
