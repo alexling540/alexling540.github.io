@@ -7,6 +7,7 @@
   list-style-type: none;
   padding-inline-start: 0;
   margin: 0 auto;
+  font-size: 3vmin;
 }
 [data-anchor=section-contact] ul a {
   text-decoration: none;
@@ -16,7 +17,7 @@
   transition: all 0.3s ease-in-out;
 }
 [data-anchor=section-contact] ul div {
-  padding: 3vh 3vw;
+  padding: 4vh 3vw;
 }
 [data-anchor=section-contact] ul div svg {
   vertical-align: middle;
@@ -25,7 +26,11 @@
   padding-left: 2vmin;
   vertical-align: middle;
 }
-[data-anchor=section-contact] form input, [data-anchor=section-contact] form textarea {
+[data-anchor=section-contact] form > div {
+  padding: 2vh 2vw;
+  margin-bottom: 1rem;
+}
+[data-anchor=section-contact] form > div input, [data-anchor=section-contact] form > div textarea {
   border: none;
   font-size: 3vmin;
   font-family: Lato, sans-serif;
@@ -35,11 +40,14 @@
   padding: 0.5rem 1rem;
   width: 100%;
   box-sizing: border-box;
+  display: block;
+  font-weight: 400;
+  line-height: 1.5;
 }
-[data-anchor=section-contact] form textarea {
+[data-anchor=section-contact] form > div textarea {
   resize: vertical;
 }
-[data-anchor=section-contact] form input:focus, [data-anchor=section-contact] form textarea:focus {
+[data-anchor=section-contact] form > div input:focus, [data-anchor=section-contact] form > div textarea:focus {
   outline: none;
 }
 [data-anchor=section-contact] form button {
@@ -50,9 +58,10 @@
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s ease-in-out;
-}
-[data-anchor=section-contact] form div {
-  padding: 2vh 2vw;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
 }
 [data-anchor=section-contact] ::placeholder {
   transition: 1s ease-in-out;

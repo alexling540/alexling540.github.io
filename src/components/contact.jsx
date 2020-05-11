@@ -1,5 +1,4 @@
 import React from 'react';
-import { Form, Button } from 'react-bootstrap';
 import { isMobileOnly } from "react-device-detect";
 import {
   Phone as PhoneIcon,
@@ -45,20 +44,18 @@ export default class Contact extends React.Component {
 
   renderSendEmail() {
     return (
-      <Form>
-        <Form.Group controlId="contact-Name">
-          <Form.Control type="text" placeholder={'Your Name'} />
-        </Form.Group>
-        <Form.Group controlId="contact-Email">
-          <Form.Control type="email" placeholder={'Your Email'} />
-        </Form.Group>
-        <Form.Group controlId="exampleForm.ControlTextarea1">
-          <Form.Control as="textarea" rows="3" placeholder={'Your message...'} />
-        </Form.Group>
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
-      </Form>
+      <form>
+        <div>
+          <input placeholder="Your Name" type="text" id="contact-Name" />
+        </div>
+        <div>
+          <input placeholder="Your Email" type="email" id="contact-Email" />
+        </div>
+        <div>
+          <textarea rows="3" placeholder="Your message..." id="contact-Message" />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
     );
   }
 

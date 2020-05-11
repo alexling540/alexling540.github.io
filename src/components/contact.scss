@@ -8,6 +8,7 @@
     list-style-type: none;
     padding-inline-start: 0;
     margin: 0 auto;
+    font-size: 3vmin;
     a {
       text-decoration: none;
       transition: all 1s ease-in-out;
@@ -16,7 +17,7 @@
       }
     }
     div {
-      padding: 3vh 3vw;
+      padding: 4vh 3vw;
       svg {
         vertical-align: middle;
       }
@@ -27,22 +28,29 @@
     }
   }
   form {
-    input, textarea {
-      border: none;
-      font-size: 3vmin;
-      font-family: Lato, sans-serif;
-      border-bottom: 0.5vmin solid black;
-      transition: 0.3s ease-in-out;
-      background: none;
-      padding: 0.5rem 1rem;
-      width: 100%;
-      box-sizing: border-box;
-    }
-    textarea {
-      resize: vertical;
-    }
-    input:focus, textarea:focus {
-      outline: none;
+    > div {
+      padding: 2vh 2vw;
+      margin-bottom: 1rem;
+      input, textarea {
+        border: none;
+        font-size: 3vmin;
+        font-family: Lato, sans-serif;
+        border-bottom: 0.5vmin solid black;
+        transition: 0.3s ease-in-out;
+        background: none;
+        padding: 0.5rem 1rem;
+        width: 100%;
+        box-sizing: border-box;
+        display: block;
+        font-weight: 400;
+        line-height: 1.5;
+      }
+      textarea {
+        resize: vertical;
+      }
+      input:focus, textarea:focus {
+        outline: none;
+      }
     }
     button {
       font-size: 3vmin;
@@ -52,9 +60,10 @@
       font-weight: bold;
       cursor: pointer;
       transition: background 0.3s ease-in-out;
-    }
-    div {
-      padding: 2vh 2vw;
+      display: inline-block;
+      text-align: center;
+      vertical-align: middle;
+      user-select: none;
     }
   }
   ::placeholder {
