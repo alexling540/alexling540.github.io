@@ -28,7 +28,7 @@ export default class Contact extends React.Component {
     ];
 
     return (
-      <ul>
+      <ul style={{'textAlign':'left'}}>
         {sections.map((element, i) => (
           <li key={i}>
             <a href={element.href} target={element.target} rel='noopener noreferrer'>
@@ -72,7 +72,7 @@ export default class Contact extends React.Component {
     }
     return (
       <React.Fragment>
-        <div className={'half'} style={{'textAlign':'left'}}>
+        <div className={'half'}>
           {this.renderContactInfo()}
         </div>
         <div className={'half'}>

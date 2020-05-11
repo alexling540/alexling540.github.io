@@ -8,6 +8,7 @@ import SkillsTable from "../lib/SkillsTable";
 import './about.scss'
 
 const params = {
+  spaceBetween: 20,
   pagination: {
     el: '.swiper-pagination',
     type: 'bullets',

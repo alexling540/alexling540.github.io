@@ -54,11 +54,12 @@
 .section .section-content .swiper-container {
   flex: 1 1 auto;
 }
-.section .section-content .swiper-container .swiper-slide {
-  display: flex;
-}
 .section .section-content .swiper-container .swiper-wrapper {
   height: calc(100% - 5vmin);
+}
+.section .section-content .swiper-container .swiper-wrapper .swiper-slide {
+  display: flex;
+  flex-direction: column;
 }
 .section .section-content .swiper-container .swiper-pagination-fraction, .section .section-content .swiper-container .swiper-pagination-custom, .section .section-content .swiper-container .swiper-container-horizontal > .swiper-pagination-bullets {
   bottom: 0;
