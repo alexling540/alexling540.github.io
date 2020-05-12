@@ -59,7 +59,7 @@ export default class Menu extends React.Component {
   renderDesktopMenu() {
     return (
       <React.Fragment>
-        <ThemeToggle id={'themeToggle'} onClick={() => this.props.toggleTheme()}>
+        <ThemeToggle id={'themeToggle'} onClick={this.props.toggleTheme}>
           <div>
             <MoonIcon strokeWidth={'1.5'}/>
           </div>
