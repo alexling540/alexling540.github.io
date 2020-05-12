@@ -3,12 +3,12 @@ import styled from "styled-components";
 import "./Card.scss";
 
 const Link = styled.a`
-  color: ${props => props.theme.accentColor2}
+  color: ${props => props.theme.accentColor2};
   &:link, &:visited {
-    color: ${props => props.theme.accentColor2}
+    color: ${props => props.theme.accentColor2};
   }
   &:hover {
-    color: ${props => props.theme.accentColor}
+    color: ${props => props.theme.accentColor};
   }
 `;
 

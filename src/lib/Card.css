@@ -36,7 +36,6 @@
 }
 .card .card-body a {
   text-decoration: none;
-  background-color: transparent;
 }
 .card .list-group {
   display: flex;
