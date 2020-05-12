@@ -26,89 +26,67 @@ import {darkTheme, lightTheme} from "./themes";
 // https://github.com/stephane-monnot/react-vertical-timeline
 
 
-const sections = [
-  { anchor: 'section-intro',    title: 'Home',     icon: (<IntroIcon/>),     section: (<Introduction/>) },
-  { anchor: 'section-about',    title: 'About',    icon: (<AboutIcon/>),     section: (<About/>) },
-  { anchor: 'section-projects', title: 'Projects', icon: (<ProjectsIcon/>),  section: (<Projects/>) },
-  { anchor: 'section-contact',  title: 'Contact',  icon: (<ContactIcon/>),   section: (<Contact/>) }
-];
+function App () {
 
-class App extends React.Component {
+  const sections = [
+    { anchor: 'section-intro',    title: 'Home',     icon: (<IntroIcon/>),     section: (<Introduction/>) },
+    { anchor: 'section-about',    title: 'About',    icon: (<AboutIcon/>),     section: (<About/>) },
+    { anchor: 'section-projects', title: 'Projects', icon: (<ProjectsIcon/>),  section: (<Projects/>) },
+    { anchor: 'section-contact',  title: 'Contact',  icon: (<ContactIcon/>),   section: (<Contact/>) }
+  ];
 
-  static darkBg = new Array(sections.length - 1).fill(darkTheme.backgroundColor).concat(darkTheme.backgroundColorOther);
-  static lightBg = new Array(sections.length - 1).fill(lightTheme.backgroundColor).concat(lightTheme.backgroundColorOther);
+  const darkBg = new Array(sections.length - 1).fill(darkTheme.backgroundColor).concat(darkTheme.backgroundColorOther);
+  const lightBg = new Array(sections.length - 1).fill(lightTheme.backgroundColor).concat(lightTheme.backgroundColorOther);
 
-  constructor(props) {
-    super(props);
-    this.props = props;
-    this.getDefaultTheme = this.getDefaultTheme.bind(this);
-    this.getMatchingScheme = this.getMatchingScheme.bind(this);
-    this.toggleTheme = this.toggleTheme.bind(this);
-    // const defaultTheme = useMediaPredicate('(prefers-color-scheme: light)') ? 'light' : 'dark';
-    this.state = {
-      theme: this.getDefaultTheme(),
-      // themeBg: this.getMatchingScheme(this.state.theme)
-    };
-  }
+  const defaultTheme = useMediaPredicate('(prefers-color-scheme: light)') ? 'light' : 'dark';
 
-  getDefaultTheme() {
-    // return useMediaPredicate('(prefers-color-scheme: light)') ? 'light' : 'dark';
-    return 'dark';
-  }
+  const getMatchingScheme = (th) => {
+    return (th === 'light') ? lightBg : darkBg;
+  };
 
-  getMatchingScheme() {
-    switch(this.state.theme) {
-      case 'dark':
-        return App.darkBg;
-      case 'light':
-        return App.lightBg;
-    }
-  }
+  const [theme, setTheme] = useState(defaultTheme);
+  const [themeBg, setThemeBg] = useState(getMatchingScheme(theme));
 
-  toggleTheme() {
-    if (this.state.theme === 'light') {
-      this.setState({
-        theme: 'dark'
-      });
-    } else if (this.state.theme === 'dark') {
-      this.setState({
-        theme: 'light'
-      });
+  const toggleTheme = () => {
+    if (theme === 'light') {
+      setTheme('dark');
+      setThemeBg(darkBg)
+    } else if (theme === 'dark') {
+      setTheme('light');
+      setThemeBg(lightBg);
     } else {
-      this.setState({
-        theme: this.getDefaultTheme()
-      })
+      setTheme(defaultTheme);
+      getMatchingScheme(theme);
     }
   };
 
-  render() {
-    return (
-      <ThemeProvider theme={(this.state.theme === 'light') ? lightTheme : darkTheme}>
-        <div className="App">
-          <Menu toggleTheme={this.toggleTheme} sections={sections}/>
-          <ReactFullpage
-            licenseKey={'OPEN-SOURCE-GPLV3-LICENSE'}
-            css3={true}
-            menu={'#menu'}
-            touchSensitivity={15}
-            verticalCentered={false}
-            // scrollOverflow={true}
-            render={({state, fullpageApi}) => {
-              return (
-                <ReactFullpage.Wrapper>
-                  {sections.map((element, index) => (
-                    <div className={'section'} data-anchor={element.anchor} key={index}>
-                      {element.section}
-                    </div>
-                  ))}
-                </ReactFullpage.Wrapper>
-              );
-            }}
-          />
-        </div>
-      </ThemeProvider>
-    );
-  }
+  return (
+    <ThemeProvider theme={(theme === 'light') ? lightTheme : darkTheme}>
+      <div className="App">
+        <Menu toggleTheme={toggleTheme} sections={sections}/>
+        <ReactFullpage
+          licenseKey={'OPEN-SOURCE-GPLV3-LICENSE'}
+          css3={true}
+          menu={'#menu'}
+          touchSensitivity={15}
+          verticalCentered={false}
+          sectionsColor={themeBg}
+          // scrollOverflow={true}
+          render={({state, fullpageApi}) => {
+            return (
+              <ReactFullpage.Wrapper>
+                {sections.map((element, index) => (
+                  <div className={'section'} data-anchor={element.anchor} key={index}>
+                    {element.section}
+                  </div>
+                ))}
+              </ReactFullpage.Wrapper>
+            );
+          }}
+        />
+      </div>
+    </ThemeProvider>
+  );
 }
 
 export default App;
