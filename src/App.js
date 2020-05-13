@@ -46,15 +46,19 @@ function App () {
 
   const [theme, setTheme] = useState(defaultTheme);
   const [themeBg, setThemeBg] = useState(getMatchingScheme(theme));
+  const [animateAnchor, setAnimateAnchor] = useState(true); // initially animate when loading page
 
   const toggleTheme = () => {
     if (theme === 'light') {
+      setAnimateAnchor(false); // do not animate when toggling theme
       setTheme('dark');
-      setThemeBg(darkBg)
+      setThemeBg(darkBg);
     } else if (theme === 'dark') {
+      setAnimateAnchor(false); // do not animate when toggling theme
       setTheme('light');
       setThemeBg(lightBg);
     } else {
+      setAnimateAnchor(false); // do not animate when toggling theme
       setTheme(defaultTheme);
       getMatchingScheme(theme);
     }
@@ -71,7 +75,7 @@ function App () {
           touchSensitivity={15}
           verticalCentered={false}
           sectionsColor={themeBg}
-          // scrollOverflow={true}
+          animateAnchor={animateAnchor}
           render={({state, fullpageApi}) => {
             return (
               <ReactFullpage.Wrapper>

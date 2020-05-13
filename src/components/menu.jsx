@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { BrowserView, MobileView } from "react-device-detect";
 import styled from "styled-components";
 import {
