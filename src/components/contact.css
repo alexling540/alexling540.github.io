@@ -68,10 +68,6 @@
   transition: 1s ease-in-out;
 }
 
-.App[theme=dark] [data-anchor=section-contact] ::placeholder {
-  color: var(--dark-accent5);
-}
-
 .App[theme=vaporwave] [data-anchor=section-contact] ul a {
   color: var(--vaporwave-accent9);
 }

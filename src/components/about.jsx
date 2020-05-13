@@ -1,11 +1,32 @@
 import React from "react";
-import { Download as DownloadIcon } from "react-feather";
 import { Timeline, TimelineEvent } from "react-event-timeline";
 import { isMobileOnly } from "react-device-detect";
 import Swiper from "react-id-swiper";
+import styled, { ThemeConsumer } from "styled-components";
+// import { FiDownload as DownloadIcon } from "react-icons/fi";
+import { Download as DownloadIcon } from "react-feather";
+import { GoMortarBoard, GoBriefcase } from "react-icons/go";
 import SectionTitle from "../lib/SectionTitle";
 import SkillsTable from "../lib/SkillsTable";
 import './about.scss'
+
+const ResumeLink = styled.a`
+  color: ${props => props.theme.textColor};
+  > span {
+    border: 2px solid ${props => props.theme.accentColor};
+    &:hover {
+      background: ${props => props.theme.accentColor};
+      svg, span {
+        color: black;
+      }
+    }
+  }
+`;
+
+const AboutParagraph = styled.p`
+  text-align: justify;
+  color: ${props => props.theme.textColor};
+`;
 
 const params = {
   spaceBetween: 20,
@@ -34,33 +55,43 @@ export default class About extends React.Component {
         <div>
           <img src={''} alt={''} />
         </div>
-        <div style={{
-          textAlign: 'justify',
-          color: 'white'
-        }}>
-          <p>Howdy! I'm Alexander Ling, a Junior at Texas A&M majoring in Computer Science. </p>
+        <div>
+          <AboutParagraph>Howdy! I'm Alexander Ling, a Junior at Texas A&M majoring in Computer Science.</AboutParagraph>
         </div>
-        <a href={'https://drive.google.com/file/d/1K1iig6_iW95FU5qU2SLp9ZqPaJKFrN82/view?usp=sharing'} target="_blank" rel="noopener noreferrer" id={'download-resume'}>
+        <ResumeLink href={'https://drive.google.com/file/d/1K1iig6_iW95FU5qU2SLp9ZqPaJKFrN82/view?usp=sharing'} target="_blank" rel="noopener noreferrer" id={'download-resume'}>
           <span>
             <span>
               View Resume
             </span>
-            <DownloadIcon/>
+            <DownloadIcon height={24} width={24}/>
           </span>
-        </a>
+        </ResumeLink>
       </React.Fragment>
     );
   }
 
   renderTimeline() {
     return(
-      <Timeline>
-        <TimelineEvent title="Texas A&M University"
-                       createdAt="2018-Present"
-        >
-          Studying Computer Science at Texas A&M University
-        </TimelineEvent>
-      </Timeline>
+      <ThemeConsumer>
+        {theme => (
+          <Timeline>
+            <TimelineEvent
+              title="Texas A&M University"
+              subtitle="2018-Present"
+              container={'card'}
+
+              bubbleStyle={{
+                background: theme.backgroundColor,
+                borderColor: theme.accentColor
+              }}
+              icon={<GoMortarBoard/>}
+              iconColor={theme.accentColor}
+            >
+              Studying Computer Science at Texas A&M University
+            </TimelineEvent>
+          </Timeline>
+        )}
+      </ThemeConsumer>
     );
   }
 
@@ -68,8 +99,10 @@ export default class About extends React.Component {
     return(
       <SkillsTable
         skills={[
-          {name: 'Test', percent: 60},
-          {name: 'Test two', percent: 20}
+          {name: 'C++', percent: 60},
+          {name: 'Java', percent: 20},
+          {name: 'JavaScript', percent: 0},
+          {name: 'PostgreSQL', percent: 0}
         ]}
       />
     );

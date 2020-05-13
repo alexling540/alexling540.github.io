@@ -1,12 +1,13 @@
 [data-anchor=section-about] #download-resume {
-  color: black;
   text-decoration: none;
 }
 [data-anchor=section-about] #download-resume > span {
   padding: 2vmin 3vw;
+  transition: 0.25s all ease-in-out;
 }
 [data-anchor=section-about] #download-resume > span svg, [data-anchor=section-about] #download-resume > span span {
   vertical-align: middle;
+  transition: 0.25s all ease-in-out;
 }
 [data-anchor=section-about] .third {
   width: calc(33% - 10vmin);
@@ -16,25 +17,6 @@
 }
 [data-anchor=section-about] .swiper-slide {
   flex-direction: column;
-}
-
-.App[theme=dark] [data-anchor=section-about] #download-resume > span {
-  border: 2px solid var(--dark-accent2);
-  transition: 0.25s all ease-in-out;
-}
-.App[theme=dark] [data-anchor=section-about] #download-resume > span svg, .App[theme=dark] [data-anchor=section-about] #download-resume > span span {
-  color: white;
-  transition: 0.25s all ease-in-out;
-}
-.App[theme=dark] [data-anchor=section-about] #download-resume > span:hover {
-  background: var(--dark-accent2);
-}
-.App[theme=dark] [data-anchor=section-about] #download-resume > span:hover svg, .App[theme=dark] [data-anchor=section-about] #download-resume > span:hover span {
-  color: black;
-}
-
-.App[theme=light] [data-anchor=section-about] #download-resume span {
-  background: var(--lv2-accent5);
 }
 
 /*# sourceMappingURL=about.css.map */

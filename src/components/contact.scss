@@ -72,15 +72,6 @@
   }
 }
 
-.App[theme='dark'] [data-anchor='section-contact'] {
-  ::placeholder {
-    color: var(--dark-accent5);
-  }
-}
-
-.App[theme='light'] [data-anchor='section-contact'] {
-}
-
 .App[theme='vaporwave'] [data-anchor='section-contact'] {
   ul a {
     color: var(--vaporwave-accent9);
