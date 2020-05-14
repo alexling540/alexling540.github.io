@@ -2,9 +2,9 @@ import React from "react";
 import { BrowserView, MobileView } from "react-device-detect";
 import styled from "styled-components";
 import {
-  Moon as MoonIcon,
-  Sun as SunIcon
-} from 'react-feather';
+  FiMoon as MoonIcon,
+  FiSun as SunIcon
+} from 'react-icons/fi';
 import './menu.scss';
 import vaporwave from '../imgs/vaporwave_trees.png';
 

@@ -9,11 +9,31 @@ export const darkTheme = {
   backgroundColorDark: '#16191b', // dark-accent6
 };
 
-export const lightTheme = {
+export const lightTheme2 = {
   name: 'light',
   textColor: 'black',
   accentColor: '#E85A4F', // lv2-accent5
   accentColor2: '#E98074', // lv2-accent4
   backgroundColor: '#EAE7DC', // lv2-accent1
   backgroundColorDark: '#D8C3A5', // lv2-accent2
+};
+
+// export const lightTheme4 = {
+//   name: 'light',
+//   textColor: 'black',
+//   accentColor: '#00A8E8',
+//   accentColor2: '#007EA7',
+//   backgroundColor: '#FFFFFF',
+//   backgroundColorDark: '#003459',
+//   backgroundColorDarker: '#00171F'
+// };
+
+export const lightTheme = {
+  name: 'light',
+  textColor: 'black',
+  accentColor: '#00A8E8',
+  accentColor2: '#007EA7',
+  backgroundColorLight: '#FFFFFF',
+  backgroundColor: '#D3F6F8',
+  backgroundColorDark: '#C6D8D9'
 };

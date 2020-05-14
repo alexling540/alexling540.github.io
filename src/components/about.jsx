@@ -3,9 +3,8 @@ import { Timeline, TimelineEvent } from "react-event-timeline";
 import { isMobileOnly } from "react-device-detect";
 import Swiper from "react-id-swiper";
 import styled, { ThemeConsumer } from "styled-components";
-// import { FiDownload as DownloadIcon } from "react-icons/fi";
-import { Download as DownloadIcon } from "react-feather";
-import { GoMortarBoard, GoBriefcase } from "react-icons/go";
+import { GoCloudDownload as DownloadIcon } from "react-icons/go";
+import { GoMortarBoard, GoBriefcase, GoMilestone } from "react-icons/go";
 import SectionTitle from "../lib/SectionTitle";
 import SkillsTable from "../lib/SkillsTable";
 import './about.scss'

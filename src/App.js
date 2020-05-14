@@ -3,11 +3,11 @@ import { useMediaPredicate } from 'react-media-hook';
 import ReactFullpage from '@fullpage/react-fullpage';
 import { ThemeProvider } from "styled-components";
 import {
-  Home as IntroIcon,
-  User as AboutIcon,
-  Package as ProjectsIcon,
-  Info as ContactIcon
-} from 'react-feather';
+  FiHome as IntroIcon,
+  FiUser as AboutIcon,
+  FiPackage as ProjectsIcon,
+  FiInfo as ContactIcon
+} from 'react-icons/fi';
 import 'typeface-lato';
 import './App.scss';
 import Menu from './components/menu';
