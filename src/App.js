@@ -35,8 +35,8 @@ function App () {
     { anchor: 'section-contact',  title: 'Contact',  icon: (<ContactIcon/>),   section: (<Contact/>) }
   ];
 
-  const darkBg = new Array(sections.length - 1).fill(darkTheme.backgroundColor).concat(darkTheme.backgroundColorOther);
-  const lightBg = new Array(sections.length - 1).fill(lightTheme.backgroundColor).concat(lightTheme.backgroundColorOther);
+  const darkBg = new Array(sections.length - 1).fill(darkTheme.backgroundColor).concat(darkTheme.backgroundColorDark);
+  const lightBg = new Array(sections.length - 1).fill(lightTheme.backgroundColor).concat(lightTheme.backgroundColorDark);
 
   const defaultTheme = useMediaPredicate('(prefers-color-scheme: light)') ? 'light' : 'dark';
 

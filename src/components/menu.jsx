@@ -28,7 +28,7 @@ const ThemeToggle = styled.div`
     opacity: ${props => props.theme.name === 'vaporwave' ? 1 : 0};
   }
 `;
-const Navigation = styled.nav`
+const DesktopNavigation = styled.nav`
   li {
     color: ${props => props.theme.textColor};
     svg {
@@ -44,6 +44,12 @@ const Navigation = styled.nav`
     a:after {
       background: ${props => props.theme.accentColor};
     }
+  }
+`;
+const MobileNavigation = styled.nav`
+  background: var(--dark-accent4);
+  li a:after {
+    background: var(--dark-accent2);
   }
 `;
 
@@ -70,7 +76,7 @@ export default class Menu extends React.Component {
             <img src={vaporwave} alt={''}/>
           </div>
         </ThemeToggle>
-        <Navigation>
+        <DesktopNavigation>
           <ul>
             {this.props.sections.map((element, index) => (
               <li data-menuanchor={element.anchor} key={index}>
@@ -81,7 +87,7 @@ export default class Menu extends React.Component {
               </li>
             ))}
           </ul>
-        </Navigation>
+        </DesktopNavigation>
       </React.Fragment>
     );
   }

@@ -79,13 +79,15 @@ export default class About extends React.Component {
               title="Texas A&M University"
               subtitle="2018-Present"
               container={'card'}
-
               bubbleStyle={{
                 background: theme.backgroundColor,
                 borderColor: theme.accentColor
               }}
               icon={<GoMortarBoard/>}
               iconColor={theme.accentColor}
+              cardHeaderStyle={{
+                background: theme.accentColor
+              }}
             >
               Studying Computer Science at Texas A&M University
             </TimelineEvent>
