@@ -52,7 +52,10 @@ export default class About extends React.Component {
     return(
       <React.Fragment>
         <div>
-          <img src={''} alt={''} />
+          <img src={''} alt={''} style={{
+            width: '100%',
+            
+          }}/>
         </div>
         <div>
           <AboutParagraph>Howdy! I'm Alexander Ling, a Junior at Texas A&M majoring in Computer Science.</AboutParagraph>

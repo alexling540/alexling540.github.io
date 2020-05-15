@@ -149,7 +149,6 @@
   top: 50%;
   left: 0;
   display: block;
-  background: #020304;
   transition: 0.5s;
 }
 #menu .menu-mobile input + label span:first-child {
@@ -171,7 +170,6 @@
   transform: rotate(-405deg);
 }
 #menu .menu-mobile input ~ nav {
-  background: white;
   position: fixed;
   top: 0;
   left: 0;
@@ -198,7 +196,6 @@
 #menu .menu-mobile input ~ nav > ul > li > a {
   text-decoration: none;
   text-transform: uppercase;
-  color: #020304;
   font-weight: 700;
   font-family: Lato, sans-serif;
   font-size: 6vmin;

@@ -46,10 +46,21 @@ const DesktopNavigation = styled.nav`
     }
   }
 `;
+const MenuToggleBar = styled.span`
+  background: ${props => props.theme.accentColor};
+`;
 const MobileNavigation = styled.nav`
-  background: var(--dark-accent4);
-  li a:after {
-    background: var(--dark-accent2);
+  background: ${props => props.theme.backgroundColorLight};
+  li {
+    > a {
+      color: ${props => props.theme.textColor};
+      &:after {
+        background: ${props => props.theme.accentColor};
+      }
+    }
+    &.active a {
+      color: ${props => props.theme.accentColor};
+    }
   }
 `;
 
@@ -97,11 +108,11 @@ export default class Menu extends React.Component {
       <React.Fragment>
         <input id="burgerCheckbox" type="checkbox"/>
         <label htmlFor="burgerCheckbox">
-          <span></span>
-          <span></span>
-          <span></span>
+          <MenuToggleBar/>
+          <MenuToggleBar/>
+          <MenuToggleBar/>
         </label>
-        <nav>
+        <MobileNavigation>
           <ul>
             {this.props.sections.map((element, index) => (
               <li data-menuanchor={element.anchor} key={index}>
@@ -109,7 +120,7 @@ export default class Menu extends React.Component {
               </li>
             ))}
           </ul>
-        </nav>
+        </MobileNavigation>
       </React.Fragment>
     )
   }

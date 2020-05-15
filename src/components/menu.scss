@@ -150,7 +150,7 @@
         top: 50%;
         left: 0;
         display: block;
-        background: #020304;
+        //background: #020304;
         transition: 0.5s;
       }
       span:first-child {
@@ -176,7 +176,7 @@
     }
   }
   input ~ nav {
-    background: white;
+    //background: white;
     position: fixed;
     top: 0;
     left: 0;
@@ -200,7 +200,7 @@
         > a {
           text-decoration: none;
           text-transform: uppercase;
-          color: #020304;
+          //color: #020304;
           font-weight: 700;
           font-family: Lato, sans-serif;
           font-size: 6vmin;
