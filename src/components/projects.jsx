@@ -38,16 +38,16 @@ const cards = [
       {text: 'Repository', link: 'https://github.tamu.edu/peterluong/group14databaseproject'}
     ]
   },
-  {
-    title: 'This website',
-    image: '',
-    text: [
-
-    ],
-    links: [
-
-    ]
-  }
+  // {
+  //   title: 'This website',
+  //   image: '',
+  //   text: [
+  //
+  //   ],
+  //   links: [
+  //
+  //   ]
+  // }
 ];
 
 const slidesPerView = (isMobile) ? ((isMobileOnly) ? 1 : 2) : 3; // phone=1, tablet=2, desktop=3

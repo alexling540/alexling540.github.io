@@ -22,12 +22,12 @@ export default class SkillsTable extends React.Component {
 
   render () {
     return (
-      <div style={this.props.style} className={'skills-table'}>
-        <div className={'skills-title'}>Skills</div>
+      <div style={this.props.style} className='skills-table'>
+        <div className='skills-title'>Skills</div>
         {this.props.skills.map((element, i) => (
           <SkillRow key={i} className={'skill-row'}>
-            <span className={'skill-name'}>{element.name}</span>
-            <Line className={'skill-line'} percent={element.percent} strokeLinecap="square" trailColor={'transparent'}/>
+            <span className='skill-name'>{element.name}</span>
+            <Line className='skill-line' percent={element.percent} strokeLinecap="square" trailColor='transparent'/>
           </SkillRow>
         ))}
       </div>

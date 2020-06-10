@@ -9,6 +9,9 @@
   vertical-align: middle;
   transition: 0.25s all ease-in-out;
 }
+[data-anchor=section-about] #download-resume > span svg {
+  padding-left: 5px;
+}
 [data-anchor=section-about] .third {
   width: calc(33% - 10vmin);
   float: left;

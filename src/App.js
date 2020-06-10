@@ -49,16 +49,14 @@ function App () {
   const [animateAnchor, setAnimateAnchor] = useState(true); // initially animate when loading page
 
   const toggleTheme = () => {
+    setAnimateAnchor(false); // do not animate when toggling theme
     if (theme === 'light') {
-      setAnimateAnchor(false); // do not animate when toggling theme
       setTheme('dark');
       setThemeBg(darkBg);
     } else if (theme === 'dark') {
-      setAnimateAnchor(false); // do not animate when toggling theme
       setTheme('light');
       setThemeBg(lightBg);
     } else {
-      setAnimateAnchor(false); // do not animate when toggling theme
       setTheme(defaultTheme);
       getMatchingScheme(theme);
     }

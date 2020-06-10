@@ -23,6 +23,7 @@
     "react-is": "^16.13.1",
     "react-media-hook": "^0.4.4",
     "react-scripts": "^3.4.0",
+    "react-transition-group": "^4.4.1",
     "styled-components": "^5.1.0",
     "swiper": "^5.3.8",
     "tsutils": "^3.17.1",

@@ -58,7 +58,7 @@ const MobileNavigation = styled.nav`
         background: ${props => props.theme.accentColor};
       }
     }
-    &.active a {
+    &.active > a {
       color: ${props => props.theme.accentColor};
     }
   }

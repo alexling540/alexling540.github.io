@@ -3,8 +3,10 @@ import { Timeline, TimelineEvent } from "react-event-timeline";
 import { isMobileOnly } from "react-device-detect";
 import Swiper from "react-id-swiper";
 import styled, { ThemeConsumer } from "styled-components";
-import { GoCloudDownload as DownloadIcon } from "react-icons/go";
-import { GoMortarBoard, GoBriefcase, GoMilestone } from "react-icons/go";
+import { IconContext } from "react-icons";
+import {
+  GoCloudDownload as DownloadIcon,
+  GoMortarBoard, GoBriefcase, GoMilestone } from "react-icons/go";
 import SectionTitle from "../lib/SectionTitle";
 import SkillsTable from "../lib/SkillsTable";
 import './about.scss'
@@ -54,48 +56,69 @@ export default class About extends React.Component {
         <div>
           <img src={''} alt={''} style={{
             width: '100%',
-            
           }}/>
         </div>
         <div>
           <AboutParagraph>Howdy! I'm Alexander Ling, a Junior at Texas A&M majoring in Computer Science.</AboutParagraph>
+          <p>
+            <ResumeLink href={'https://drive.google.com/file/d/1K1iig6_iW95FU5qU2SLp9ZqPaJKFrN82/view?usp=sharing'} target="_blank" rel="noopener noreferrer" id={'download-resume'}>
+              <span>
+                <span>
+                  View Resume
+                </span>
+                <DownloadIcon height={24} width={24}/>
+              </span>
+            </ResumeLink>
+          </p>
         </div>
-        <ResumeLink href={'https://drive.google.com/file/d/1K1iig6_iW95FU5qU2SLp9ZqPaJKFrN82/view?usp=sharing'} target="_blank" rel="noopener noreferrer" id={'download-resume'}>
-          <span>
-            <span>
-              View Resume
-            </span>
-            <DownloadIcon height={24} width={24}/>
-          </span>
-        </ResumeLink>
       </React.Fragment>
     );
   }
 
   renderTimeline() {
     return(
-      <ThemeConsumer>
-        {theme => (
-          <Timeline>
-            <TimelineEvent
-              title="Texas A&M University"
-              subtitle="2018-Present"
-              container={'card'}
-              bubbleStyle={{
-                background: theme.backgroundColor,
-                borderColor: theme.accentColor
-              }}
-              icon={<GoMortarBoard/>}
-              iconColor={theme.accentColor}
-              cardHeaderStyle={{
-                background: theme.accentColor
+      <React.Fragment>
+        <div>Timeline</div>
+        <ThemeConsumer>
+          {theme => (
+            <IconContext.Provider
+              value={{
+                size: '1.5em'
               }}
             >
-              Studying Computer Science at Texas A&M University
-            </TimelineEvent>
-          </Timeline>
-        )}
-      </ThemeConsumer>
+              <Timeline>
+                <TimelineEvent
+                  title="Texas A&M University"
+                  subtitle="2018-Present"
+                  container={'card'}
+                  // bubbleStyle={{
+                  //   background: theme.backgroundColor,
+                  //   borderColor: theme.accentColor
+                  // }}
+                  bubbleStyle={{
+                    background: theme.accentColor,
+                    borderColor: theme.accentColor
+                  }}
+                  icon={<GoMortarBoard/>}
+                  // iconColor={theme.accentColor}
+                  iconColor={theme.backgroundColor}
+                  cardHeaderStyle={{
+                    background: theme.accentColor
+                  }}
+                  titleStyle={{
+                    color: 'black'
+                  }}
+                  subtitleStyle={{
+                    color: 'black'
+                  }}
+                >
+                  Studying Computer Science at Texas A&M University
+                </TimelineEvent>
+              </Timeline>
+            </IconContext.Provider>
+          )}
+        </ThemeConsumer>
+      </React.Fragment>
     );
   }
 
@@ -103,10 +126,11 @@ export default class About extends React.Component {
     return(
       <SkillsTable
         skills={[
-          {name: 'C++', percent: 60},
-          {name: 'Java', percent: 20},
-          {name: 'JavaScript', percent: 0},
-          {name: 'PostgreSQL', percent: 0}
+          {name: 'C++', percent: 40},
+          {name: 'Java', percent: 45},
+          {name: 'JavaScript', percent: 24},
+          {name: 'PostgreSQL', percent: 16},
+          {name: 'Python', percent: 15}
         ]}
       />
     );
