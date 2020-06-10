@@ -1,38 +1,107 @@
+:root {
+  --dark-accent1: #61892F;
+  --dark-accent2: #86C232;
+  --dark-accent3: #222629;
+  --dark-accent4: #474B4F;
+  --dark-accent5: #6B6E70;
+  --dark-accent6: #16191b;
+  --light-accent1: #5680E9;
+  --light-accent2: #84CEEB;
+  --light-accent3: #5AB9EA;
+  --light-accent4: #C1C8E4;
+  --light-accent5: #8860D0;
+  --lv2-accent1: #EAE7DC;
+  --lv2-accent2: #D8C3A5;
+  --lv2-accent3: #8E8D8A;
+  --lv2-accent4: #E98074;
+  --lv2-accent5: #E85A4F;
+  --vaporwave-accent1: #9239F6;
+  --vaporwave-accent2: #903495;
+  --vaporwave-accent3: #6F3460;
+  --vaporwave-accent4: #4A354F;
+  --vaporwave-accent5: #D20076;
+  --vaporwave-accent6: #FF0076;
+  --vaporwave-accent7: #FF4373;
+  --vaporwave-accent8: #FF6B58;
+  --vaporwave-accent9: #F8B660;
+}
+
 .App {
   text-align: center;
+  font-family: Lato, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.section {
+  padding: 7vmin 5vw 0;
+  transition: all 1s cubic-bezier(0.25, 0, 0.41, 1);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.section > h1 {
+  flex-shrink: 0;
+  text-align: left;
+  font-size: 7vmin;
+  line-height: 1;
+  transition: 1s ease-in-out;
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+.section .section-content {
+  flex: 1 1 0;
+  padding: 5vmin 0 5vmin;
+  max-height: calc(100% - 17vmin);
+  display: flex;
+}
+.section .section-content .swiper-container {
+  flex: 1 1 auto;
+}
+.section .section-content .swiper-container .swiper-wrapper {
+  height: calc(100% - 5vh);
+}
+.section .section-content .swiper-container .swiper-wrapper .swiper-slide {
+  display: flex;
+}
+.section .section-content .swiper-container .swiper-pagination-fraction, .section .section-content .swiper-container .swiper-pagination-custom, .section .section-content .swiper-container .swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 0;
+}
+
+.App[theme=dark] .section {
+  background: var(--dark-accent3);
+}
+.App[theme=dark] .section:last-child {
+  background: var(--dark-accent6);
+}
+.App[theme=dark] .section h1 {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.App[theme=dark] .section h1:first-letter {
+  color: var(--dark-accent2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App[theme=light] .section {
+  background: var(--lv2-accent1);
 }
+.App[theme=light] .section:last-child {
+  background: var(--lv2-accent2);
+}
+.App[theme=light] .section h1 {
+  color: black;
+}
+.App[theme=light] .section h1:first-letter {
+  color: var(--lv2-accent5);
+}
+
+.App[theme=vaporwave] {
+  background: linear-gradient(var(--vaporwave-accent1) 0%, var(--vaporwave-accent2) 100%);
+}
+.App[theme=vaporwave] .section {
+  background: transparent;
+}
+.App[theme=vaporwave] .section h1 {
+  color: var(--vaporwave-accent8);
+}
+.App[theme=vaporwave] .section h1:first-letter {
+  color: var(--vaporwave-accent7);
+}
+
+/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,25 @@
+[data-anchor=section-about] #download-resume {
+  text-decoration: none;
+}
+[data-anchor=section-about] #download-resume > span {
+  padding: 2vmin 3vw;
+  transition: 0.25s all ease-in-out;
+}
+[data-anchor=section-about] #download-resume > span svg, [data-anchor=section-about] #download-resume > span span {
+  vertical-align: middle;
+  transition: 0.25s all ease-in-out;
+}
+[data-anchor=section-about] #download-resume > span svg {
+  padding-left: 5px;
+}
+[data-anchor=section-about] .third {
+  width: calc(33% - 10vmin);
+  float: left;
+  overflow-x: hidden;
+  padding: 5vmin;
+}
+[data-anchor=section-about] .swiper-slide {
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=about.css.map */
