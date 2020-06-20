@@ -8,7 +8,7 @@
 .skills-table .skill-row .skill-name {
   font-variant: small-caps;
   font-family: Lato, sans-serif;
-  font-size: 2.5vmin;
+  font-size: 2.5vh;
 }
 .skills-table .skill-row .skill-line {
   border-width: 1px;
