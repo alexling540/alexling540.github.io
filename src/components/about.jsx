@@ -29,6 +29,10 @@ const AboutParagraph = styled.p`
   color: ${props => props.theme.textColor};
 `;
 
+const Title = styled.div`
+  color: ${props => props.theme.textColor}
+`;
+
 const params = {
   spaceBetween: 20,
   pagination: {
@@ -78,7 +82,7 @@ export default class About extends React.Component {
   renderTimeline() {
     return(
       <React.Fragment>
-        <div>Timeline</div>
+        <Title>Timeline</Title>
         <ThemeConsumer>
           {theme => (
             <IconContext.Provider
@@ -124,15 +128,18 @@ export default class About extends React.Component {
 
   renderSkills() {
     return(
-      <SkillsTable
-        skills={[
-          {name: 'C++', percent: 40},
-          {name: 'Java', percent: 45},
-          {name: 'JavaScript', percent: 24},
-          {name: 'PostgreSQL', percent: 16},
-          {name: 'Python', percent: 15}
-        ]}
-      />
+      <React.Fragment>
+        <Title>Skills</Title>
+        <SkillsTable
+          skills={[
+            {name: 'C++', percent: 40},
+            {name: 'Java', percent: 45},
+            {name: 'JavaScript', percent: 24},
+            {name: 'PostgreSQL', percent: 16},
+            {name: 'Python', percent: 15}
+          ]}
+        />
+      </React.Fragment>
     );
   }
 
