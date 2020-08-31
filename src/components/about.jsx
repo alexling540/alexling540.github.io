@@ -94,7 +94,7 @@ export default class About extends React.Component {
                 <TimelineEvent
                   title="Texas A&M University"
                   subtitle="2018-Present"
-                  container={'card'}
+                  container="card"
                   // bubbleStyle={{
                   //   background: theme.backgroundColor,
                   //   borderColor: theme.accentColor
@@ -118,6 +118,27 @@ export default class About extends React.Component {
                 >
                   Studying Computer Science at Texas A&M University
                 </TimelineEvent>
+                <TimelineEvent
+                  title="Project CORA"
+                  subtitle="2020-Present"
+                  container="card"
+                  bubbleStyle={{
+                    background: theme.accentColor,
+                    borderColor: theme.accentColor
+                  }}
+                  iconColor={theme.backgroundColor}
+                  cardHeaderStyle={{
+                    background: theme.accentColor
+                  }}
+                  titleStyle={{
+                    color: 'black'
+                  }}
+                  subtitleStyle={{
+                    color: 'black'
+                  }}
+                >
+
+                </TimelineEvent>
               </Timeline>
             </IconContext.Provider>
           )}
@@ -132,11 +153,13 @@ export default class About extends React.Component {
         <Title>Skills</Title>
         <SkillsTable
           skills={[
-            {name: 'C++', percent: 40},
-            {name: 'Java', percent: 45},
-            {name: 'JavaScript', percent: 24},
+            {name: 'JavaScript', percent: 50},
+            {name: 'C++', percent: 45},
+            {name: 'Java', percent: 40},
+            {name: 'Git', percent: 20},
             {name: 'PostgreSQL', percent: 16},
-            {name: 'Python', percent: 15}
+            {name: 'Python', percent: 15},
+            {name: 'Ruby', percent: 5}
           ]}
         />
       </React.Fragment>
