@@ -55,7 +55,7 @@ export default class Contact extends React.Component {
       // {icon: <PhoneIcon/>, text: 'Phone', href: '#section-contact', target: '_self'},
       {icon: <MailIcon/>, text: 'alexling.js@gmail.com', href: 'mailto:alexling.js@gmail.com', target: '_self' },
       {icon: <GitHubIcon/>, text: 'alexling540', href: 'https://github.com/alexling540', target: '_blank'},
-      // {icon: <LinkedinIcon/>, text: 'alexander-ling-6b8a28178', href: 'https://www.linkedin.com/in/alexander-ling-6b8a28178/', target: '_blank'}
+      {icon: <LinkedinIcon/>, text: 'alexander-ling-6b8a28178', href: 'https://www.linkedin.com/in/alexander-ling-6b8a28178/', target: '_blank'}
     ];
 
     return (

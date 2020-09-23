@@ -11,6 +11,11 @@ import SectionTitle from "../lib/SectionTitle";
 import SkillsTable from "../lib/SkillsTable";
 import './about.scss'
 
+const ProfilePicture = styled.img`
+  border: 2px solid ${props => props.theme.accentColor};
+  width: 40%;
+`;
+
 const ResumeLink = styled.a`
   color: ${props => props.theme.textColor};
   > span {
@@ -27,6 +32,7 @@ const ResumeLink = styled.a`
 const AboutParagraph = styled.p`
   text-align: justify;
   color: ${props => props.theme.textColor};
+  transition: 0.25s ease-in-out;
 `;
 
 const Title = styled.div`
@@ -56,26 +62,31 @@ export default class About extends React.Component {
 
   renderAbout() {
     return(
-      <React.Fragment>
-        <div>
-          <img src={''} alt={''} style={{
-            width: '100%',
-          }}/>
-        </div>
-        <div>
-          <AboutParagraph>Howdy! I'm Alexander Ling, a Junior at Texas A&M majoring in Computer Science.</AboutParagraph>
-          <p>
-            <ResumeLink href={'https://drive.google.com/file/d/1K1iig6_iW95FU5qU2SLp9ZqPaJKFrN82/view?usp=sharing'} target="_blank" rel="noopener noreferrer" id={'download-resume'}>
-              <span>
-                <span>
-                  View Resume
-                </span>
-                <DownloadIcon height={24} width={24}/>
-              </span>
-            </ResumeLink>
-          </p>
-        </div>
-      </React.Fragment>
+      <div>
+        {/*<ProfilePicture src={require('../assets/images/alex_ling.png')} alt={''}/>*/}
+        <AboutParagraph>
+          Howdy! I'm Alexander Ling, a Junior at Texas A&M majoring in Computer Science.
+        </AboutParagraph>
+        <AboutParagraph>
+          My strengths currently lie in front-end development, where I have experience using both React and Vue.js.
+          I also have experience using PostgreSQL and the NoSQL databases Realtime Database and Firestore from
+          Google's Firebase.
+        </AboutParagraph>
+        <AboutParagraph>
+          Currently, I am taking data science, machine learning, and artificial intelligence courses at A&M. I hope
+          to one day apply what I learn from these classes into a project or at work!
+        </AboutParagraph>
+        <ResumeLink href={'https://drive.google.com/file/d/1K1iig6_iW95FU5qU2SLp9ZqPaJKFrN82/view?usp=sharing'}
+          target="_blank" rel="noopener noreferrer" id={'download-resume'}
+        >
+          <span>
+            <span>
+              View Resume
+            </span>
+            <DownloadIcon height={24} width={24}/>
+          </span>
+        </ResumeLink>
+      </div>
     );
   }
 
@@ -170,29 +181,17 @@ export default class About extends React.Component {
     if (isMobileOnly) {
       return (
         <Swiper {...params}>
-          <div>
-            {this.renderAbout()}
-          </div>
-          <div>
-            {this.renderTimeline()}
-          </div>
-          <div>
-            {this.renderSkills()}
-          </div>
+          <div>{ this.renderAbout()}</div>
+          <div>{this.renderTimeline()}</div>
+          <div>{this.renderSkills()}</div>
         </Swiper>
       );
     }
     return (
       <React.Fragment>
-        <div className={'third'}>
-          {this.renderAbout()}
-        </div>
-        <div className={'third'}>
-          {this.renderTimeline()}
-        </div>
-        <div className={'third'}>
-          {this.renderSkills()}
-        </div>
+        <div className={'third'}>{this.renderAbout()}</div>
+        <div className={'third'}>{this.renderTimeline()}</div>
+        <div className={'third'}>{this.renderSkills()}</div>
       </React.Fragment>
     );
   }
@@ -207,5 +206,4 @@ export default class About extends React.Component {
       </React.Fragment>
     );
   }
-
 }
