@@ -15,7 +15,7 @@ import Introduction from './components/intro';
 import About from './components/about';
 import Projects from './components/projects';
 import Contact from './components/contact';
-import {darkTheme, lightTheme} from "./themes";
+import { darkTheme, lightTheme } from "./themes";
 
 // https://visme.co/blog/website-color-schemes/
 // https://fonts.google.com/specimen/Lato?selection.family=Lato
@@ -74,7 +74,7 @@ function App () {
           verticalCentered={false}
           sectionsColor={themeBg}
           animateAnchor={animateAnchor}
-          render={({state, fullpageApi}) => {
+          render={({ state, fullpageApi }) => {
             return (
               <ReactFullpage.Wrapper>
                 {sections.map((element, index) => (

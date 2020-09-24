@@ -8,6 +8,7 @@
     color: white;
     font-family: Lato, sans-serif;
     font-size: 10vmin;
+    transition: all 0.25s ease-in-out;
   }
 
   .intro-picture {
@@ -19,6 +20,7 @@
     right: 0;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: background-image 0.25s ease-in-out;
   }
 
   .intro-down {
