@@ -14,10 +14,10 @@ import SectionTitle from "../lib/SectionTitle";
 import SkillsTable from "../lib/SkillsTable";
 import './about.scss'
 
-const ProfilePicture = styled.img`
-  border: 2px solid ${props => props.theme.accentColor};
-  width: 40%;
-`;
+// const ProfilePicture = styled.img`
+//   border: 2px solid ${props => props.theme.accentColor};
+//   width: 40%;
+// `;
 
 const ResumeLink = styled.a`
   color: ${props => props.theme.textColor};
