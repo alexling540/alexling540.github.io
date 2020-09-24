@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserView, MobileView } from "react-device-detect";
+import { BrowserView } from "react-device-detect";
 import { IconContext } from "react-icons";
 import { ThemeConsumer } from "styled-components";
 import { FiChevronDown as ChevronDown } from 'react-icons/fi';
