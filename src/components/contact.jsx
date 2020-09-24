@@ -2,7 +2,7 @@ import React from 'react';
 import { isMobileOnly } from "react-device-detect";
 import styled from "styled-components";
 import {
-  Phone as PhoneIcon,
+  // Phone as PhoneIcon,
   Mail as MailIcon,
   GitHub as GitHubIcon,
   Linkedin as LinkedinIcon

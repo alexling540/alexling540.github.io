@@ -6,7 +6,10 @@ import styled, { ThemeConsumer } from "styled-components";
 import { IconContext } from "react-icons";
 import {
   GoCloudDownload as DownloadIcon,
-  GoMortarBoard, GoBriefcase, GoMilestone } from "react-icons/go";
+  GoMortarBoard,
+  // GoBriefcase,
+  // GoMilestone
+} from "react-icons/go";
 import SectionTitle from "../lib/SectionTitle";
 import SkillsTable from "../lib/SkillsTable";
 import './about.scss'
