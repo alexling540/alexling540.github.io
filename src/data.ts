@@ -8,7 +8,7 @@ const intro: string[] = [
   `I'm Alex, a full stack developer working at Paycom. Most of my work experience is with PHP in an MVC framework, with 
   more emphasis on backend.`,
   `Most of my hobbyist programming is spent on learning frontend frameworks to keep up with the industry and writing 
-  scripts to automate tedius tasks.`
+  scripts to automate tedious tasks.`
 ];
 
 const skills: Skills = {
