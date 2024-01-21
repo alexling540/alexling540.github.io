@@ -1,5 +1,7 @@
 <div class="grid">
-  <div class="date"><slot name="date" /></div>
+  <div class="date">
+    <slot name="date" />
+  </div>
   <div class="info">
     <slot name="info" />
   </div>

@@ -1,5 +1,6 @@
 import type { EducationEntry } from '$types/EducationEntry';
 import type { ExperienceEntry } from '$types/ExperienceEntry';
+import type { Skills } from '$types/Skills';
 
 const header: string = 'hello, world';
 
@@ -10,11 +11,11 @@ const intro: string[] = [
   scripts to automate tedius tasks.`
 ];
 
-const skills = {
+const skills: Skills = {
   languages: ['JavaScript', 'TypeScript', 'PHP', 'SQL', 'Java', 'Python', 'Lua', 'C'],
   libraries: ['React.js', 'Next.js', 'Vue.js', 'jQuery', 'Svelte', 'SvelteKit', 'Spring Boot'],
-  tools: ['Git'],
-  platforms: ['Firebase', 'Vercel', 'Supabase']
+  platforms: ['Firebase', 'Vercel', 'Supabase'],
+  tools: ['Git']
 };
 
 const experience: ExperienceEntry[] = [
