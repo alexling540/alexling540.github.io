@@ -5,7 +5,7 @@
   import EducationSection from '$components/education/Section.svelte';
   import Footer from '$components/footer/Footer.svelte';
 
-  import { header, intro, skills, experience, education, linkedIn, gitHub } from '../config';
+  import { header, intro, skills, experience, education, linkedIn, gitHub } from '../data';
 
   import '../app.css';
 
