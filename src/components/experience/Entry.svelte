@@ -25,7 +25,9 @@
 <TwoColumnEntry>
   <span slot="date">{formatDate(start, '?')} &ndash; {formatDate(end, 'Present')}</span>
   <div slot="info" class="info">
-    <span class="position"><span class="title">{title}</span> &mdash; {company}</span>
+    <span class="position">
+      <span class="title">{title}</span> &mdash; {company}
+    </span>
     <div class="description">
       {#if descriptionParagraphs.length > 0}
         {#each descriptionParagraphs as paragraph}

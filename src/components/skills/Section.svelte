@@ -7,11 +7,8 @@
   export let tools: string[];
 </script>
 
-<section>
-  <header>
-    <h2>Skills</h2>
-  </header>
-
+<article>
+  <h2>Skills</h2>
   <div class="grid">
     <div>
       <Category header="Languages" list={languages} />
@@ -26,7 +23,7 @@
       <Category header="Tools" list={tools} />
     </div>
   </div>
-</section>
+</article>
 
 <style lang="css">
   .grid {

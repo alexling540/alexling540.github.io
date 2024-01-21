@@ -4,10 +4,7 @@
 </script>
 
 <section>
-  <header>
-    <h1>{header}</h1>
-  </header>
-
+  <h1>{header}</h1>
   {#each paragraphs as paragraph}
     <p>{paragraph}</p>
   {/each}

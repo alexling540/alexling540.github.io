@@ -17,5 +17,5 @@
   <SkillsSection {languages} {libraries} {platforms} {tools} />
   <ExperienceSection entries={experience} />
   <EducationSection entries={education} />
-  <Footer {gitHub} {linkedIn} />
 </main>
+<Footer {gitHub} {linkedIn} />

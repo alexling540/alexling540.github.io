@@ -4,9 +4,7 @@
 </script>
 
 <section>
-  <header>
-    <h3>{header}</h3>
-  </header>
+  <h3>{header}</h3>
   <ul>
     {#each list as item}
       <li>{item}</li>

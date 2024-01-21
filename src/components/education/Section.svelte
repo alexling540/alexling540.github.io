@@ -6,12 +6,9 @@
   export let entries: EducationEntry[];
 </script>
 
-<section>
-  <header>
-    <h2>Education</h2>
-  </header>
-
+<article>
+  <h2>Education</h2>
   {#each entries as { certification, start, end, university, location }}
     <Entry {certification} {start} {end} {university} {location} />
   {/each}
-</section>
+</article>

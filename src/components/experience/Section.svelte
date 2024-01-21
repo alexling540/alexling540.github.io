@@ -6,11 +6,8 @@
   export let entries: ExperienceEntry[];
 </script>
 
-<section>
-  <header>
-    <h2>Experience</h2>
-  </header>
-
+<article>
+  <h2>Experience</h2>
   <div class="grid">
     {#each entries as { title, company, start, end, description, stack }}
       <Entry
@@ -24,7 +21,7 @@
       />
     {/each}
   </div>
-</section>
+</article>
 
 <style lang="css">
   .grid {
