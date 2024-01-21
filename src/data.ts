@@ -11,10 +11,10 @@ const intro: string[] = [
 ];
 
 const skills = {
-  languages: ['JavaScript', 'TypeScript', 'PHP', 'SQL', 'Python', 'Java', 'Lua', 'C'],
+  languages: ['JavaScript', 'TypeScript', 'PHP', 'SQL', 'Java', 'Python', 'Lua', 'C'],
   libraries: ['React.js', 'Next.js', 'Vue.js', 'jQuery', 'Svelte', 'SvelteKit', 'Spring Boot'],
   tools: ['Git'],
-  platforms: ['Firebase', 'Vercel']
+  platforms: ['Firebase', 'Vercel', 'Supabase']
 };
 
 const experience: ExperienceEntry[] = [
