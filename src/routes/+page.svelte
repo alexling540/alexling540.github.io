@@ -12,6 +12,11 @@
   const { languages, libraries, platforms, tools } = skills;
 </script>
 
+<svelte:head>
+  <title>Alexander Ling | Personal Website</title>
+  <meta name="description" content="Alexander Ling's Personal Home Page" />
+</svelte:head>
+
 <main>
   <IntroSection {header} paragraphs={intro} />
   <SkillsSection {languages} {libraries} {platforms} {tools} />
