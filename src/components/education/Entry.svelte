@@ -1,18 +1,20 @@
 <script lang="ts">
   import TwoColumnEntry from '$components/TwoColumnEntry.svelte';
 
-  import { formatDateMs } from '$lib/formatDateMs';
+  import { formatMonthAndYear } from '$lib/formatMonthAndYear';
+
+  import type { MonthAndYear } from '$types/MonthAndYear';
 
   export let certification: string;
-  export let start: number;
-  export let end: number | undefined = undefined;
+  export let start: MonthAndYear;
+  export let end: MonthAndYear | undefined = undefined;
   export let university: string;
   export let location: string;
 </script>
 
 <TwoColumnEntry>
   <span slot="date">
-    {formatDateMs(start, '?')} &ndash; {formatDateMs(end, 'Present')}
+    {formatMonthAndYear(start, '?')} &ndash; {formatMonthAndYear(end, 'Present')}
   </span>
   <div slot="info" class="info">
     <span class="certification">{certification}</span>

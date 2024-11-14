@@ -1,5 +1,6 @@
 import type { EducationEntry } from '$types/EducationEntry';
 import type { ExperienceEntry } from '$types/ExperienceEntry';
+import { Month } from '$types/Month';
 import type { Skills } from '$types/Skills';
 
 const header: string = 'hello, world';
@@ -22,24 +23,37 @@ const experience: ExperienceEntry[] = [
   {
     title: 'Software Developer III',
     company: 'Paycom',
-    start: Date.UTC(2022, 4),
+    start: {
+      year: 2022,
+      month: Month.MAY
+    },
     description: {
       points: [
-        `Enhanced an existing deferred overtime calculation system to be more flexible`,
+        `Rewrote 2 existing legacy PHP configuration wizards in React consuming data from a PHP REST API server`,
+        `Created an interface for users to view their time sheet calculations in greater detail`,
+        `Extended a pay calculation system to allow for more customization of payouts for certain time, integrating 
+          modern PHP with legacy code`,
         `Collaborated on improving an existing system to allow for customized calculations and filtering`,
+        `Enhanced an existing overtime calculation system to allow user defined constants`,
         `Worked on preventing XSS exploits by patching legacy code`
       ]
     },
-    stack: ['PHP', 'MySQL', 'JavaScript', 'jQuery', 'React']
+    stack: ['PHP', 'MySQL', 'React', 'TypeScript', 'JavaScript', 'jQuery']
   },
   {
     title: 'Software Development Intern',
     company: 'Paycom',
-    start: Date.UTC(2021, 4),
-    end: Date.UTC(2021, 7),
+    start: {
+      year: 2021,
+      month: Month.MAY
+    },
+    end: {
+      year: 2021,
+      month: Month.AUGUST
+    },
     description: {
       paragraphs: [
-        `As a team of 4 interns, designed and built the frontend and backend of a social media website.`
+        `As a team of 4 interns, designed and built the frontend and backend of a social media website`
       ]
     },
     stack: ['React', 'PHP', 'MySQL', 'Socket.IO']
@@ -48,9 +62,15 @@ const experience: ExperienceEntry[] = [
 
 const education: EducationEntry[] = [
   {
-    certification: 'BS in Computer Science',
-    start: Date.UTC(2018, 7),
-    end: Date.UTC(2022, 4),
+    certification: 'Bachelors of Science in Computer Science',
+    start: {
+      year: 2018,
+      month: Month.AUGUST
+    },
+    end: {
+      year: 2022,
+      month: Month.MAY
+    },
     university: 'Texas A&M University',
     location: 'College Station, TX'
   }

@@ -1,29 +1,21 @@
 <script lang="ts">
   import TwoColumnEntry from '$components/TwoColumnEntry.svelte';
 
+  import { formatMonthAndYear } from '$lib/formatMonthAndYear';
+
+  import type { MonthAndYear } from '$types/MonthAndYear';
+
   export let title: string;
   export let company: string;
-  export let start: number;
-  export let end: number | undefined = undefined;
+  export let start: MonthAndYear;
+  export let end: MonthAndYear | undefined = undefined;
   export let descriptionParagraphs: string[] = [];
   export let descriptionPoints: string[] = [];
   export let stack: string[] = [];
-
-  const formatDate = (dateInMs: number | undefined, defaultValue: string = ''): string => {
-    if (typeof dateInMs === 'undefined') {
-      return defaultValue;
-    }
-
-    return Intl.DateTimeFormat('en-US', {
-      year: 'numeric',
-      month: 'short',
-      timeZone: 'UTC'
-    }).format(new Date(dateInMs));
-  };
 </script>
 
 <TwoColumnEntry>
-  <span slot="date">{formatDate(start, '?')} &ndash; {formatDate(end, 'Present')}</span>
+  <span slot="date">{formatMonthAndYear(start, '?')} &ndash; {formatMonthAndYear(end, 'Present')}</span>
   <div slot="info" class="info">
     <span class="position">
       <span class="title">{title}</span> &mdash; {company}

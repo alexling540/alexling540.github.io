@@ -1,8 +1,10 @@
+import type { MonthAndYear } from './MonthAndYear';
+
 export interface ExperienceEntry {
   title: string;
   company: string;
-  start: number;
-  end?: number;
+  start: MonthAndYear;
+  end?: MonthAndYear;
   description: {
     paragraphs?: string[];
     points?: string[];
