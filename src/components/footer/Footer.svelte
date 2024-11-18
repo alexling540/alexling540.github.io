@@ -7,7 +7,7 @@
 </script>
 
 <footer>
-  <div class="break">&#65374;</div>
+  <div class="break" role="separator">&#65374;</div>
   <ul>
     <li>
       <a href={linkedInUrl} class="no-print">LinkedIn</a>
