@@ -15,7 +15,9 @@
 </script>
 
 <TwoColumnEntry>
-  <span slot="date">{formatMonthAndYear(start, '?')} &ndash; {formatMonthAndYear(end, 'Present')}</span>
+  <span slot="date">
+    {formatMonthAndYear(start, '?')} &ndash; {formatMonthAndYear(end, 'Present')}
+  </span>
   <div slot="info" class="info">
     <span class="position">
       <span class="title">{title}</span> &mdash; {company}
