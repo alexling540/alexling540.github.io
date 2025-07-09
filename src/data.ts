@@ -21,7 +21,7 @@ const skills: Skills = {
 
 const experience: ExperienceEntry[] = [
   {
-    title: 'Software Developer III',
+    title: 'Software Developer IV',
     company: 'Paycom',
     start: {
       year: 2022,
@@ -29,13 +29,18 @@ const experience: ExperienceEntry[] = [
     },
     description: {
       points: [
-        `Rewrote 2 existing legacy PHP configuration wizards in React consuming data from a PHP REST API server`,
-        `Created an interface for users to view their time sheet calculations in greater detail`,
-        `Extended a pay calculation system to allow for more customization of payouts for certain time, integrating 
-          modern PHP with legacy code`,
-        `Collaborated on improving an existing system to allow for customized calculations and filtering`,
-        `Enhanced an existing overtime calculation system to allow user defined constants`,
-        `Worked on preventing XSS exploits by patching legacy code`
+        `Rewrote setup pages to improve the client experience by reducing UI latency and enabling immediate display of 
+          setup changes. This was part of a top executive’s project in 2024, and completed on an accelerated timeline of
+           5 months while simultaneously learning React and Couchbase`,
+        `Developed a feature in the time card view to display detailed pay calculations by shift and date, facilitating 
+          easy verification for hourly employees`,
+        `Enhanced functionality in the shift system to allow clients to programmatically determine pay calculations for 
+          overlapping shifts, a high-priority client request`,
+        `Introduced flexibility in the holiday payout system, enabling clients to apply custom formulas based on 
+          historical pay`,
+        `Extended the existing deferred overtime calculation system to accommodate different rate multipliers in 
+          compliance with state-specific laws`,
+        `Collaborated on a new system allowing employees to attest their time with client-defined attestation messages`
       ]
     },
     stack: ['PHP', 'MySQL', 'React', 'TypeScript', 'JavaScript', 'jQuery']
@@ -53,7 +58,12 @@ const experience: ExperienceEntry[] = [
     },
     description: {
       paragraphs: [
-        `As a team of 4 interns, designed and built the frontend and backend of a social media website`
+        `Voted as one of the top internship projects by the internship committee, which included the CFO and the 
+          Director of Software Development`,
+        `Designed a responsive social media website using Material UI components and following Material UI guidelines 
+          inside of Figma`,
+        `Built the website in React and PHP with typical social media features such as an infinite scroll feed, profile 
+          pages, creating and interacting with text posts, and friends`
       ]
     },
     stack: ['React', 'PHP', 'MySQL', 'Socket.IO']
