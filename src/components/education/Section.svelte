@@ -3,7 +3,11 @@
 
   import type { EducationEntry } from '$types/EducationEntry';
 
-  export let entries: EducationEntry[];
+  interface Props {
+    entries: EducationEntry[];
+  }
+
+  let { entries }: Props = $props();
 </script>
 
 <article>

@@ -1,6 +1,10 @@
 <script lang="ts">
-  export let gitHub: string;
-  export let linkedIn: string;
+  interface Props {
+    gitHub: string;
+    linkedIn: string;
+  }
+
+  let { gitHub, linkedIn }: Props = $props();
 
   const linkedInUrl: string = `https://www.linkedin.com/in/${linkedIn}`;
   const gitHubUrl: string = `https://www.github.com/${gitHub}`;

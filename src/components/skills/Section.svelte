@@ -1,10 +1,19 @@
 <script lang="ts">
   import Category from './Category.svelte';
 
-  export let languages: string[];
-  export let libraries: string[];
-  export let platforms: string[];
-  export let tools: string[];
+  interface Props {
+    languages: string[];
+    libraries: string[];
+    platforms: string[];
+    tools: string[];
+  }
+
+  let {
+    languages,
+    libraries,
+    platforms,
+    tools
+  }: Props = $props();
 </script>
 
 <article>

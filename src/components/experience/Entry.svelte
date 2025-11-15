@@ -5,43 +5,59 @@
 
   import type { MonthAndYear } from '$types/MonthAndYear';
 
-  export let title: string;
-  export let company: string;
-  export let start: MonthAndYear;
-  export let end: MonthAndYear | undefined = undefined;
-  export let descriptionParagraphs: string[] = [];
-  export let descriptionPoints: string[] = [];
-  export let stack: string[] = [];
+  interface Props {
+    title: string;
+    company: string;
+    start: MonthAndYear;
+    end?: MonthAndYear | undefined;
+    descriptionParagraphs?: string[];
+    descriptionPoints?: string[];
+    stack?: string[];
+  }
+
+  let {
+    title,
+    company,
+    start,
+    end = undefined,
+    descriptionParagraphs = [],
+    descriptionPoints = [],
+    stack = []
+  }: Props = $props();
 </script>
 
 <TwoColumnEntry>
-  <span slot="date">
-    {formatMonthAndYear(start, '?')} &ndash; {formatMonthAndYear(end, 'Present')}
-  </span>
-  <div slot="info" class="info">
-    <span class="position">
-      <span class="title">{title}</span> &mdash; {company}
+  {#snippet date()}
+    <span >
+      {formatMonthAndYear(start, '?')} &ndash; {formatMonthAndYear(end, 'Present')}
     </span>
-    <div class="description">
-      {#if descriptionParagraphs.length > 0}
-        {#each descriptionParagraphs as paragraph}
-          <p>{paragraph}</p>
-        {/each}
-      {/if}
-      {#if descriptionPoints.length > 0}
-        <ul>
-          {#each descriptionPoints as point}
-            <li>{point}</li>
+  {/snippet}
+  {#snippet info()}
+    <div  class="info">
+      <span class="position">
+        <span class="title">{title}</span> &mdash; {company}
+      </span>
+      <div class="description">
+        {#if descriptionParagraphs.length > 0}
+          {#each descriptionParagraphs as paragraph}
+            <p>{paragraph}</p>
           {/each}
-        </ul>
-      {/if}
+        {/if}
+        {#if descriptionPoints.length > 0}
+          <ul>
+            {#each descriptionPoints as point}
+              <li>{point}</li>
+            {/each}
+          </ul>
+        {/if}
+      </div>
+      <ul class="stack">
+        {#each stack as item}
+          <li>{item}</li>
+        {/each}
+      </ul>
     </div>
-    <ul class="stack">
-      {#each stack as item}
-        <li>{item}</li>
-      {/each}
-    </ul>
-  </div>
+  {/snippet}
 </TwoColumnEntry>
 
 <style lang="css">

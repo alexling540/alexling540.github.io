@@ -1,6 +1,10 @@
 <script lang="ts">
-  export let header: string;
-  export let paragraphs: string[];
+  interface Props {
+    header: string;
+    paragraphs: string[];
+  }
+
+  let { header, paragraphs }: Props = $props();
 </script>
 
 <section>

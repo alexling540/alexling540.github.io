@@ -3,7 +3,11 @@
 
   import type { ExperienceEntry } from '$types/ExperienceEntry';
 
-  export let entries: ExperienceEntry[];
+  interface Props {
+    entries: ExperienceEntry[];
+  }
+
+  let { entries }: Props = $props();
 </script>
 
 <article>

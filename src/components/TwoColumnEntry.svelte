@@ -1,9 +1,18 @@
+<script lang="ts">
+  interface Props {
+    date?: import('svelte').Snippet;
+    info?: import('svelte').Snippet;
+  }
+
+  let { date, info }: Props = $props();
+</script>
+
 <div class="grid">
   <div class="date">
-    <slot name="date" />
+    {@render date?.()}
   </div>
   <div class="info">
-    <slot name="info" />
+    {@render info?.()}
   </div>
 </div>
 

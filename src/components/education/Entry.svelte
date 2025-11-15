@@ -5,21 +5,35 @@
 
   import type { MonthAndYear } from '$types/MonthAndYear';
 
-  export let certification: string;
-  export let start: MonthAndYear;
-  export let end: MonthAndYear | undefined = undefined;
-  export let university: string;
-  export let location: string;
+  interface Props {
+    certification: string;
+    start: MonthAndYear;
+    end?: MonthAndYear | undefined;
+    university: string;
+    location: string;
+  }
+
+  let {
+    certification,
+    start,
+    end = undefined,
+    university,
+    location
+  }: Props = $props();
 </script>
 
 <TwoColumnEntry>
-  <span slot="date">
-    {formatMonthAndYear(start, '?')} &ndash; {formatMonthAndYear(end, 'Present')}
-  </span>
-  <div slot="info" class="info">
-    <span class="certification">{certification}</span>
-    <span class="location">{university}, {location}</span>
-  </div>
+  {#snippet date()}
+    <span >
+      {formatMonthAndYear(start, '?')} &ndash; {formatMonthAndYear(end, 'Present')}
+    </span>
+  {/snippet}
+  {#snippet info()}
+    <div  class="info">
+      <span class="certification">{certification}</span>
+      <span class="location">{university}, {location}</span>
+    </div>
+  {/snippet}
 </TwoColumnEntry>
 
 <style lang="css">
