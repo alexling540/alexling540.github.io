@@ -10,7 +10,7 @@
 <section>
   <h3>{header}</h3>
   <ul>
-    {#each list as item}
+    {#each list as item (item)}
       <li>{item}</li>
     {/each}
   </ul>

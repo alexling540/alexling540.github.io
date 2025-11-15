@@ -13,7 +13,7 @@
 <article>
   <h2>Experience</h2>
   <div class="grid">
-    {#each entries as { title, company, start, end, description, stack }}
+    {#each entries as { title, company, start, end, description, stack } (`${company}|${title}`)}
       <Entry
         {title}
         {company}

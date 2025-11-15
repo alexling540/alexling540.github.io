@@ -39,20 +39,20 @@
       </span>
       <div class="description">
         {#if descriptionParagraphs.length > 0}
-          {#each descriptionParagraphs as paragraph}
+          {#each descriptionParagraphs as paragraph (paragraph)}
             <p>{paragraph}</p>
           {/each}
         {/if}
         {#if descriptionPoints.length > 0}
           <ul>
-            {#each descriptionPoints as point}
+            {#each descriptionPoints as point (point)}
               <li>{point}</li>
             {/each}
           </ul>
         {/if}
       </div>
       <ul class="stack">
-        {#each stack as item}
+        {#each stack as item (item)}
           <li>{item}</li>
         {/each}
       </ul>

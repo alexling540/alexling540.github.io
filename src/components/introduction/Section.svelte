@@ -9,7 +9,7 @@
 
 <section>
   <h1>{header}</h1>
-  {#each paragraphs as paragraph}
+  {#each paragraphs as paragraph (paragraph)}
     <p>{paragraph}</p>
   {/each}
 </section>
