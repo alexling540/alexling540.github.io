@@ -8,12 +8,7 @@
     tools: string[];
   }
 
-  let {
-    languages,
-    libraries,
-    platforms,
-    tools
-  }: Props = $props();
+  let { languages, libraries, platforms, tools }: Props = $props();
 </script>
 
 <article>

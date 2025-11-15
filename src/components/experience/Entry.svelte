@@ -28,12 +28,12 @@
 
 <TwoColumnEntry>
   {#snippet date()}
-    <span >
+    <span>
       {formatMonthAndYear(start, '?')} &ndash; {formatMonthAndYear(end, 'Present')}
     </span>
   {/snippet}
   {#snippet info()}
-    <div  class="info">
+    <div class="info">
       <span class="position">
         <span class="title">{title}</span> &mdash; {company}
       </span>

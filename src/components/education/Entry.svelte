@@ -13,23 +13,17 @@
     location: string;
   }
 
-  let {
-    certification,
-    start,
-    end = undefined,
-    university,
-    location
-  }: Props = $props();
+  let { certification, start, end = undefined, university, location }: Props = $props();
 </script>
 
 <TwoColumnEntry>
   {#snippet date()}
-    <span >
+    <span>
       {formatMonthAndYear(start, '?')} &ndash; {formatMonthAndYear(end, 'Present')}
     </span>
   {/snippet}
   {#snippet info()}
-    <div  class="info">
+    <div class="info">
       <span class="certification">{certification}</span>
       <span class="location">{university}, {location}</span>
     </div>
