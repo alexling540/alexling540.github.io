@@ -7,13 +7,13 @@ const header: string = 'hello, world';
 
 const intro: string[] = [
   `I'm Alex, a full stack developer working at Paycom. Most of my work experience is with PHP in an MVC framework, with 
-  more emphasis on backend.`,
+    more emphasis on backend.`,
   `Most of my hobbyist programming is spent on learning frontend frameworks to keep up with the industry and writing 
-  scripts to automate tedious tasks.`
+    scripts to automate tedious tasks.`
 ];
 
 const skills: Skills = {
-  languages: ['JavaScript', 'TypeScript', 'PHP', 'SQL', 'Java', 'Python', 'Lua', 'C'],
+  languages: ['TypeScript', 'JavaScript', 'PHP', 'SQL', 'Java', 'Python', 'Lua', 'C'],
   libraries: ['React.js', 'Next.js', 'Vue.js', 'jQuery', 'Svelte', 'SvelteKit', 'Spring Boot'],
   platforms: ['Firebase', 'Vercel', 'Supabase'],
   tools: ['Git']
@@ -29,18 +29,19 @@ const experience: ExperienceEntry[] = [
     },
     description: {
       points: [
-        `Rewrote setup pages to improve the client experience by reducing UI latency and enabling immediate display of 
-          setup changes. This was part of a top executive’s project in 2024, and completed on an accelerated timeline of
-           5 months while simultaneously learning React and Couchbase`,
-        `Developed a feature in the time card view to display detailed pay calculations by shift and date, facilitating 
-          easy verification for hourly employees`,
-        `Enhanced functionality in the shift system to allow clients to programmatically determine pay calculations for 
-          overlapping shifts, a high-priority client request`,
-        `Introduced flexibility in the holiday payout system, enabling clients to apply custom formulas based on 
-          historical pay`,
-        `Extended the existing deferred overtime calculation system to accommodate different rate multipliers in 
-          compliance with state-specific laws`,
-        `Collaborated on a new system allowing employees to attest their time with client-defined attestation messages`
+        `Redeveloped legacy PHP setup pages into a fast, interactive React application, delivering the project in 4 
+          months instead of the planned 12 months to meet executive priorities. Implemented a configurable sandbox mode 
+          allowing clients to preview pay impacting changes before saving edits, increasing visibility in setups, 
+          reducing errors, and earning strong client praise.`,
+        `Implemented detailed pay calculation display within the time card view, enabling transparent wage validation 
+          for employees.`,
+        `Developed overlapping shift pay functionality within the new shift system, significantly simplifying the setup 
+          of 6% of clients using the new system and resolving a major blocker that enabled the final 5% of clients to 
+          transition from the legacy system.`,
+        `Engineered a configurable holiday pay system leveraging historical payroll data, allowing clients to define 
+          custom pay rules and enabling successful expansion into the Canadian market.`,
+        `Enhanced the existing deferred overtime calculation system to support variable rate multipliers, ensuring 
+          compliance with state-specific labor laws.`
       ]
     },
     stack: ['PHP', 'MySQL', 'React', 'TypeScript', 'JavaScript', 'jQuery']
@@ -58,12 +59,13 @@ const experience: ExperienceEntry[] = [
     },
     description: {
       paragraphs: [
-        `Voted as one of the top internship projects by the internship committee, which included the CFO and the 
-          Director of Software Development`,
-        `Designed a responsive social media website using Material UI components and following Material UI guidelines 
-          inside of Figma`,
-        `Built the website in React and PHP with typical social media features such as an infinite scroll feed, profile 
-          pages, creating and interacting with text posts, and friends`
+        `Built an internal social media platform using React, PHP, MySQL, and Socket.IO, integrating employee profiles 
+          with existing accounts in the company's payroll system.`,
+        `Designed a user-friendly, responsive UI with Material UI components using Figma.`,
+        `Developed infinite scroll feeds, profile pages, text posts with likes and comments, friend management, and a 
+          real-time chat, delivering a fully featured social experience.`,
+        `Recognized as one of the top internship projects by the internship committee, led by the CFO and the Director 
+          of Software Development.`
       ]
     },
     stack: ['React', 'PHP', 'MySQL', 'Socket.IO']
