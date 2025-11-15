@@ -10,8 +10,8 @@
   let { entries }: Props = $props();
 </script>
 
-<article>
-  <h2>Education</h2>
+<article aria-labelledby="education">
+  <h2 id="education">Education</h2>
   {#each entries as { certification, start, end, university, location } (`${university}|${certification}`)}
     <Entry {certification} {start} {end} {university} {location} />
   {/each}

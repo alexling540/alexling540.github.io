@@ -35,7 +35,7 @@
   {#snippet info()}
     <div class="info">
       <span class="position">
-        <span class="title">{title}</span> &mdash; {company}
+        <span class="title">{title}</span> &mdash; <span>{company}</span>
       </span>
       <div class="description">
         {#if descriptionParagraphs.length > 0}

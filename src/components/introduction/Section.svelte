@@ -7,7 +7,7 @@
   let { header, paragraphs }: Props = $props();
 </script>
 
-<section>
+<section aria-label="Introduction">
   <h1>{header}</h1>
   {#each paragraphs as paragraph (paragraph)}
     <p>{paragraph}</p>

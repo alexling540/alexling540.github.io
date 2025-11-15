@@ -1,14 +1,15 @@
 <script lang="ts">
   interface Props {
+    id: string;
     header: string;
     list: string[];
   }
 
-  let { header, list }: Props = $props();
+  let { id, header, list }: Props = $props();
 </script>
 
-<section>
-  <h3>{header}</h3>
+<section aria-labelledby={id}>
+  <h3 {id}>{header}</h3>
   <ul>
     {#each list as item (item)}
       <li>{item}</li>

@@ -10,8 +10,8 @@
   let { entries }: Props = $props();
 </script>
 
-<article>
-  <h2>Experience</h2>
+<article aria-labelledby="experience">
+  <h2 id="experience">Experience</h2>
   <div class="grid">
     {#each entries as { title, company, start, end, description, stack } (`${company}|${title}`)}
       <Entry

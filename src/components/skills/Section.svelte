@@ -11,20 +11,20 @@
   let { languages, libraries, platforms, tools }: Props = $props();
 </script>
 
-<article>
-  <h2>Skills</h2>
+<article aria-labelledby="skills">
+  <h2 id="skills">Skills</h2>
   <div class="grid">
     <div>
-      <Category header="Languages" list={languages} />
+      <Category id="language" header="Languages" list={languages} />
     </div>
     <div>
-      <Category header="Libraries & Frameworks" list={libraries} />
+      <Category id="libraries" header="Libraries & Frameworks" list={libraries} />
     </div>
     <div>
-      <Category header="Platforms" list={platforms} />
+      <Category id="platforms" header="Platforms" list={platforms} />
     </div>
     <div>
-      <Category header="Tools" list={tools} />
+      <Category id="tools" header="Tools" list={tools} />
     </div>
   </div>
 </article>
