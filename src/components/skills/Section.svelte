@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Section from '$components/Section.svelte';
   import Category from './Category.svelte';
 
   interface Props {
@@ -11,23 +12,24 @@
   let { languages, libraries, platforms, tools }: Props = $props();
 </script>
 
-<article aria-labelledby="skills">
-  <h2 id="skills">Skills</h2>
-  <div class="grid">
-    <div>
-      <Category id="language" header="Languages" list={languages} />
+<Section id="skills" header="Skills">
+  {#snippet content()}
+    <div class="grid">
+      <div>
+        <Category id="language" header="Languages" list={languages} />
+      </div>
+      <div>
+        <Category id="libraries" header="Libraries & Frameworks" list={libraries} />
+      </div>
+      <div>
+        <Category id="platforms" header="Platforms" list={platforms} />
+      </div>
+      <div>
+        <Category id="tools" header="Tools" list={tools} />
+      </div>
     </div>
-    <div>
-      <Category id="libraries" header="Libraries & Frameworks" list={libraries} />
-    </div>
-    <div>
-      <Category id="platforms" header="Platforms" list={platforms} />
-    </div>
-    <div>
-      <Category id="tools" header="Tools" list={tools} />
-    </div>
-  </div>
-</article>
+  {/snippet}
+</Section>
 
 <style lang="css">
   .grid {
