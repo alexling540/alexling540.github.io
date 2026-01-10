@@ -1,7 +1,9 @@
 <script lang="ts">
+  import type { Snippet } from 'svelte';
+
   interface Props {
-    date?: import('svelte').Snippet;
-    info?: import('svelte').Snippet;
+    date?: Snippet;
+    info?: Snippet;
   }
 
   let { date, info }: Props = $props();

@@ -1,5 +1,6 @@
 <script lang="ts">
   import Section from '$components/Section.svelte';
+
   import Category from './Category.svelte';
 
   interface Props {
